@@ -1,0 +1,186 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Fallback code for the website*/
+body {
+	color:#000000;
+	font-family: "AW Conqueror Carved One", "AW Conqueror Sans Light", sans-serif;
+}
+
+section#top {
+	text-align:left;
+	color:#000000;
+}
+	
+ul#nav-bar {
+	font-size:16px;
+	text-align:right;
+	width:auto;
+	padding-right:30px;
+	position:absolute;	/* fix this and the next two lines when you figure out */
+	top:60px;			/* how to vertically align the nav bar with my name */
+	right:50px;
+}
+
+	ul#nav-bar li {
+		list-style:none;
+		display:inline;
+		padding-left:10px;
+		padding-right:10px;
+	}
+	
+	ul#nav-bar a {
+		text-decoration:none;
+		display:inline;
+		color:#595959;
+		padding-left:10px;
+		padding-right:10px;
+	}
+	
+	ul#nav-bar a:hover {
+		color: #19205a;
+		/*
+		-webkit-transition: all 1s;
+		-moz-transition: all 1s
+		-o-transition: all 1s;
+		transition: all 1s; */
+	}
+	
+nav#header {
+	box-shadow: 0px 2px 1px -1px #989898;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	z-index:9999;
+	background-color:white;
+	display:inline;
+	width:100%;
+	height:100px;
+}
+	
+	nav#header img#RR-img {
+		right:10px;
+	}
+
+	nav#header h1#header-name {
+		text-align:left;
+		font-size:50px;
+		position:absolute;
+		left:230px;
+		top:-25px;		
+	}
+
+nav#connect-list {
+	max-width:100%;
+	margin:auto;
+	background-color:#c0c0c0;
+}
+
+ul#connect-icons {
+	text-align:center;
+	margin-bottom:0;
+	padding-top:5px;
+}
+	
+	ul#connect-icons li {
+		list-style:none;
+		display:inline-block;
+		padding-left:5px;
+		padding-right:5px;
+	}
+	
+	ul#connect-icons a {
+		text-decoration:none;
+	}
+
+ul#personal-descs {
+	text-align:center;
+	margin-bottom:0;
+	padding-top:5px;
+}
+	ul#personal-descs li {
+		list-style:none;
+		display:inline-block;
+		padding-left:5px;
+		padding-right:5px;
+	}
+	
+ul#professional-descs {
+	text-align:center;
+	margin-bottom:0;
+	padding-top:5px;
+}
+	ul#professional-descs li {
+		list-style:none;
+		display:inline-block;
+		padding-left:5px;
+		padding-right:5px;
+	}
+
+ul#hobbies-descs {
+	text-align:center;
+	margin-bottom:0;
+	padding-top:5px;
+}
+	ul#hobbies-descs li {
+		list-style:none;
+		display:inline-block;
+		padding-left:5px;
+		padding-right:5px;
+	}
+
+img {
+	max-width:100%;
+	height:auto;
+	width:auto\9;
+	left:0;
+	right:0;
+}
+
+.center {
+	text-align:center;
+}
+
+.right {
+	text-align:right;
+}
+
+.left {
+	text-align:left;
+}
+
+h2 {
+	text-align:center;
+	padding-top:10px;
+	padding-botom:0;
+	margin-bottom:10px;
+	font-size:44px;
+	color:#000000;
+	max-width:100%;
+}
+
+.img-center {
+	margin:auto;
+	display:block;
+}
+
+.divider {
+	margin:auto;
+	display:block;
+	padding-bottom:20px;
+}
+
+.paragraph {
+	font-size:20px;
+	color:#727272;
+	margin:auto;
+	width:60%;
+}
+
+/* Removes the margin on the document. Everything is end-to-end. */ 
+
+body {
+	margin:0;
+	padding:0;
+}
