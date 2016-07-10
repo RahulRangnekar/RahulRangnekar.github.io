@@ -31,9 +31,11 @@ function clickPSE() {
 	if (trackPSE == 'd') {
 		image.src = "images/PSE.jpg";
 		trackPSE = 'o';
+		image.width = "400";
 	} else {
 		image.src = "images/PSE-desc.jpg";
 		trackPSE = 'd';
+		image.width = "1600";
 	}
 }
 
@@ -42,9 +44,11 @@ function offPSE() {
 	if (trackPSE == 'h' || trackPSE == 'o') {
 		image.src = "images/PSE.jpg";
 		trackPSE = 'o';
+		image.width = "400";
 	} else {
 		image.src = "images/PSE-desc.jpg";
 		trackPSE = 'd';
+		image.width = "1600";
 	}
 }
 
@@ -65,9 +69,11 @@ function clickASUC() {
 	if (trackASUC == 'd') {
 		image.src = "images/ASUC.jpg";
 		trackASUC = 'o';
+		image.width = "400";
 	} else {
 		image.src = "images/ASUC-desc.jpg";
 		trackASUC = 'd';
+		image.width = "1600";
 	}
 }
 
@@ -76,9 +82,11 @@ function offASUC() {
 	if (trackASUC == 'h' || trackASUC == 'o') {
 		image.src = "images/ASUC.jpg";
 		trackASUC = 'o';
+		image.width = "400";
 	} else {
 		image.src = "images/ASUC-desc.jpg";
 		trackASUC = 'd';
+		image.width = "1600";
 	}
 }
 
@@ -99,9 +107,11 @@ function clickLaasya() {
 	if (trackLaasya == 'd') {
 		image.src = "images/Laasya.jpg";
 		trackLaasya = 'o';
+		image.width = "400";
 	} else {
 		image.src = "images/Laasya-desc.jpg";
 		trackLaasya = 'd';
+		image.width = "1600";
 	}
 }
 
@@ -110,9 +120,11 @@ function offLaasya() {
 	if (trackLaasya == 'h' || trackLaasya == 'o') {
 		image.src = "images/Laasya.jpg";
 		trackLaasya = 'o';
+		image.width = "400";
 	} else {
 		image.src = "images/Laasya-desc.jpg";
 		trackLaasya = 'd';
+		image.width = "1600";
 	}
 }
 
@@ -133,9 +145,11 @@ function clickARC() {
 	if (trackARC == 'd') {
 		image.src = "images/ARC.jpg";
 		trackARC = 'o';
+		image.width = "400";
 	} else {
 		image.src = "images/ARC-desc.jpg";
 		trackARC = 'd';
+		image.width = "1600";
 	}
 }
 
@@ -144,14 +158,13 @@ function offARC() {
 	if (trackARC == 'h' || trackARC == 'o') {
 		image.src = "images/ARC.jpg";
 		trackARC = 'o';
+		image.width = "400";
 	} else {
 		image.src = "images/ARC-desc.jpg";
 		trackARC = 'd';
+		image.width = "1600";
 	}
 }
-
-
-
 
 /* "HOBBIES" SECTION CODE */
 
@@ -172,9 +185,11 @@ function clickExercise() {
 	if (trackExercise == 'd') {
 		image.src = "images/Exercise.jpg";
 		trackExercise = 'o';
+		image.width = "400";
 	} else {
 		image.src = "images/Exercise-desc.jpg";
 		trackExercise = 'd';
+		image.width = "1600";
 	}
 }
 
@@ -183,9 +198,11 @@ function offExercise() {
 	if (trackExercise == 'h' || trackExercise == 'o') {
 		image.src = "images/Exercise.jpg";
 		trackExercise = 'o';
+		image.width = "400";
 	} else {
 		image.src = "images/Exercise-desc.jpg";
 		trackExercise = 'd';
+		image.width = "1600";
 	}
 }
 
@@ -206,9 +223,11 @@ function clickCook() {
 	if (trackCook == 'd') {
 		image.src = "images/Cook.jpg";
 		trackCook = 'o';
+		image.width = "400";
 	} else {
 		image.src = "images/Cook-desc.jpg";
 		trackCook = 'd';
+		image.width = "1600";
 	}
 }
 
@@ -217,9 +236,11 @@ function offCook() {
 	if (trackCook == 'h' || trackCook == 'o') {
 		image.src = "images/Cook.jpg";
 		trackCook = 'o';
+		image.width = "400";
 	} else {
 		image.src = "images/Cook-desc.jpg";
 		trackCook = 'd';
+		image.width = "1600";
 	}
 }
 
@@ -240,9 +261,11 @@ function clickNBA() {
 	if (trackNBA == 'd') {
 		image.src = "images/NBA.jpg";
 		trackNBA = 'o';
+		image.width = "400";
 	} else {
 		image.src = "images/NBA-desc.jpg";
 		trackNBA = 'd';
+		image.width = "1600";
 	}
 }
 
@@ -251,9 +274,11 @@ function offNBA() {
 	if (trackNBA == 'h' || trackNBA == 'o') {
 		image.src = "images/NBA.jpg";
 		trackNBA = 'o';
+		image.width = "400";
 	} else {
 		image.src = "images/NBA-desc.jpg";
 		trackNBA = 'd';
+		image.width = "1600";
 	}
 }
 
@@ -274,9 +299,11 @@ function clickCode() {
 	if (trackCode == 'd') {
 		image.src = "images/Code.jpg";
 		trackCode = 'o';
+		image.width = "400";
 	} else {
 		image.src = "images/Code-desc.jpg";
 		trackCode = 'd';
+		image.width = "1600";
 	}
 }
 
@@ -285,9 +312,11 @@ function offCode() {
 	if (trackCode == 'h' || trackCode == 'o') {
 		image.src = "images/Code.jpg";
 		trackCode = 'o';
+		image.width = "400";
 	} else {
 		image.src = "images/Code-desc.jpg";
 		trackCode = 'd';
+		image.width = "1600";
 	}
 }
 
