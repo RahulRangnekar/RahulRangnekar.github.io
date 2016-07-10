@@ -97,7 +97,7 @@ var trackLaasya = 'o';
 function hoverLaasya() {
 	var image = document.getElementById('Laasya-pic');
 	if (trackLaasya == 'o') {
-		image.src = "images/Laasya-hover.jpg";
+		image.src = "images/laasya-hover.jpg";
 		trackLaasya = 'h';
 	}
 }
@@ -105,11 +105,11 @@ function hoverLaasya() {
 function clickLaasya() {
 	var image = document.getElementById("Laasya-pic");
 	if (trackLaasya == 'd') {
-		image.src = "images/Laasya.jpg";
+		image.src = "images/laasya.jpg";
 		trackLaasya = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/Laasya-desc.jpg";
+		image.src = "images/laasya-desc.jpg";
 		trackLaasya = 'd';
 		image.width = "1600";
 	}
@@ -118,11 +118,11 @@ function clickLaasya() {
 function offLaasya() {
 	var image = document.getElementById("Laasya-pic");
 	if (trackLaasya == 'h' || trackLaasya == 'o') {
-		image.src = "images/Laasya.jpg";
+		image.src = "images/laasya.jpg";
 		trackLaasya = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/Laasya-desc.jpg";
+		image.src = "images/laasya-desc.jpg";
 		trackLaasya = 'd';
 		image.width = "1600";
 	}
@@ -175,7 +175,7 @@ var trackExercise = 'o';
 function hoverExercise() {
 	var image = document.getElementById('Exercise-pic');
 	if (trackExercise == 'o') {
-		image.src = "images/Exercise-hover.jpg";
+		image.src = "images/exercise-hover.jpg";
 		trackExercise = 'h';
 	}
 }
@@ -183,11 +183,11 @@ function hoverExercise() {
 function clickExercise() {
 	var image = document.getElementById("Exercise-pic");
 	if (trackExercise == 'd') {
-		image.src = "images/Exercise.jpg";
+		image.src = "images/exercise.jpg";
 		trackExercise = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/Exercise-desc.jpg";
+		image.src = "images/exercise-desc.jpg";
 		trackExercise = 'd';
 		image.width = "1600";
 	}
@@ -196,11 +196,11 @@ function clickExercise() {
 function offExercise() {
 	var image = document.getElementById("Exercise-pic");
 	if (trackExercise == 'h' || trackExercise == 'o') {
-		image.src = "images/Exercise.jpg";
+		image.src = "images/exercise.jpg";
 		trackExercise = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/Exercise-desc.jpg";
+		image.src = "images/exercise-desc.jpg";
 		trackExercise = 'd';
 		image.width = "1600";
 	}
@@ -213,7 +213,7 @@ var trackCook = 'o';
 function hoverCook() {
 	var image = document.getElementById('Cook-pic');
 	if (trackCook == 'o') {
-		image.src = "images/Cook-hover.jpg";
+		image.src = "images/cook-hover.jpg";
 		trackCook = 'h';
 	}
 }
@@ -221,11 +221,11 @@ function hoverCook() {
 function clickCook() {
 	var image = document.getElementById("Cook-pic");
 	if (trackCook == 'd') {
-		image.src = "images/Cook.jpg";
+		image.src = "images/cook.jpg";
 		trackCook = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/Cook-desc.jpg";
+		image.src = "images/cook-desc.jpg";
 		trackCook = 'd';
 		image.width = "1600";
 	}
@@ -234,11 +234,11 @@ function clickCook() {
 function offCook() {
 	var image = document.getElementById("Cook-pic");
 	if (trackCook == 'h' || trackCook == 'o') {
-		image.src = "images/Cook.jpg";
+		image.src = "images/cook.jpg";
 		trackCook = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/Cook-desc.jpg";
+		image.src = "images/cook-desc.jpg";
 		trackCook = 'd';
 		image.width = "1600";
 	}
@@ -289,7 +289,7 @@ var trackCode = 'o';
 function hoverCode() {
 	var image = document.getElementById('Code-pic');
 	if (trackCode == 'o') {
-		image.src = "images/Code-hover.jpg";
+		image.src = "images/code-hover.jpg";
 		trackCode = 'h';
 	}
 }
@@ -297,11 +297,11 @@ function hoverCode() {
 function clickCode() {
 	var image = document.getElementById("Code-pic");
 	if (trackCode == 'd') {
-		image.src = "images/Code.jpg";
+		image.src = "images/code.jpg";
 		trackCode = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/Code-desc.jpg";
+		image.src = "images/code-desc.jpg";
 		trackCode = 'd';
 		image.width = "1600";
 	}
@@ -310,11 +310,11 @@ function clickCode() {
 function offCode() {
 	var image = document.getElementById("Code-pic");
 	if (trackCode == 'h' || trackCode == 'o') {
-		image.src = "images/Code.jpg";
+		image.src = "images/code.jpg";
 		trackCode = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/Code-desc.jpg";
+		image.src = "images/code-desc.jpg";
 		trackCode = 'd';
 		image.width = "1600";
 	}
@@ -329,7 +329,7 @@ var trackSS = 'o';
 function hoverSS() {
 	var image = document.getElementById('SS-pic');
 	if (trackSS == 'o') {
-		image.src = "images/SteppingStone-hover.jpg";
+		image.src = "images/steppingstone-hover.jpg";
 		trackSS = 'h';
 	}
 }
@@ -337,10 +337,10 @@ function hoverSS() {
 function clickSS() {
 	var image = document.getElementById("SS-pic");
 	if (trackSS == 'd') {
-		image.src = "images/SteppingStone.jpg";
+		image.src = "images/steppingstone.jpg";
 		trackSS = 'o';
 	} else {
-		image.src = "images/SteppingStone-desc.jpg";
+		image.src = "images/steppingstone-desc.jpg";
 		trackSS = 'd';
 	}
 }
@@ -348,10 +348,10 @@ function clickSS() {
 function offSS() {
 	var image = document.getElementById("SS-pic");
 	if (trackSS == 'h' || trackSS == 'o') {
-		image.src = "images/SteppingStone.jpg";
+		image.src = "images/steppingstone.jpg";
 		trackSS = 'o';
 	} else {
-		image.src = "images/SteppingStone-desc.jpg";
+		image.src = "images/steppingstone-desc.jpg";
 		trackSS = 'd';
 	}
 }
@@ -363,7 +363,7 @@ var trackEmber = 'o';
 function hoverEmber() {
 	var image = document.getElementById('Ember-pic');
 	if (trackEmber == 'o') {
-		image.src = "images/Ember-hover.jpg";
+		image.src = "images/ember-hover.jpg";
 		trackEmber = 'h';
 	}
 }
@@ -371,22 +371,26 @@ function hoverEmber() {
 function clickEmber() {
 	var image = document.getElementById("Ember-pic");
 	if (trackEmber == 'd') {
-		image.src = "images/Ember.jpg";
+		image.src = "images/ember.jpg";
 		trackEmber = 'o';
+		image.width = "400";
 	} else {
-		image.src = "images/Ember-desc.jpg";
+		image.src = "images/ember-desc.jpg";
 		trackEmber = 'd';
+		image.width = "1600";
 	}
 }
 
 function offEmber() {
 	var image = document.getElementById("Ember-pic");
 	if (trackEmber == 'h' || trackEmber == 'o') {
-		image.src = "images/Ember.jpg";
+		image.src = "images/ember.jpg";
 		trackEmber = 'o';
+		image.width = "400";
 	} else {
-		image.src = "images/Ember-desc.jpg";
+		image.src = "images/ember-desc.jpg";
 		trackEmber = 'd';
+		image.width = "1600";
 	}
 }
 
@@ -397,7 +401,7 @@ var trackFD = 'o';
 function hoverFD() {
 	var image = document.getElementById('FD-pic');
 	if (trackFD == 'o') {
-		image.src = "images/FullDive-hover.jpg";
+		image.src = "images/fulldive-hover.jpg";
 		trackFD = 'h';
 	}
 }
@@ -405,22 +409,26 @@ function hoverFD() {
 function clickFD() {
 	var image = document.getElementById("FD-pic");
 	if (trackFD == 'd') {
-		image.src = "images/FullDive.jpg";
+		image.src = "images/fulldive.jpg";
 		trackFD = 'o';
+		image.width = "400";
 	} else {
-		image.src = "images/FullDive-desc.jpg";
+		image.src = "images/fulldive-desc.jpg";
 		trackFD = 'd';
+		image.width = "1600";
 	}
 }
 
 function offFD() {
 	var image = document.getElementById("FD-pic");
 	if (trackFD == 'h' || trackFD == 'o') {
-		image.src = "images/FullDive.jpg";
+		image.src = "images/fulldive.jpg";
 		trackFD = 'o';
+		image.width = "400";
 	} else {
-		image.src = "images/FullDive-desc.jpg";
+		image.src = "images/fulldive-desc.jpg";
 		trackFD = 'd';
+		image.width = "1600";
 	}
 }
 
