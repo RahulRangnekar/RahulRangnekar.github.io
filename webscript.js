@@ -21,7 +21,7 @@ var trackPSE = 'o';
 function hoverPSE() {
 	var image = document.getElementById('PSE-pic');
 	if (trackPSE == 'o') {
-		image.src = "images/PSE-hover.jpg";
+		image.src = "images/pse-h.jpg";
 		trackPSE = 'h';
 	}
 }
@@ -29,11 +29,11 @@ function hoverPSE() {
 function clickPSE() {
 	var image = document.getElementById("PSE-pic");
 	if (trackPSE == 'd') {
-		image.src = "images/PSE.jpg";
+		image.src = "images/pse-o.jpg";
 		trackPSE = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/PSE-desc.jpg";
+		image.src = "images/pse-d.jpg";
 		trackPSE = 'd';
 		image.width = "1600";
 	}
@@ -42,11 +42,11 @@ function clickPSE() {
 function offPSE() {
 	var image = document.getElementById("PSE-pic");
 	if (trackPSE == 'h' || trackPSE == 'o') {
-		image.src = "images/PSE.jpg";
+		image.src = "images/pse-o.jpg";
 		trackPSE = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/PSE-desc.jpg";
+		image.src = "images/pse-d.jpg";
 		trackPSE = 'd';
 		image.width = "1600";
 	}
@@ -59,7 +59,7 @@ var trackASUC = 'o';
 function hoverASUC() {
 	var image = document.getElementById('ASUC-pic');
 	if (trackASUC == 'o') {
-		image.src = "images/ASUC-hover.jpg";
+		image.src = "images/asuc-h.jpg";
 		trackASUC = 'h';
 	}
 }
@@ -67,11 +67,11 @@ function hoverASUC() {
 function clickASUC() {
 	var image = document.getElementById("ASUC-pic");
 	if (trackASUC == 'd') {
-		image.src = "images/ASUC.jpg";
+		image.src = "images/asuc-o.jpg";
 		trackASUC = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/ASUC-desc.jpg";
+		image.src = "images/asuc-d.jpg";
 		trackASUC = 'd';
 		image.width = "1600";
 	}
@@ -80,11 +80,11 @@ function clickASUC() {
 function offASUC() {
 	var image = document.getElementById("ASUC-pic");
 	if (trackASUC == 'h' || trackASUC == 'o') {
-		image.src = "images/ASUC.jpg";
+		image.src = "images/asuc-o.jpg";
 		trackASUC = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/ASUC-desc.jpg";
+		image.src = "images/asuc-d.jpg";
 		trackASUC = 'd';
 		image.width = "1600";
 	}
@@ -97,7 +97,7 @@ var trackLaasya = 'o';
 function hoverLaasya() {
 	var image = document.getElementById('Laasya-pic');
 	if (trackLaasya == 'o') {
-		image.src = "images/laasya-hover.jpg";
+		image.src = "images/laasya-h.jpg";
 		trackLaasya = 'h';
 	}
 }
@@ -105,11 +105,11 @@ function hoverLaasya() {
 function clickLaasya() {
 	var image = document.getElementById("Laasya-pic");
 	if (trackLaasya == 'd') {
-		image.src = "images/laasya.jpg";
+		image.src = "images/laasya-o.jpg";
 		trackLaasya = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/laasya-desc.jpg";
+		image.src = "images/laasya-d.jpg";
 		trackLaasya = 'd';
 		image.width = "1600";
 	}
@@ -118,11 +118,11 @@ function clickLaasya() {
 function offLaasya() {
 	var image = document.getElementById("Laasya-pic");
 	if (trackLaasya == 'h' || trackLaasya == 'o') {
-		image.src = "images/laasya.jpg";
+		image.src = "images/laasya-o.jpg";
 		trackLaasya = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/laasya-desc.jpg";
+		image.src = "images/laasya-d.jpg";
 		trackLaasya = 'd';
 		image.width = "1600";
 	}
@@ -135,7 +135,7 @@ var trackARC = 'o';
 function hoverARC() {
 	var image = document.getElementById('ARC-pic');
 	if (trackARC == 'o') {
-		image.src = "images/ARC-hover.jpg";
+		image.src = "images/arc-h.jpg";
 		trackARC = 'h';
 	}
 }
@@ -143,11 +143,11 @@ function hoverARC() {
 function clickARC() {
 	var image = document.getElementById("ARC-pic");
 	if (trackARC == 'd') {
-		image.src = "images/ARC.jpg";
+		image.src = "images/arc-o.jpg";
 		trackARC = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/ARC-desc.jpg";
+		image.src = "images/arc-d.jpg";
 		trackARC = 'd';
 		image.width = "1600";
 	}
@@ -156,11 +156,11 @@ function clickARC() {
 function offARC() {
 	var image = document.getElementById("ARC-pic");
 	if (trackARC == 'h' || trackARC == 'o') {
-		image.src = "images/ARC.jpg";
+		image.src = "images/arc.jpg";
 		trackARC = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/ARC-desc.jpg";
+		image.src = "images/arc-d.jpg";
 		trackARC = 'd';
 		image.width = "1600";
 	}
@@ -175,7 +175,7 @@ var trackExercise = 'o';
 function hoverExercise() {
 	var image = document.getElementById('Exercise-pic');
 	if (trackExercise == 'o') {
-		image.src = "images/exercise-hover.jpg";
+		image.src = "images/exercise-h.jpg";
 		trackExercise = 'h';
 	}
 }
@@ -183,11 +183,11 @@ function hoverExercise() {
 function clickExercise() {
 	var image = document.getElementById("Exercise-pic");
 	if (trackExercise == 'd') {
-		image.src = "images/exercise.jpg";
+		image.src = "images/exercise-o.jpg";
 		trackExercise = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/exercise-desc.jpg";
+		image.src = "images/exercise-d.jpg";
 		trackExercise = 'd';
 		image.width = "1600";
 	}
@@ -196,11 +196,11 @@ function clickExercise() {
 function offExercise() {
 	var image = document.getElementById("Exercise-pic");
 	if (trackExercise == 'h' || trackExercise == 'o') {
-		image.src = "images/exercise.jpg";
+		image.src = "images/exercise-o.jpg";
 		trackExercise = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/exercise-desc.jpg";
+		image.src = "images/exercise-d.jpg";
 		trackExercise = 'd';
 		image.width = "1600";
 	}
@@ -213,7 +213,7 @@ var trackCook = 'o';
 function hoverCook() {
 	var image = document.getElementById('Cook-pic');
 	if (trackCook == 'o') {
-		image.src = "images/cook-hover.jpg";
+		image.src = "images/cook-h.jpg";
 		trackCook = 'h';
 	}
 }
@@ -221,11 +221,11 @@ function hoverCook() {
 function clickCook() {
 	var image = document.getElementById("Cook-pic");
 	if (trackCook == 'd') {
-		image.src = "images/cook.jpg";
+		image.src = "images/cook-o.jpg";
 		trackCook = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/cook-desc.jpg";
+		image.src = "images/cook-d.jpg";
 		trackCook = 'd';
 		image.width = "1600";
 	}
@@ -234,11 +234,11 @@ function clickCook() {
 function offCook() {
 	var image = document.getElementById("Cook-pic");
 	if (trackCook == 'h' || trackCook == 'o') {
-		image.src = "images/cook.jpg";
+		image.src = "images/cook-o.jpg";
 		trackCook = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/cook-desc.jpg";
+		image.src = "images/cook-d.jpg";
 		trackCook = 'd';
 		image.width = "1600";
 	}
@@ -251,7 +251,7 @@ var trackNBA = 'o';
 function hoverNBA() {
 	var image = document.getElementById('NBA-pic');
 	if (trackNBA == 'o') {
-		image.src = "images/NBA-hover.jpg";
+		image.src = "images/nba-h.jpg";
 		trackNBA = 'h';
 	}
 }
@@ -259,11 +259,11 @@ function hoverNBA() {
 function clickNBA() {
 	var image = document.getElementById("NBA-pic");
 	if (trackNBA == 'd') {
-		image.src = "images/NBA.jpg";
+		image.src = "images/nba-o.jpg";
 		trackNBA = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/NBA-desc.jpg";
+		image.src = "images/nba-d.jpg";
 		trackNBA = 'd';
 		image.width = "1600";
 	}
@@ -272,11 +272,11 @@ function clickNBA() {
 function offNBA() {
 	var image = document.getElementById("NBA-pic");
 	if (trackNBA == 'h' || trackNBA == 'o') {
-		image.src = "images/NBA.jpg";
+		image.src = "images/nba-o.jpg";
 		trackNBA = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/NBA-desc.jpg";
+		image.src = "images/nba-d.jpg";
 		trackNBA = 'd';
 		image.width = "1600";
 	}
@@ -289,7 +289,7 @@ var trackCode = 'o';
 function hoverCode() {
 	var image = document.getElementById('Code-pic');
 	if (trackCode == 'o') {
-		image.src = "images/code-hover.jpg";
+		image.src = "images/code-h.jpg";
 		trackCode = 'h';
 	}
 }
@@ -297,11 +297,11 @@ function hoverCode() {
 function clickCode() {
 	var image = document.getElementById("Code-pic");
 	if (trackCode == 'd') {
-		image.src = "images/code.jpg";
+		image.src = "images/code-o.jpg";
 		trackCode = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/code-desc.jpg";
+		image.src = "images/code-d.jpg";
 		trackCode = 'd';
 		image.width = "1600";
 	}
@@ -310,11 +310,11 @@ function clickCode() {
 function offCode() {
 	var image = document.getElementById("Code-pic");
 	if (trackCode == 'h' || trackCode == 'o') {
-		image.src = "images/code.jpg";
+		image.src = "images/code-o.jpg";
 		trackCode = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/code-desc.jpg";
+		image.src = "images/code-d.jpg";
 		trackCode = 'd';
 		image.width = "1600";
 	}
@@ -329,7 +329,7 @@ var trackSS = 'o';
 function hoverSS() {
 	var image = document.getElementById('SS-pic');
 	if (trackSS == 'o') {
-		image.src = "images/steppingstone-hover.jpg";
+		image.src = "images/steppingstone-h.jpg";
 		trackSS = 'h';
 	}
 }
@@ -337,10 +337,10 @@ function hoverSS() {
 function clickSS() {
 	var image = document.getElementById("SS-pic");
 	if (trackSS == 'd') {
-		image.src = "images/steppingstone.jpg";
+		image.src = "images/steppingstone-o.jpg";
 		trackSS = 'o';
 	} else {
-		image.src = "images/steppingstone-desc.jpg";
+		image.src = "images/steppingstone-d.jpg";
 		trackSS = 'd';
 	}
 }
@@ -348,10 +348,10 @@ function clickSS() {
 function offSS() {
 	var image = document.getElementById("SS-pic");
 	if (trackSS == 'h' || trackSS == 'o') {
-		image.src = "images/steppingstone.jpg";
+		image.src = "images/steppingstone-o.jpg";
 		trackSS = 'o';
 	} else {
-		image.src = "images/steppingstone-desc.jpg";
+		image.src = "images/steppingstone-d.jpg";
 		trackSS = 'd';
 	}
 }
@@ -363,7 +363,7 @@ var trackEmber = 'o';
 function hoverEmber() {
 	var image = document.getElementById('Ember-pic');
 	if (trackEmber == 'o') {
-		image.src = "images/ember-hover.jpg";
+		image.src = "images/ember-h.jpg";
 		trackEmber = 'h';
 	}
 }
@@ -371,11 +371,11 @@ function hoverEmber() {
 function clickEmber() {
 	var image = document.getElementById("Ember-pic");
 	if (trackEmber == 'd') {
-		image.src = "images/ember.jpg";
+		image.src = "images/ember-o.jpg";
 		trackEmber = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/ember-desc.jpg";
+		image.src = "images/ember-d.jpg";
 		trackEmber = 'd';
 		image.width = "1600";
 	}
@@ -384,11 +384,11 @@ function clickEmber() {
 function offEmber() {
 	var image = document.getElementById("Ember-pic");
 	if (trackEmber == 'h' || trackEmber == 'o') {
-		image.src = "images/ember.jpg";
+		image.src = "images/ember-o.jpg";
 		trackEmber = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/ember-desc.jpg";
+		image.src = "images/ember-d.jpg";
 		trackEmber = 'd';
 		image.width = "1600";
 	}
@@ -401,7 +401,7 @@ var trackFD = 'o';
 function hoverFD() {
 	var image = document.getElementById('FD-pic');
 	if (trackFD == 'o') {
-		image.src = "images/fulldive-hover.jpg";
+		image.src = "images/fulldive-h.jpg";
 		trackFD = 'h';
 	}
 }
@@ -409,11 +409,11 @@ function hoverFD() {
 function clickFD() {
 	var image = document.getElementById("FD-pic");
 	if (trackFD == 'd') {
-		image.src = "images/fulldive.jpg";
+		image.src = "images/fulldive-o.jpg";
 		trackFD = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/fulldive-desc.jpg";
+		image.src = "images/fulldive-d.jpg";
 		trackFD = 'd';
 		image.width = "1600";
 	}
@@ -422,11 +422,11 @@ function clickFD() {
 function offFD() {
 	var image = document.getElementById("FD-pic");
 	if (trackFD == 'h' || trackFD == 'o') {
-		image.src = "images/fulldive.jpg";
+		image.src = "images/fulldive-o.jpg";
 		trackFD = 'o';
 		image.width = "400";
 	} else {
-		image.src = "images/fulldive-desc.jpg";
+		image.src = "images/fulldive-d.jpg";
 		trackFD = 'd';
 		image.width = "1600";
 	}
