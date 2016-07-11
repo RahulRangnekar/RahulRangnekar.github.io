@@ -156,7 +156,7 @@ function clickARC() {
 function offARC() {
 	var image = document.getElementById("ARC-pic");
 	if (trackARC == 'h' || trackARC == 'o') {
-		image.src = "images/arc.jpg";
+		image.src = "images/arc-o.jpg";
 		trackARC = 'o';
 		image.width = "400";
 	} else {
@@ -339,9 +339,11 @@ function clickSS() {
 	if (trackSS == 'd') {
 		image.src = "images/steppingstone-o.jpg";
 		trackSS = 'o';
+		image.width = "400";
 	} else {
 		image.src = "images/steppingstone-d.jpg";
 		trackSS = 'd';
+		image.width = "1600";
 	}
 }
 
@@ -350,9 +352,11 @@ function offSS() {
 	if (trackSS == 'h' || trackSS == 'o') {
 		image.src = "images/steppingstone-o.jpg";
 		trackSS = 'o';
+		image.width = "400";
 	} else {
 		image.src = "images/steppingstone-d.jpg";
 		trackSS = 'd';
+		image.width = "1600";
 	}
 }
 
