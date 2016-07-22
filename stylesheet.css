@@ -36,7 +36,8 @@ nav#header {
 		font-size:50px;
 		position:absolute;
 		left:230px;
-		top:-25px;		
+		top:-25px;
+		min-width:1110px;		
 	}
 	
 /* styles the navigation bar in the locked header bar */	
