@@ -5,80 +5,52 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="stylesheet.css" rel="stylesheet" type="text/css">
-        <script language="javascript" type="text/javascript" src="webscript.js"></script>
-</head>
+        <link href="classes.css" rel="stylesheet" type="text/css">
+        <script language="javascript" type="text/javascript" src="script.js"></script>
+	</head>
 
 <body>
 
+<!-- LANDING SECTION -->
 <section id="top">
 	<nav id="header">
-        <a href="#top"><img src="images/RR.png" width="175" height="99" alt="RR" id="RR-img" onMouseOver="hoverRR()" onMouseOut="offRR()"/></a>        
+        <a href="#top"><img src="images/RR.png" width="141" height="78" alt="RR" id="RR-img" onMouseOver="hoverRR()" onMouseOut="offRR()"/></a>        
         <h1 id="header-name">RAHUL RANGNEKAR</h1>
         <ul id="nav-bar">
-			<li><a href="#personal" class="scroll">Personal</a></li>
-            <li><a href="#hobbies" class="scroll">Hobbies</a></li>
-            <li><a href="#professional" class="scroll">Professional</a></li>	
-            <li><a href="#connect" class="scroll">Connect</a></li>
+        	<li><a href="index.html" id="home">Home</a></li>
+            <li><a href="about.html" id="about">About</a></li>
+            <li><a href="personal.html" id="personal">Personal</a></li>
+            <li><a href="professional.html" class="scroll" id="professional">Professional</a></li>
+            <li><a href="RahulRangnekar_Resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="connect.html" id="connect">Connect</a></li>
         </ul>
 	</nav>
-	<div id="cover">
-		<img src="images/cover.jpg" width="1903" height="1229" alt="picture of me" class="img-center"/>
-    </div>
+	<img src="images/cover.jpg" id="cover-image" width="1903" height="1109" alt="picture of me" class="img-center"/>
 </section>
+
+<!-- END OF LANDING SECTION -->
+
+<!-- PERSONAL SECTION -->
 
 <section id="personal">
-	<h2>PERSONAL</h2>
-    <img src="images/divider-line.png" width="880" height="20" alt="divider line" class="divider"/>
-    <p title="About Me!">Hello Everyone! I am a rising junior studying Economics and Computer Science at UC Berkeley.
-    <br>I love to learn anything and everything that will make me a better student, leader, and person. I find the best way to do so is by being active in my
-    community at Cal. <br>These are the clubs and organizations in which I have been involved - click on an image for more information!
-    </p>
-    
-    <ul id="personal-descs">
-        <li><img src="images/pse-o.jpg" width="400" height="400" alt="Pi Sigma Epsilon" class="img-center" id="PSE-pic" onMouseOver="hoverPSE();" onMouseOut="offPSE();" onClick="clickPSE();"/></li>            
-        <li><img src="images/asuc-o.jpg" width="400" height="400" alt="Associated Students of the University of California" class="img-center" id="ASUC-pic" onMouseOver="hoverASUC();" onMouseOut="offASUC();" onClick="clickASUC();"/></li>
-        <li><img src="images/laasya-o.jpg" width="400" height="400" alt="Laasya 2016 Dance Competition" class="img-center" id="Laasya-pic" onMouseOver="hoverLaasya();" onMouseOut="offLaasya();" onClick="clickLaasya();"/></li>
-        <li><img src="images/arc-o.jpg" width="400" height="400" alt="American Red Cross at Cal" class="img-center" id="ARC-pic" onMouseOver="hoverARC();" onMouseOut="offARC();" onClick="clickARC();"/></li>
+    <h2>Hello! My name is Rahul!</h2>
+    <br>
+    <p id="intro-desc">I am a rising junior studying Economics and Computer Science at UC Berkeley.</p>
+    <ul id="intro-pics">
+        <li><a href="personal.html"><img src="images/intro-pers.jpg" id="intro-pers" width="300" height="300" alt="a picture of myself linked to my personal blog" class="img-center" onMouseOver="onPers()" onMouseOut="offPers()"/></a></li>
+        <li><a href="professional.html"><img src="images/intro-prof.jpg" id="intro-prof" width="300" height="300" alt="a picture of myself linked to my professional blog" class="img-center" onMouseOver="onProf();" onMouseOut="offProf();"/></a></li>
 	</ul>
-
+    <img src="images/divider-line.png" class="divider"/>
 </section>
 
-<section id="hobbies">
-	<h2>HOBBIES</h2>
-    <img src="images/divider-line.png" width="880" height="20" alt="divider line" class="divider"/>
-    <p title="My Hobbies!">I love to keep myself happy and productive in my free time! This is what I like to do to relax!</p>
-    
-    <ul id="hobbies-descs">
-		<li><img src="images/exercise-o.jpg" width="400" height="400" alt="Exercise" class="img-center" id="Exercise-pic" onMouseOver="hoverExercise();" onMouseOut="offExercise();" onClick="clickExercise();"/></li>
-		<li><img src="images/cook-o.jpg" width="400" height="400" alt="Cook" class="img-center" id="Cook-pic" onMouseOver="hoverCook();" onMouseOut="offCook();" onClick="clickCook();"/></li>
-		<li><img src="images/nba-o.jpg" width="400" height="400" alt="Follow the NBA" class="img-center" id="NBA-pic" onMouseOver="hoverNBA();" onMouseOut="offNBA();" onClick="clickNBA();"/></li>
-		<li><img src="images/code-o.jpg" width="400" height="400" alt="Code" class="img-center" id="Code-pic" onMouseOver="hoverCode();" onMouseOut="offCode();" onClick="clickCode();"/></li>
-    </ul>
-    
-</section>
+<!-- END OF PERSONAL SECTION -->
 
-<section id="professional">
-	<h2>PROFESSIONAL</h2>
-    <img src="images/divider-line.png" width="880" height-"20" alt="divider line" class="divider"/>
-    <p title="About Me!">After graduation, I hope to work as a tech consultant in the San Francisco Bay Area.
-    <br>These are my previous work experiences.
-    </p>
-
-	<ul id="professional-descs">
-		<li><img src="images/steppingstone-o.jpg" width="400" height="400" alt="Stepping Stone Talent Recruiting" class="img-center" id="SS-pic" onMouseOver="hoverSS();" onMouseOut="offSS();" onClick="clickSS();"/></li>
-    	<li><img src="images/ember-o.jpg" width="400" height="400" alt="Ember Technologies" class="img-center" id="Ember-pic" onMouseOver="hoverEmber();" onMouseOut="offEmber();" onClick="clickEmber();"/></li>
-        <li><img src="images/fulldive-o.jpg" width="400" height="400" alt="FullDive Virtual Reality" class="img-center" id="FD-pic" onMouseOver="hoverFD();" onMouseOut="offFD();" onClick="clickFD();"/></li>
-	</ul>
-    
-</section>
+<!-- FOOTER -->
 
 <section id="connect">
-	<h2>CONNECT</h2>
-    <img src="images/divider-line.png" width="880" height="20" alt="divider line" class="divider"/>
     <nav>
     	<ul id="connect-links">
             <li><a href="mailto:rrangnekar@berkeley.edu" target="_blank">Email</a></li>
-            <li><a href="RahulRangnekar_Resume.pdf" target="_blank">Resume</a></li>
             <li><a href="https://linkedin.com/in/rrangnekar" target="_blank">LinkedIn</a></li>
             <li><a href="https://www.facebook.com/rahul.rangnekar/" target="_blank">Facebook</a></li>
             <li><a href="https://twitter.com/rahrangnek" target="_blank">Twitter</a></li>
@@ -87,7 +59,6 @@
             <li><a href="https://github.com/RahulRangnekar" target="_blank">Github</a></li>
         </ul>
 	</nav>
-
 </section>
 
 </body>

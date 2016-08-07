@@ -22,7 +22,7 @@ nav#header {
 	background-color:white;
 	display:inline;
 	width:100%;
-	height:100px;
+	height:80px;
 }
 	
 /* styles that dope image of my initials in the top left */	
@@ -36,8 +36,8 @@ nav#header {
 		font-size:50px;
 		position:absolute;
 		left:230px;
-		top:-25px;
-		min-width:1110px;		
+		top:-35px;
+		min-width:1110px;	/* 1110px; */	
 	}
 	
 /* styles the navigation bar in the locked header bar */	
@@ -46,8 +46,9 @@ ul#nav-bar {
 	text-align:right;
 	padding-right:30px;
 	position:absolute;
-	top:60px;
+	top:40px;
 	right:50px;
+	min-width:500px;
 }
 
 	ul#nav-bar li {
@@ -72,46 +73,33 @@ ul#nav-bar {
 		transition: all 0.5s;
 	}	
 	
-/* styles the images in the personal section */	
-ul#personal-descs {
-	text-align:center;
-	margin-bottom:0;
-	padding-top:5px;
-}
-	ul#personal-descs li {
-		list-style:none;
-		display:inline-block;
-		padding-left:5px;
-		padding-right:5px;
-	}
+/* styles the cover image */
+
+img#cover-image {
+	margin-top:-20px;
 	
-/* styles the images in the hobbies section */	
-ul#hobbies-descs {
+}
+
+ul#intro-pics {
 	text-align:center;
 	margin-bottom:0;
 	padding-top:5px;
 }
-	ul#hobbies-descs li {
+	ul#intro-pics li {
 		list-style:none;
 		display:inline-block;
-		padding-left:5px;
-		padding-right:5px;
-	}	
-	
-/* styles the images in the professional section */	
-ul#professional-descs {
-	text-align:center;
-	margin-bottom:0;
-	padding-top:5px;
-}
-	ul#professional-descs li {
-		list-style:none;
-		display:inline-block;
-		padding-left:5px;
-		padding-right:5px;
+		padding-left:15px;
+		padding-right:15px;
 	}
 
-/* styles the hyperlinks in the connect section */	
+/* styles the hyperlinks in the connect section */
+
+section#connect {
+	background-color: #EEE;
+	padding-top:2px;
+	padding-bottom:2px;
+}
+
 ul#connect-links {
 	font-size:18px;
 	text-align:center;
@@ -143,59 +131,46 @@ ul#connect-links {
 		-o-transition: all 0.5s;
 		transition: all 0.5s;
 	}
-
-/* makes the landing photo end-to-end*/
-img {
-	max-width:100%;
-	height:auto;
-	width:auto\9;
-	left:0;
-	right:0;
+	
+a#basketball {
+	letter-spacing: 0.25px;
+	color: #595959;
+	text-decoration: none;
 }
+	
+	a#basketball:hover {
+		color: #46729d;
+	}
 
-/* changes the font, color, and position of the h2 headings */
-h2 {
+ul#build-choices {
 	text-align:center;
-	padding-top:10px;
-	padding-botom:0;
-	margin-bottom:10px;
-	font-size:44px;
-	color:#000000;
-	max-width:100%;
-	font-family: AW Conqueror Carved One;
+	font-size:20px;
+	margin-top:50px;
 }
+	
+	ul#build-choices li {
+		list-style:none;
+		display:inline;
+		padding-left:30px;
+		padding-right:30px;
+	}
+	
+	ul#build-choices a {
+		text-decoration:none;
+		color:#727272;
+		border: 2px solid black;
+		padding: 20px 30px 20px 30px;
+		color:black;
+		letter-spacing:1px;
+		font-family:FreightSans Medium;
+	}
 
-/* changes the font, color, and position of the paragraphs under h2 headings */
-p {
-	font-family: FreightSans;
-	font-size:22px;
-	color:#727272;
-	text-align:center;
-	margin:auto;
-	width:60%;
-}
-
-/* changes the font on hyperlinked words */
-a {
-	font-family: FreightSans;
-}
-
-/* centers an image on the page */
-.img-center {
-	margin:auto;
-	display:block;
-}
-
-/* code for the divider line between an h2 heading and the corresponding paragraph */
-.divider {
-	margin:auto;
-	display:block;
-	padding-bottom:20px;
-}
-
-/* Removes the margin on the document. Everything is end-to-end. */ 
-
-body {
-	margin:0;
-	padding:0;
-}
+	ul#build-choices a:hover {
+		color: white;
+		background: black;
+		border: 2px solid black;		
+		-webkit-transition: all 0.5s;
+		-moz-transition: all 0.5s
+		-o-transition: all 0.5s;
+		transition: all 0.5s;
+	}
