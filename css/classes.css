@@ -5,6 +5,7 @@ h1, h2 {
 	font-family: "Amiko", sans-serif;
 	font-weight: bold;
 	font-size: 2.5em;
+	color: #2980B9;
 }
 
 p {
@@ -33,8 +34,6 @@ a:hover {
 	text-decoration: none;
 	color: #2980B9;
 }
-
-
 
 /* Removes the margin on the document. Everything is end-to-end. */ 
 
