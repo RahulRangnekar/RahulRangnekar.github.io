@@ -35,6 +35,11 @@ a:hover {
 	color: #2980B9;
 }
 
+li {
+	margin: 0;
+	padding: 0;
+}
+
 /* Removes the margin on the document. Everything is end-to-end. */ 
 
 body {
