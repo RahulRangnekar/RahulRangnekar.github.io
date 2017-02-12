@@ -46,8 +46,18 @@ div#icon-bar {
 	padding-top: 6%;
 }
 
+.icon {
+	opacity: 1.0;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;	
+}
+
 .icon:hover {
 	opacity: 0.75;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;	
 }
 
 div#bottom-gutter {

@@ -95,5 +95,3 @@ function offKanye() {
 	var image = document.getElementById("post-kanye");
 	image.src = "images/blog/kanye_west.jpg";
 }
-
-
