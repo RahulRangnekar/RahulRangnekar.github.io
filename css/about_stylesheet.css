@@ -1,27 +1,5 @@
-@charset "utf-8";
+@charset "UTF-8";
 /* CSS Document */
-
-div#top-bar {
-	width:auto;
-	height: 10px;
-	background-color: #2980B9;
-}
-
-.nav-pad {
-	padding: 30% 10% 0%;
-}
-
-.margin-top-3 {
-	margin-top: 3%;
-}
-
-.active-link {
-	color: #2980B9;
-	border-style: solid;
-	border-top: none;
-	border-left: none;
-	border-right: none;
-}
 
 .paragraph-link {
 	color: #2980B9;
@@ -58,14 +36,4 @@ div#icon-bar {
 	transition: opacity .25s ease-in-out;
 	-moz-transition: opacity .25s ease-in-out;
 	-webkit-transition: opacity .25s ease-in-out;	
-}
-
-div#bottom-gutter {
-	width: auto;
-	height: 25px;
-}
-
-.no-pad {
-	padding: 0;
-	margin: 0;
 }

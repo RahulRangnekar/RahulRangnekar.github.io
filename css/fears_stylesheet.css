@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* CSS Document */
+
+p#fears-paragraph {
+	font-size: 2em;	
+
+}
+
+ul#fears {
+	list-style: none;
+	text-decoration: none;
+}
+
+ul#fears li {
+	font-family: "Slabo 27px", serif;
+	font-weight: 200;
+	font-size: 1.875em;
+	letter-spacing: 0.0675em;
+}
