@@ -3,13 +3,13 @@
 function hoverFears() {	
 	"use strict";
 	var image = document.getElementById("proj-fears");
-	image.src = "images/work/underarmour_hover.jpg";
+	image.src = "images/work/fear_hover.jpg";
 }
 
 function offFears() {
 	"use strict";
 	var image = document.getElementById("proj-fears");
-	image.src = "images/work/underarmour.jpg";
+	image.src = "images/work/fear.jpg";
 }
 
 function hoverUA() {	
