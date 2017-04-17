@@ -1,9 +1,8 @@
 @charset "UTF-8";
 /* CSS Document */
 
-p#fears-paragraph {
+.para {
 	font-size: 2em;	
-
 }
 
 ul#fears {
@@ -12,8 +11,21 @@ ul#fears {
 }
 
 ul#fears li {
+	margin: 1% 0 1% 0;
+}
+
+ul#fears li button {
 	font-family: "Slabo 27px", serif;
 	font-weight: 200;
 	font-size: 1.875em;
-	letter-spacing: 0.0675em;
+	letter-spacing: 0.05em;
+	width: 200px;
+	height: 45px;
+	border: none;
+	outline: none;
+	background: #4995C7;
+}
+
+ul#fears li:hover {
+	opacity: 0.75;
 }

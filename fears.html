@@ -19,6 +19,7 @@
 	<link href="css/fears_stylesheet.css" rel="stylesheet" type="text/css">
 
 	<!--JavaScript-->
+	<script src="js/fears_script.js" type="text/javascript"></script>
 	
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -63,7 +64,7 @@
 	<div class="row">
 		<div class="col-sm-2"></div>
 		<div class="col-sm-8">
-			<p id="fears-paragraph" class="text-center">This is my final project for UGBA 190T: Creativity Lab in the Spring 2017 semester. It is focused on a few of my deepest and darkest fears, and will be finished by the end of April. Check back for regular updates! Fear is such a large part of my everyday life, from relatively minor things like lifting too heavy of weight at the gym or asking a question in class, to the pervasive and lingering ones below. Throughout my junior year, I have made a conscious effort to acknowledge and assuage these fears. I examined them at the roots, and dug for the seeds. Through my personal creativity channels - graphic design, collage-making, and writing - I now impart to you why my fears exist and how I strive to make peace with them.</p>
+			<p id="proj-description" class="para text-center">This is my final project for UGBA 190T: Creativity Lab in the Spring 2017 semester. It is focused on a few of my <strong>deepest and darkest fears</strong>, and will be finished by the end of April. Check back for regular updates! Fear is a large part of my everyday life, from relatively minor things like lifting too heavy of weight at the gym or asking a question in class, to the pervasive and lingering ones below. Throughout my junior year, I have made a conscious effort to acknowledge and assuage these fears. I examined them at the roots, and dug for the seeds. Through my personal creative channels - graphic design, collage-making, and writing - I now impart to you my fears and how I strive to make peace with them.</p>
 		</div>
 		<div class="col-sm-2"></div>
 	</div>
@@ -71,15 +72,24 @@
 	<br>
 	
 	<div class="row">
+		<div class="col-sm-1"></div>
+		<div class="col-sm-10">
+			<ul id="fears" class="text-center list-inline">
+				<li><button type="button" onClick="displayProfessional()">Professional Failure</button></li>
+				<li><button type="button" onClick="displayPhysical()">Physical Health</button></li>
+				<li><button type="button" onClick="displayMental()">Mental Health</button></li>				
+				<li><button type="button" onClick="displayEmotion()">Expressing Emotion</button></li>
+				<li><button type="button" onClick="displaySolidarity()">Lifelong Solidarity</button></li>
+			</ul>
+		</div>
+		<div class="col-sm-1"></div>
+	</div>
+	
+	<div class="row" id="fears-section" style="display:none">
 		<div class="col-sm-2"></div>
 		<div class="col-sm-8">
-			<ul id="fears" class="text-left">
-				<li>Professional Failure</li>
-				<li>Overcompensation</li>
-				<li>Neglecting Mental Health</li>
-				<li>Diminished Physical Health</li>
-				<li>Lifelong Solidarity</li>
-			</ul>
+			<h2 id="fears-title" class="text-center">You will now see this</h2>
+			<p class="para" id="fears-paragraph">How does this look?</p>
 		</div>
 		<div class="col-sm-2"></div>
 	</div>
