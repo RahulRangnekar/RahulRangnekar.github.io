@@ -28,3 +28,32 @@ div#bottom-gutter {
 	height: 25px;
 }
 
+/***Change highlight color***/
+/*** Works on common browsers ***/
+::selection {
+    background-color: #2980B9;
+    color: #fff;
+}
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+    background-color: #2980B9;
+    color: #fff;
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+    background-color: #2980B9;
+    color: #fff;
+}
+
+::-ms-selection {
+    background-color: #2980B9;
+    color: #fff;
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+    background-color: #2980B9;
+    color: #fff;
+}
