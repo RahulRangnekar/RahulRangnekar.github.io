@@ -5,6 +5,10 @@
 	font-size: 2em;	
 }
 
+.haiku {
+	font-size: 2.125em;
+}
+
 ul#fears {
 	list-style: none;
 	text-decoration: none;
