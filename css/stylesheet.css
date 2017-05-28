@@ -1,0 +1,223 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/*** === NAVIGATION BAR === ***/
+
+nav#navigation-bar {
+	background-color: rgba(0, 0, 0, 0);
+	border: none;
+	z-index: 5;
+	height: 12%;
+}
+
+ul#main-navigation {
+	font-size: 1.5em;
+	letter-spacing: 0.075em;
+	margin: -2% 1% 0 0;
+}
+
+ul#main-navigation li a {
+	color: white;
+}
+
+/*** END OF NAVIGATION BAR ***/
+
+/*** === LANDING SECTION === ***/
+
+div#heading-holder {
+	position: absolute;
+	top: 50%;
+	left: 2.5%;
+}
+
+h1#name {
+	font-size: 7em;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+}
+
+div#descriptors {
+	color: white;
+	font-size: 4em;
+	font-weight: 300;
+	letter-spacing: 0.025em;
+}
+
+img#down-arrow {
+	position: absolute;
+	top: 90%;
+	left: 50%;
+}
+
+/*** END OF LANDING SECTION ***/
+
+/*** === ABOUT SECTION === ***/
+
+p#about-description {
+	font-size: 2em;
+}
+
+/*** END OF ABOUT SECTION ***/
+
+/*** === PASSION SECTION === ***/
+
+.passion-nav {
+	list-style: none;
+}
+
+.passion-card {
+	display: inline-block;
+	padding: 0 0 5% 0;
+}
+
+.passion-text {
+	float: right;
+	margin-top: -5%;
+	width: 75%;
+}
+
+.passion-text h3 {
+	font-size: 1.75em;
+	font-weight: 600;
+	letter-spacing: 0.035em;
+}
+
+.passion-text p {
+	font-size: 1.5em;
+	font-weight: 500;
+	letter-spacing: 0.025em;
+/*	text-align: right;*/
+}
+
+/*** === END OF PASSION SECTION === ***/
+
+/*** === SKILLS SECTION === ***/
+
+div#skills-section h3 {
+	font-size: 2em;
+	letter-spacing: 0.035em;
+	margin: 0 0 3% 0;
+}
+
+div#progress-bars h4{
+	font-size: 1.35em;
+	letter-spacing: 0.025em;
+	margin: 1% 0;
+}
+
+.p-bar {
+	width: 80%;
+}
+
+.skills-list {
+	font-size: 1.65em;
+	line-height: 1.75em;
+	list-style: none;
+}
+
+/*** END OF SKILLS SECTION ***/
+
+/*** === CONTACT SECTION === ***/
+
+p#contact-description {
+	font-size: 2em;
+	letter-spacing: 0.035em;
+	margin: 0 0 3% 0;
+}
+
+p#contact-description a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+ul#social-nav li {
+	margin: 0 0.5%;
+}
+
+ul#social-nav li:hover {
+	opacity: 0.75;
+}
+
+/*** END OF CONTACT SECTION ***/
+
+/*** === CLASSES === ***/
+
+.header-class {
+	margin: 3% 0;
+}
+
+.text-white {
+	color: white;
+}
+
+.text-blue {
+	color: #2980B9;
+}
+
+.dark {
+	background-color: #DDD;
+}
+
+.super-dark {
+	background-color: #202020;
+}
+
+/*** END OF CLASSES ***/
+
+/*** === PARALLAX === ***/
+
+.parallax {
+    background-image: url("../images/beach.jpg");
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*** END OF PARALLAX ***/
+
+/*** === BUILT-IN CLASSES === ***/
+
+h2 {
+	color: #383838;
+	font-size: 3em;
+	font-weight: 600;
+	letter-spacing: 0.035em;
+	margin-top: 3%;
+	
+}
+
+p strong {
+	letter-spacing: 0.035em;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Raleway", sans-serif;
+	font-size: 100%;
+	background-color: white;
+}
+
+/*** END OF BUILT-IN CLASSES ***/
+
+/*** CHANGE HIGHLIGHT COLOR ***/
+
+::selection {
+    background-color: #2980B9;
+    color: #fff;
+}
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+    background-color: #2980B9;
+    color: #fff;
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+    background-color: #2980B9;
+    color: #fff;
+}

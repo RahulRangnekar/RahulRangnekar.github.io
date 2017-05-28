@@ -53,10 +53,9 @@ a:hover {
 	line-height: 1.75em;
 }
 
-/* Removes the margin on the document. Everything is end-to-end. */ 
-
 body {
 	font-size: 100%;
+	font-family: "Raleway", sans-serif;
 	background-color: white;
 	margin:0;
 	padding:0;
