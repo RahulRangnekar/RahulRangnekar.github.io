@@ -18,8 +18,10 @@
 	<!--Favicon-->
 	<link rel="shortcut icon" href="images/favicon.ico" >
 
-	<!--StyleSheets-->
+	<!--Bootstrap StyleSheet-->
 	<link href="css/bootstrap.css" rel="stylesheet" />
+	
+	<!--StyleSheet-->
 	<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
 		
 	<!-- jQuery library -->
@@ -27,6 +29,9 @@
 
 	<!-- Bootstrap JavaScript library-->
 	<script src="js/bootstrap.js" type="text/javascript"></script>
+	
+	<!--Scroll JavaScript library-->
+	<script src="js/scroll.js" type="text/javascript"></script>
 
 	<!--Google Fonts-->
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -44,17 +49,17 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>                        
 			</button>
-			<a class="navbar-brand" href="#top"><img id="logo" src="images/logo-white.png" height="60" width="65" alt="my logo"/></a>
+			<a class="navbar-brand scroll" href="#top"><img id="logo" src="images/logo-white.png" height="60" width="65" alt="my logo"/></a>
 		</div>
 	</div>
 	<div class="collapse navbar-collapse text-uppercase text-center" id="navigator">
 		<ul class="nav navbar-nav navbar-right" id="main-navigation">
-			<li><a href="#about">About</a></li>
-			<li><a href="#passions">Passions</a></li>
-			<li><a href="#skills">Skills</a></li>
-			<li><a href="#projects">Projects</a></li>
-			<li><a href="#blog">Blog</a></li>
-			<li><a href="#contact">Contact</a></li>
+			<li><a class="scroll active-link" href="#about">About</a></li>
+			<li><a class="scroll" href="#passions">Passions</a></li>
+			<li><a class="scroll" href="#skills">Skills</a></li>
+<!--		<li><a class="scroll" href="#projects">Projects</a></li>-->
+<!--		<li><a class="scroll" href="#blog">Blog</a></li>-->
+			<li><a class="scroll" href="#contact">Contact</a></li>
 		</ul>
 	</div>
 </nav>
@@ -73,12 +78,12 @@
 				<p class="slide">Athlete</p>
 			</div>
 		</div>
-		<a href="#about"><img src="images/icons/down-arrow.png" width="32" height="32" alt="go to the next section" id="down-arrow"/></a>
+		<a class="scroll" href="#about"><img src="images/icons/down-arrow.png" width="32" height="32" alt="go to the next section" id="down-arrow"/></a>
 	</div>
 </div>
 
 <!--ABOUT SECTION-->
-<div class="container-fluid">
+<div class="container-fluid page">
 	<div class="header-class" id="about">
 		<h2 class="text-center text-uppercase">About</h2>
 		<img src="images/blue-line.png" height="30" width="200" class="center-block text-center"/>
@@ -98,8 +103,8 @@
 			<strong class="text-blue">Capabilities</strong> <br>
 			- Studies Computer Science and Economics <br>
 			- Falls asleep anywhere and everywhere possible <br>
-			- Sings from the Hamilton soundtrack on command <br>
-			- Bottomless stomach can eat anything (if it's pescatarian)
+			- Bottomless stomach can eat anything (if it's pescatarian) <br>
+			- Raps anything from Childish Gambino to Hamilton on command
 			<br><br>
 			<strong class="text-blue">Whereabouts</strong> <br>
 			- Berkeley campus: searching for hidden areas and secrets <br>
@@ -120,7 +125,7 @@
 </div>
 
 <!--MY PASSIONS-->
-<div class="container-fluid dark">
+<div class="container-fluid dark page">
 	<div class="header-class" id="passions">
 		<h2 class="text-center text-uppercase">What I Love to Do</h2>
 		<img src="images/blue-line.png" height="30" width="200" class="center-block text-center" />
@@ -134,7 +139,7 @@
 						<img src="images/icons/molecule.png" height="50" width="50" />
 						<div class="passion-text">
 							<h3 class="text-uppercase">Learn</h3>
-							<p>This is filler text for now. I will first format everything, then replace this with meaningful material when I can. :D</p>
+							<p>I find nothing more enjoyable than making myself a better person. I live to learn everything the world has to offer.</p>
 						</div>
 					</div>
 				</li>
@@ -143,7 +148,7 @@
 						<img src="images/icons/bulb.png" height="50" width="50" />
 						<div class="passion-text">
 							<h3 class="text-uppercase">Strategize</h3>
-							<p>This is filler text for now. I will first format everything, then replace this with meaningful material when I can. :D</p>
+							<p>I enjoy just sitting down, reading product strategy, and applying these lessons to improve products and companies.</p>
 						</div>
 					</div>
 				</li>
@@ -152,7 +157,7 @@
 						<img src="images/icons/pencil.png" height="50" width="50" />
 						<div class="passion-text">
 							<h3 class="text-uppercase">Write</h3>
-							<p>This is filler text for now. I will first format everything, then replace this with meaningful material when I can. :D</p>
+							<p>I journal to clear my head, relieve my stress, and track my self-growth. It is one of my most important habits.</p>
 						</div>
 					</div>
 				</li>
@@ -165,7 +170,7 @@
 						<img src="images/icons/weight.png" height="50" width="50" />
 						<div class="passion-text">
 							<h3 class="text-uppercase">Exercise</h3>
-							<p>This is filler text for now. I will first format everything, then replace this with meaningful material when I can. :D</p>
+							<p>I love to challenge myself physically. I will do 50 consecutive pullups and run a half marathon by the year's end.</p>
 						</div>
 					</div>
 				</li>
@@ -174,7 +179,7 @@
 						<img src="images/icons/terminal.png" height="50" width="50" />
 						<div class="passion-text">
 							<h3 class="text-uppercase">Develop</h3>
-							<p>This is filler text for now. I will first format everything, then replace this with meaningful material when I can. :D</p>
+							<p>Coding is one of my favorite pastimes. I love to learn new front-end languages to create websites and applications.</p>
 						</div>
 					</div>
 				</li>
@@ -183,7 +188,7 @@
 						<img src="images/icons/heart.png" height="50" width="50" />
 						<div class="passion-text">
 							<h3 class="text-uppercase">Teach</h3>
-							<p>This is filler text for now. I will first format everything, then replace this with meaningful material when I can. :D</p>
+							<p>I've learned from others, and I strive to share my experiences. I plan to teach a design class in the fall semester.</p>
 						</div>
 					</div>
 				</li>
@@ -195,7 +200,7 @@
 </div>
 
 <!-- SKILLS -->
-<div class="container-fluid parallax">
+<div class="container-fluid parallax page">
 	<div class="header-class" id="skills">
 		<h2 class="text-center text-uppercase text-white">Skills</h2>
 		<img src="images/blue-line.png" height="30" width="200" class="center-block text-center" />
@@ -222,13 +227,13 @@
 					<span class="text-white">70%</span>
 				</div>
 			</div>
-			<h4>Microsoft Excel</h4>
+			<h4>React JS</h4>
 			<div class="progress p-bar">
 				<div class="progress-bar text-blue" role="progressbar" aria-valuenow="60" aria-valuemax="100" style="width: 60%">
 					<span class="text-white">60%</span>
 				</div>
 			</div>
-			<h4>React JS</h4>
+			<h4>Microsoft Excel</h4>
 			<div class="progress p-bar">
 				<div class="progress-bar text-blue" role="progressbar" aria-valuenow="50" aria-valuemax="100" style="width: 50%">
 					<span class="text-white">50%</span>
@@ -236,8 +241,8 @@
 			</div>
 		</div>
 		<div class="col-sm-2 text-left">
-			<h3>Interests</h3>
 			<ul class="skills-list">
+				<h3>Interests</h3>
 				<li><img src="images/icons/add.png" height="20" width="20" /> &nbsp; User Behavior</li>
 				<li><img src="images/icons/add.png" height="20" width="20" /> &nbsp; Productivity</li>
 				<li><img src="images/icons/add.png" height="20" width="20" /> &nbsp; Startups</li>
@@ -251,12 +256,11 @@
 	<div class="row text-white">
 		<div class="col-sm-2"></div>
 		<div class="col-sm-6">
-			<h3>Concepts</h3>
-			
+<!--			<h3>Concepts</h3>-->
 		</div>
 		<div class="col-sm-2 text-left">
-			<h3>Hobbies</h3>
 			<ul class="skills-list">
+				<h3>Hobbies</h3>
 				<li><img src="images/icons/karaoke.png" height="20" width="20" /> &nbsp; Karaoke</li>
 				<li><img src="images/icons/pan.png" height="20" width="20" /> &nbsp; Cooking</li>
 				<li><img src="images/icons/hiking.png" height="20" width="20" /> &nbsp; Hiking</li>

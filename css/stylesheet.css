@@ -68,7 +68,7 @@ p#about-description {
 
 .passion-card {
 	display: inline-block;
-	padding: 0 0 5% 0;
+	padding: 5% 0 5% 0;
 }
 
 .passion-text {
@@ -95,7 +95,7 @@ p#about-description {
 /*** === SKILLS SECTION === ***/
 
 div#skills-section h3 {
-	font-size: 2em;
+/*	font-size: 2em;*/
 	letter-spacing: 0.035em;
 	margin: 0 0 3% 0;
 }
@@ -115,6 +115,7 @@ div#progress-bars h4{
 	line-height: 1.75em;
 	list-style: none;
 }
+
 
 /*** END OF SKILLS SECTION ***/
 
@@ -143,6 +144,10 @@ ul#social-nav li:hover {
 
 /*** === CLASSES === ***/
 
+.active-link {
+	border-bottom: solid #2980B9;
+}
+
 .header-class {
 	margin: 3% 0;
 }
@@ -161,6 +166,10 @@ ul#social-nav li:hover {
 
 .super-dark {
 	background-color: #202020;
+}
+
+.page {
+	min-height: 730px;
 }
 
 /*** END OF CLASSES ***/
