@@ -9,6 +9,7 @@ nav#navigation-bar {
 	border: none;
 	z-index: 5;
 	height: 12%;
+	max-width: 100%;
 }
 
 ul#main-navigation {
@@ -112,8 +113,11 @@ div#progress-bars h4{
 
 .skills-list {
 	font-size: 1.65em;
-	line-height: 1.75em;
 	list-style: none;
+}
+
+.skills-list li {
+	margin: 0.375em 0;
 }
 
 .donut-chart {
@@ -142,6 +146,11 @@ p#contact-description a:hover {
 
 ul#social-nav li {
 	margin: 0 0.5%;
+	font-size: 2.5em;
+}
+
+ul#social-nav *:before {
+	color: white;
 }
 
 ul#social-nav li:hover {
