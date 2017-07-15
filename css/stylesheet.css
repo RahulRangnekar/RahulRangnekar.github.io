@@ -26,9 +26,13 @@ ul#main-navigation li a {
 
 /*** === LANDING SECTION === ***/
 
+div#top-container {
+	position: relative;
+}
+
 div#heading-holder {
 	position: absolute;
-	top: 50%;
+	top: 40%;
 	left: 2.5%;
 }
 
@@ -220,14 +224,28 @@ p strong {
 }
 
 body {
+	background-color: white;
+	font-family: "Raleway", sans-serif;
+	font-size: 1em;
 	margin: 0;
 	padding: 0;
-	font-family: "Raleway", sans-serif;
-	font-size: 100%;
-	background-color: white;
 }
 
 /*** END OF BUILT-IN CLASSES ***/
+
+/*** === MEDIA QUERIES === ***/
+
+
+/*@media (min-width: 768px) {
+	h1 { font-size: 112px; }
+	p { font-size: 40px; }
+}
+
+@media (min-width: 425px) {
+	h1 { font-size: 10px; }
+	p { font-size: 30px; }
+}*/
+
 
 /*** CHANGE HIGHLIGHT COLOR ***/
 
