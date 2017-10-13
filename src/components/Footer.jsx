@@ -6,77 +6,105 @@ import { Link } from 'react-router-dom';
 import { css, StyleSheet } from 'aphrodite';
 import { fadeIn } from 'react-animations';
 
+const FOOTER_INFO = [
+  {
+    media: 'github',
+    link: '/',
+    icon: 'github'
+  },
+  {
+    media: 'medium',
+    link: '/',
+    icon: 'medium'
+  },
+  {
+    media: 'linkedin',
+    link: '/',
+    icon: 'linkedin'
+  },
+  {
+    media: 'yelp',
+    link: '/',
+    icon: 'yelp'
+  },
+  {
+    media: 'quora',
+    link: '/',
+    icon: 'quora'
+  },
+  {
+    media: 'spotify',
+    link: '/',
+    icon: 'spotify'
+  },
+  {
+    media: 'twitter',
+    link: '/',
+    icon: 'twitter'
+  },
+  {
+    media: 'instagram',
+    link: '/',
+    icon: 'instagram'
+  }
+];
+
 export default class Navbar extends React.Component {
   render() {
+    const socialMediaLinks = FOOTER_INFO.map(media => {
+      return (
+        <Link
+          className={css(styles.mediaLink, styles.link)}
+          to={media.link}
+          target="blank"
+        >
+          <i className={` fa fa-${media.icon}`} aria-hidden="true" />
+        </Link>
+      );
+    });
+
     return (
-      <div id="navbar-container" className={css(styles.fadeIn)}>
-        <div className={css(styles.headerContainer)}>
-          <Link to="/" className={css(styles.headerLink)}>
-            <img
-              src="images/logo-white.png"
-              className={css(styles.logo)}
-              alt={'yelp logo'}
-            />
-          </Link>
-          <div className={css(styles.linkContainer)} />
+      <div className={css(styles.footerContainer, styles.fadeIn)}>
+        <p className={css(styles.text)}>Peace and Love</p>
+        <div className={css(styles.socialMediaContainer)}>
+          {socialMediaLinks}
         </div>
+        <Link
+          className={css(styles.link)}
+          to={'https://github.com/rahrang/rahrang.github.io/'}
+          target="blank"
+        >
+          Source Code
+        </Link>
       </div>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  headerContainer: {
-    backgroundColor: '#D32323',
-    width: '100%',
+  footerContainer: {
+    backgroundColor: '#333',
+    color: '#FFF',
+    fontFamily: 'Raleway, sans-serif',
     display: 'flex',
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: '10px 0'
+    padding: '0 15px',
+    fontSize: '0.875em'
   },
 
-  headerLink: {
-    color: '#F5F5F5',
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    textDecoration: 'none',
-    ':hover': {
-      color: '#333'
-    }
-  },
-
-  logo: {
-    height: '77px',
-    width: '120px'
-  },
-
-  header: {
-    fontFamily: 'Montserrat, sans-serif',
-    fontSize: '1.75em',
-    letterSpacing: '0.025em',
-    margin: 0,
-    padding: '0 0 0 10px',
-    textTransform: 'uppercase'
-  },
-
-  creditContainer: {
-    color: '#F5F5F5',
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    fontFamily: 'Muli, sans-serif',
-    padding: '0 20px 0 0'
-  },
-
-  creditLink: {
-    color: '#F5F5F5',
-    cursor: 'pointer',
-    padding: '0 3px',
+  mediaLink: {
+    padding: '0 5px',
     margin: '0 5px',
+    fontSize: '1.25em'
+  },
+
+  link: {
+    color: '#FFF',
     textDecoration: 'none',
     ':hover': {
-      color: '#333'
+      color: '#2980B9'
     }
   },
 

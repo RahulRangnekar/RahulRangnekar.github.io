@@ -2,7 +2,7 @@
 import React from 'react';
 
 // NPM Modules
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { css, StyleSheet } from 'aphrodite';
 import { fadeIn } from 'react-animations';
 
@@ -15,10 +15,23 @@ export default class Navbar extends React.Component {
             <img
               src="images/logo-white.png"
               className={css(styles.logo)}
-              alt={'yelp logo'}
+              alt={'personal logo'}
             />
           </Link>
-          <div className={css(styles.linkContainer)} />
+          <div className={css(styles.linkContainer)}>
+            <NavLink to="/about" className={css(styles.link)}>
+              About
+            </NavLink>
+            <NavLink to="/passions" className={css(styles.link)}>
+              Passions
+            </NavLink>
+            <NavLink to="/projects" className={css(styles.link)}>
+              Projects
+            </NavLink>
+            <NavLink to="/contact" className={css(styles.link)}>
+              Contact
+            </NavLink>
+          </div>
         </div>
       </div>
     );
@@ -43,6 +56,23 @@ const styles = StyleSheet.create({
   logo: {
     height: '45px',
     width: '50px'
+  },
+
+  linkContainer: {
+    fontFamily: 'Raleway, sans-serif',
+    fontSize: '0.875em',
+    textTransform: 'uppercase',
+    padding: '0 10px'
+  },
+
+  link: {
+    color: '#FFF',
+    padding: '5px',
+    margin: '0 5px',
+    textDecoration: 'none',
+    ':hover': {
+      color: '#2980B9'
+    }
   },
 
   fadeIn: {

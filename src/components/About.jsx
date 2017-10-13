@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { css, StyleSheet } from 'aphrodite';
 import { fadeIn } from 'react-animations';
 
-export default class Home extends React.Component {
+export default class About extends React.Component {
   render() {
     return <div id="navbar-container" className={css(styles.fadeIn)} />;
   }
