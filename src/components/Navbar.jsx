@@ -9,7 +9,7 @@ import { fadeIn } from 'react-animations';
 export default class Navbar extends React.Component {
   render() {
     return (
-      <div id="navbar-container" className={css(styles.fadeIn)}>
+      <div id="navbar-container">
         <div className={css(styles.headerContainer)}>
           <Link to="/" className={css(styles.headerLink)}>
             <img
@@ -21,6 +21,9 @@ export default class Navbar extends React.Component {
           <div className={css(styles.linkContainer)}>
             <NavLink to="/about" className={css(styles.link)}>
               About
+            </NavLink>
+            <NavLink to="/skills" className={css(styles.link)}>
+              Skills
             </NavLink>
             <NavLink to="/passions" className={css(styles.link)}>
               Passions
@@ -45,7 +48,10 @@ const styles = StyleSheet.create({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: '10px 0'
+    padding: '10px 0',
+    zIndex: 2,
+    position: 'absolute',
+    top: '0'
   },
 
   headerLink: {
@@ -54,13 +60,14 @@ const styles = StyleSheet.create({
   },
 
   logo: {
-    height: '45px',
-    width: '50px'
+    height: '40px',
+    width: '44px'
   },
 
   linkContainer: {
-    fontFamily: 'Raleway, sans-serif',
     fontSize: '0.875em',
+    fontWeight: 'bold',
+    letterSpacing: '0.0125em',
     textTransform: 'uppercase',
     padding: '0 10px'
   },
@@ -73,10 +80,5 @@ const styles = StyleSheet.create({
     ':hover': {
       color: '#2980B9'
     }
-  },
-
-  fadeIn: {
-    animationName: fadeIn,
-    animationDuration: '1s'
   }
 });

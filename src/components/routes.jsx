@@ -10,6 +10,7 @@ import { StyleSheet, css } from 'aphrodite';
 import Navbar from './Navbar.jsx';
 import Home from './Home.jsx';
 import About from './About.jsx';
+import Skills from './Skills.jsx';
 import Passions from './Passions.jsx';
 import Project from './Project.jsx';
 import Proj from './Proj.jsx';
@@ -24,7 +25,8 @@ export default class Routes extends React.Component {
         <div className={css(styles.mainContainer)}>
           <Switch>
             <Route exact path={'/'} component={Home} />
-            <Route exact path={'/skills'} component={About} />
+            <Route exact path={'/about'} component={About} />
+            <Route exact path={'/skills'} component={Skills} />
             <Route exact path={'/passions'} component={Passions} />
             <Route exact path={'/projects'} component={Project} />
             <Route path={`/projects/:project_title`} component={Proj} />
@@ -39,6 +41,6 @@ export default class Routes extends React.Component {
 
 const styles = StyleSheet.create({
   mainContainer: {
-    minHeight: 'calc(100vh - 113px)'
+    minHeight: 'calc(100vh - 44px)'
   }
 });

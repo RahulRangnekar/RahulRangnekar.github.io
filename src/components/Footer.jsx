@@ -6,54 +6,12 @@ import { Link } from 'react-router-dom';
 import { css, StyleSheet } from 'aphrodite';
 import { fadeIn } from 'react-animations';
 
-const FOOTER_INFO = [
-  {
-    media: 'github',
-    link: '/',
-    icon: 'github'
-  },
-  {
-    media: 'medium',
-    link: '/',
-    icon: 'medium'
-  },
-  {
-    media: 'linkedin',
-    link: '/',
-    icon: 'linkedin'
-  },
-  {
-    media: 'yelp',
-    link: '/',
-    icon: 'yelp'
-  },
-  {
-    media: 'quora',
-    link: '/',
-    icon: 'quora'
-  },
-  {
-    media: 'spotify',
-    link: '/',
-    icon: 'spotify'
-  },
-  {
-    media: 'twitter',
-    link: '/',
-    icon: 'twitter'
-  },
-  {
-    media: 'instagram',
-    link: '/',
-    icon: 'instagram'
-  }
-];
-
-export default class Navbar extends React.Component {
+export default class Footer extends React.Component {
   render() {
     const socialMediaLinks = FOOTER_INFO.map(media => {
       return (
         <Link
+          key={media.type}
           className={css(styles.mediaLink, styles.link)}
           to={media.link}
           target="blank"
@@ -85,7 +43,6 @@ const styles = StyleSheet.create({
   footerContainer: {
     backgroundColor: '#333',
     color: '#FFF',
-    fontFamily: 'Raleway, sans-serif',
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
@@ -113,3 +70,51 @@ const styles = StyleSheet.create({
     animationDuration: '1s'
   }
 });
+
+const FOOTER_INFO = [
+  {
+    type: 'email',
+    link: 'mailto:rr@berkeley.edu',
+    icon: 'envelope'
+  },
+  {
+    type: 'github',
+    link: 'https://github.com/rahrang',
+    icon: 'github'
+  },
+  {
+    type: 'medium',
+    link: 'https://medium.com/@rahrang',
+    icon: 'medium'
+  },
+  {
+    type: 'linkedin',
+    link: 'https://www.linkedin.com/in/rahrang',
+    icon: 'linkedin'
+  },
+  {
+    type: 'yelp',
+    link: 'https://rahrang.yelp.com',
+    icon: 'yelp'
+  },
+  {
+    type: 'quora',
+    link: 'https://www.quora.com/profile/Rahul-Rangnekar-6',
+    icon: 'quora'
+  },
+  {
+    type: 'spotify',
+    link: 'https://open.spotify.com/user/rahrang',
+    icon: 'spotify'
+  },
+  {
+    type: 'twitter',
+    link: 'https://twitter.com/rahrangnek',
+    icon: 'twitter'
+  },
+  {
+    type: 'instagram',
+    link: 'https://www.instagram.com/rahrang/',
+    icon: 'instagram'
+  }
+];
