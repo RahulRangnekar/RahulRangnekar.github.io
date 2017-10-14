@@ -50,9 +50,10 @@ export default class About extends React.Component {
             <p className={css(styles.paragraph)}>
               <span className={css(styles.highlighted)}>Quirks</span>
               <br />
-              - Greets dogs before humans <br />
-              - Browses Medium endlessly to read about productivity <br />
               - Challenges self to climb every statue in the Bay Area <br />
+              - Takes pictures of food before eating - "it's for the Yelp"{' '}
+              <br />
+              - Considers Medium and Quora his favorite social media <br />
               - Feeds off the energy of ideas to make the world a better place
             </p>
           </div>
