@@ -13,7 +13,7 @@ export default class Home extends React.Component {
         <img
           src="images/cover copy.jpg"
           className={css(styles.image)}
-          alt="A picture of me"
+          alt="Me - Rahul Rangnekar"
         />
         <div className={css(styles.textContainer)}>
           <h1 className={css(styles.name)}>Rahul Rangnekar</h1>

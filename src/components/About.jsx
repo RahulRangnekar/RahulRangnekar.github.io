@@ -8,42 +8,114 @@ import { fadeIn } from 'react-animations';
 
 export default class About extends React.Component {
   render() {
-    return <div id="navbar-container" className={css(styles.fadeIn)} />;
+    return (
+      <div className={css(styles.columnContainer, styles.fadeIn)}>
+        <h2 className={css(styles.sectionHeader)}> About </h2>
+        <div className={css(styles.rowContainer)}>
+          <div className={css(styles.columnContainer, styles.leftContainer)}>
+            <img
+              src={'/images/rahul-1.jpg'}
+              className={css(styles.image)}
+              alt="Me"
+            />
+          </div>
+          <div className={css(styles.rightContainer)}>
+            <p className={css(styles.paragraph)}>
+              <span className={css(styles.highlighted)}>Hello! </span>
+              I'm Rahul, a senior at UC Berkeley.
+            </p>
+            <p className={css(styles.paragraph)}>
+              I tend to spend my time
+              <span className={css(styles.highlighted)}> creating </span>
+              - websites, articles, products, food - and I love every second of
+              it!
+            </p>
+            <p className={css(styles.paragraph)}>
+              <span className={css(styles.highlighted)}>Capabilities</span>
+              <br />
+              - Studies Computer Science and Economics <br />
+              - Walks anywhere and everywhere within a 2 mile radius <br />
+              - Eats anything pescatarian thanks to a bottomless stomach <br />
+              - Raps anything from Childish Gambino to Hamilton on command
+            </p>
+            <p className={css(styles.paragraph)}>
+              <span className={css(styles.highlighted)}>Whereabouts</span>
+              <br />
+              - Berkeley campus: searching for hidden areas and secrets <br />
+              - Sacks Coffee: filling up on my weekly caffeine and studying{' '}
+              <br />
+              - My Kitchen: prepping meals for the week or baking goodies <br />
+              - Memorial Stadium Gym: getting swole every day before class
+            </p>
+            <p className={css(styles.paragraph)}>
+              <span className={css(styles.highlighted)}>Quirks</span>
+              <br />
+              - Greets dogs before humans <br />
+              - Browses Medium endlessly to read about productivity <br />
+              - Challenges self to climb every statue in the Bay Area <br />
+              - Feeds off the energy of ideas to make the world a better place
+            </p>
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 
 const styles = StyleSheet.create({
-  headerContainer: {
-    backgroundColor: '#333',
-    width: '100%',
+  columnContainer: {
     display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+
+  sectionHeader: {
+    color: '#333',
+    fontSize: '1.875em',
+    borderBottom: '3px solid #2980B9',
+    padding: '10px 20px',
+    textTransform: 'uppercase'
+  },
+
+  rowContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    padding: '15px'
+  },
+
+  leftContainer: {
+    flex: 1
+  },
+
+  rightContainer: {
+    display: 'flex',
+    flex: 1,
+    flexDirection: 'column',
+    textAlign: 'left'
+  },
+
+  image: {
+    width: '400px',
+    height: '400px',
+    border: '3px solid #2980B9',
+    borderRadius: '50%'
+  },
+
+  paragraph: {
+    color: '#333',
+    fontSize: '1.25em',
+    lineHeight: '1.375em',
+    margin: 0,
     padding: '10px 0'
   },
 
-  headerLink: {
-    padding: '0 10px',
-    textDecoration: 'none'
-  },
-
-  logo: {
-    height: '45px',
-    width: '50px'
-  },
-
-  linkContainer: {
-    fontFamily: 'Raleway, sans-serif',
-    fontSize: '0.875em',
-    textTransform: 'uppercase',
-    padding: '0 10px'
-  },
-
-  link: {
-    color: '#FFF',
-    padding: '5px',
-    margin: '0 5px',
-    textDecoration: 'none'
+  highlighted: {
+    color: '#2980B9',
+    fontWeight: 'bold',
+    letterSpacing: '0.035em'
   },
 
   fadeIn: {

@@ -41,6 +41,6 @@ export default class Routes extends React.Component {
 
 const styles = StyleSheet.create({
   mainContainer: {
-    minHeight: 'calc(100vh - 44px)'
+    minHeight: 'calc(100vh - 108px)'
   }
 });

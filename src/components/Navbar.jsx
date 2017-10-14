@@ -4,10 +4,21 @@ import React from 'react';
 // NPM Modules
 import { Link, NavLink } from 'react-router-dom';
 import { css, StyleSheet } from 'aphrodite';
-import { fadeIn } from 'react-animations';
 
 export default class Navbar extends React.Component {
   render() {
+    const navLinks = navLinkInfo.map(item => {
+      return (
+        <NavLink
+          to={item.to}
+          className={css(styles.link)}
+          activeClassName={css(styles.activeLink)}
+        >
+          {item.text}
+        </NavLink>
+      );
+    });
+
     return (
       <div id="navbar-container">
         <div className={css(styles.headerContainer)}>
@@ -18,23 +29,7 @@ export default class Navbar extends React.Component {
               alt={'personal logo'}
             />
           </Link>
-          <div className={css(styles.linkContainer)}>
-            <NavLink to="/about" className={css(styles.link)}>
-              About
-            </NavLink>
-            <NavLink to="/skills" className={css(styles.link)}>
-              Skills
-            </NavLink>
-            <NavLink to="/passions" className={css(styles.link)}>
-              Passions
-            </NavLink>
-            <NavLink to="/projects" className={css(styles.link)}>
-              Projects
-            </NavLink>
-            <NavLink to="/contact" className={css(styles.link)}>
-              Contact
-            </NavLink>
-          </div>
+          <div className={css(styles.linkContainer)}>{navLinks}</div>
         </div>
       </div>
     );
@@ -48,10 +43,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: '10px 0',
-    zIndex: 2,
-    position: 'absolute',
-    top: '0'
+    padding: '10px 0'
   },
 
   headerLink: {
@@ -80,5 +72,32 @@ const styles = StyleSheet.create({
     ':hover': {
       color: '#2980B9'
     }
+  },
+
+  activeLink: {
+    borderBottom: '2px solid #2980B9'
   }
 });
+
+const navLinkInfo = [
+  {
+    to: '/about',
+    text: 'About'
+  },
+  {
+    to: '/skills',
+    text: 'Skills'
+  },
+  {
+    to: '/passions',
+    text: 'Passions'
+  },
+  {
+    to: '/projects',
+    text: 'Projects'
+  },
+  {
+    to: '/contact',
+    text: 'Contact'
+  }
+];
