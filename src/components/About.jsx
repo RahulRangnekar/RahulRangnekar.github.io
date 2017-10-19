@@ -10,7 +10,7 @@ export default class About extends React.Component {
   render() {
     return (
       <div className={css(styles.columnContainer, styles.fadeIn)}>
-        <h2 className={css(styles.sectionHeader)}> About </h2>
+        <h2 className={css(styles.header)}> About </h2>
         <div className={css(styles.rowContainer)}>
           <div className={css(styles.columnContainer, styles.leftContainer)}>
             <img
@@ -50,7 +50,7 @@ export default class About extends React.Component {
             <p className={css(styles.paragraph)}>
               <span className={css(styles.highlighted)}>Quirks</span>
               <br />
-              - Challenges self to climb every statue in the Bay Area <br />
+              - Strategizes how to climb every statue he sees <br />
               - Takes pictures of food before eating - "it's for the Yelp"{' '}
               <br />
               - Considers Medium and Quora his favorite social media <br />
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
 
-  sectionHeader: {
+  header: {
     color: '#333',
     fontSize: '1.875em',
     borderBottom: '3px solid #2980B9',
