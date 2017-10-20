@@ -2,7 +2,6 @@
 import React from 'react';
 
 // NPM Modules
-import { Link } from 'react-router-dom';
 import { css, StyleSheet } from 'aphrodite';
 import { fadeIn } from 'react-animations';
 
@@ -62,7 +61,6 @@ const styles = StyleSheet.create({
   },
 
   image: {
-    // maxWidth: '100%',
     width: 'auto',
     height: 'auto',
     margin: '0',

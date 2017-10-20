@@ -2,32 +2,62 @@
 import React from 'react';
 
 // NPM Modules
-import { Link } from 'react-router-dom';
 import { css, StyleSheet } from 'aphrodite';
 import { Circle } from 'rc-progress';
 
 export default class ProgressCircle extends React.Component {
   render() {
-    let { percent, gapDegree, gapPosition } = this.props;
+    let { progressText, percent } = this.props;
 
     return (
-      <Circle
-        percent={percent}
-        strokeWidth={'5'}
-        strokeColor={'#2980B9'}
-        trailWidth={'5'}
-        trailColor={'#F5F5F5'}
-        strokeLinecap={'square'}
-        className={css(styles.progress)}
-        gapDegree={gapDegree ? gapDegree : 0}
-        gapPosition={gapPosition ? gapPosition : 'top'}
-      />
+      <div className={css(styles.progressContainer)}>
+        <p className={css(styles.progressText)}>{progressText}</p>
+        <div className={css(styles.circleContainer)}>
+          <span className={css(styles.percent)}>{percent}%</span>
+          <Circle
+            percent={percent}
+            strokeWidth={'13'}
+            strokeColor={'#2980B9'}
+            trailWidth={'12'}
+            trailColor={'#F5F5F5'}
+            strokeLinecap={'square'}
+            className={css(styles.progress)}
+          />
+        </div>
+      </div>
     );
   }
 }
 
 const styles = StyleSheet.create({
   progress: {
-    padding: '5px'
+    width: '100px'
+  },
+
+  progressContainer: {
+    color: '#FFF',
+    fontSize: '0.875em',
+    letterSpacing: '0.025em',
+    margin: '0 10px',
+    padding: '3px 0',
+    textAlign: 'center',
+    width: '165px'
+  },
+
+  progressText: {
+    padding: '6px 0',
+    margin: '0'
+  },
+
+  circleContainer: {
+    position: 'relative'
+  },
+
+  percent: {
+    fontSize: '1.25em',
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)'
   }
 });

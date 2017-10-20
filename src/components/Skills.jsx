@@ -2,7 +2,6 @@
 import React from 'react';
 
 // NPM Modules
-import { Link } from 'react-router-dom';
 import { css, StyleSheet } from 'aphrodite';
 import { fadeIn } from 'react-animations';
 
@@ -13,68 +12,110 @@ export default class Skills extends React.Component {
   render() {
     return (
       <div className={css(styles.skillsContainer, styles.fadeIn)}>
-        <h2 className={css(styles.header)}> Skills </h2>
-        <div className={css(styles.container)}>
-          <h3 className={css(styles.sectionHeader)}>Programming</h3>
-          <div className={css(styles.programmingContainer)}>
-            <div className={css(styles.programmingSubcontainer)}>
-              <div className={css(styles.subsectionContainer)}>
-                <h4 className={css(styles.subsectionHeader)}>Languages</h4>
-                <div className={css(styles.progressBars)}>
-                  {progressBars.slice(0, 3).map(bar => {
-                    return (
-                      <ProgressLine
-                        key={bar.text}
-                        progressText={bar.text}
-                        percent={bar.percent}
-                      />
-                    );
-                  })}
+        <h2 className={css(styles.header)}> What I'm Good At </h2>
+
+        <div className={css(styles.bodyContainer)}>
+          <div className={css(styles.container)}>
+            <h3 className={css(styles.sectionHeader)}>Programming</h3>
+            <div className={css(styles.pContainer)}>
+              <div className={css(styles.pSubcontainer)}>
+                <div className={css(styles.subsectionContainer)}>
+                  <h4 className={css(styles.subsectionHeader)}>Languages</h4>
+                  <div className={css(styles.progressBars)}>
+                    {progressBars.slice(0, 3).map(bar => {
+                      return (
+                        <ProgressLine
+                          key={bar.text}
+                          progressText={bar.text}
+                          percent={bar.percent}
+                        />
+                      );
+                    })}
+                  </div>
+                </div>
+                <div className={css(styles.subsectionContainer)}>
+                  <h4 className={css(styles.subsectionHeader)}>Libraries</h4>
+                  <div className={css(styles.progressBars)}>
+                    {progressBars.slice(3, 4).map(bar => {
+                      return (
+                        <ProgressLine
+                          key={bar.text}
+                          progressText={bar.text}
+                          percent={bar.percent}
+                        />
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
-              <div className={css(styles.subsectionContainer)}>
-                <h4 className={css(styles.subsectionHeader)}>Libraries</h4>
-                <div className={css(styles.progressBars)}>
-                  {progressBars.slice(3, 4).map(bar => {
-                    return (
-                      <ProgressLine
-                        key={bar.text}
-                        progressText={bar.text}
-                        percent={bar.percent}
-                      />
-                    );
-                  })}
+              <div className={css(styles.pSubcontainer)}>
+                <div className={css(styles.subsectionContainer)}>
+                  <h4 className={css(styles.subsectionHeader)}>Frameworks</h4>
+                  <div className={css(styles.progressBars)}>
+                    {progressBars.slice(4, 7).map(bar => {
+                      return (
+                        <ProgressLine
+                          key={bar.text}
+                          progressText={bar.text}
+                          percent={bar.percent}
+                        />
+                      );
+                    })}
+                  </div>
+                </div>
+                <div className={css(styles.subsectionContainer)}>
+                  <h4 className={css(styles.subsectionHeader)}>Databases</h4>
+                  <div className={css(styles.progressBars)}>
+                    {progressBars.slice(7, 8).map(bar => {
+                      return (
+                        <ProgressLine
+                          key={bar.text}
+                          progressText={bar.text}
+                          percent={bar.percent}
+                        />
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </div>
-            <div className={css(styles.programmingSubcontainer)}>
-              <div className={css(styles.subsectionContainer)}>
-                <h4 className={css(styles.subsectionHeader)}>Frameworks</h4>
-                <div className={css(styles.progressBars)}>
-                  {progressBars.slice(4, 7).map(bar => {
-                    return (
-                      <ProgressLine
-                        key={bar.text}
-                        progressText={bar.text}
-                        percent={bar.percent}
-                      />
-                    );
-                  })}
-                </div>
+          </div>
+
+          <div className={css(styles.container)}>
+            <h3 className={css(styles.sectionHeader)}>Product</h3>
+            <div className={css(styles.prodContainer)}>
+              <div className={css(styles.prodSubcontainer)}>
+                {progressPies.slice(0, 3).map(pie => {
+                  return (
+                    <ProgressCircle
+                      key={pie.text}
+                      progressText={pie.text}
+                      percent={pie.percent}
+                    />
+                  );
+                })}
               </div>
-              <div className={css(styles.subsectionContainer)}>
-                <h4 className={css(styles.subsectionHeader)}>Databases</h4>
-                <div className={css(styles.progressBars)}>
-                  {progressBars.slice(7, 8).map(bar => {
-                    return (
-                      <ProgressLine
-                        key={bar.text}
-                        progressText={bar.text}
-                        percent={bar.percent}
-                      />
-                    );
-                  })}
-                </div>
+              <div className={css(styles.prodSubcontainer)}>
+                {progressPies.slice(3, 6).map(pie => {
+                  return (
+                    <ProgressCircle
+                      key={pie.text}
+                      progressText={pie.text}
+                      percent={pie.percent}
+                    />
+                  );
+                })}
+              </div>
+              <div className={css(styles.prodSubcontainer)}>
+                {progressPies.slice(6, 7).map(pie => {
+                  return (
+                    <ProgressCircle
+                      key={pie.text}
+                      progressText={pie.text}
+                      percent={pie.percent}
+                    />
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -93,11 +134,19 @@ const styles = StyleSheet.create({
     minHeight: 'calc(100vh - 108px)'
   },
 
+  bodyContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexFlow: 'wrap',
+    alignItems: 'baseline',
+    justifyContent: 'center'
+  },
+
   container: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'center'
   },
 
   header: {
@@ -116,14 +165,31 @@ const styles = StyleSheet.create({
     padding: 0
   },
 
-  programmingContainer: {
+  pContainer: {
     display: 'flex',
     flexDirection: 'row',
+    flexFlow: 'wrap',
     alignItems: 'center',
     justifyContent: 'center'
   },
 
-  programmingSubcontainer: {
+  prodContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+
+  pSubcontainer: {
+    margin: '0 15px'
+  },
+
+  prodSubcontainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexFlow: 'wrap',
     margin: '0 15px'
   },
 
@@ -188,5 +254,32 @@ const progressBars = [
   {
     text: 'MongoDB',
     percent: '60'
+  }
+];
+
+const progressPies = [
+  {
+    text: 'Product Management',
+    percent: '70'
+  },
+  {
+    text: 'Written Communication',
+    percent: '85'
+  },
+  {
+    text: 'Strategic Thinking',
+    percent: '80'
+  },
+  {
+    text: 'Project Management',
+    percent: '70'
+  },
+  {
+    text: 'User Research',
+    percent: '65'
+  },
+  {
+    text: 'Wireframing',
+    percent: '50'
   }
 ];

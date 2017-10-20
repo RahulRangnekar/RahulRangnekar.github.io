@@ -2,7 +2,6 @@
 import React from 'react';
 
 // NPM Modules
-import { Link } from 'react-router-dom';
 import { css, StyleSheet } from 'aphrodite';
 import { Line } from 'rc-progress';
 
@@ -19,7 +18,7 @@ export default class ProgressLine extends React.Component {
           strokeColor={'#2980B9'}
           trailWidth={'5'}
           trailColor={'#F5F5F5'}
-          strokeLinecap={'butt'}
+          strokeLinecap={'square'}
           className={css(styles.progress)}
         />
       </div>

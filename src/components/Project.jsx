@@ -8,42 +8,24 @@ import { fadeIn } from 'react-animations';
 
 export default class Project extends React.Component {
   render() {
-    return <div id="navbar-container" className={css(styles.fadeIn)} />;
+    return <div className={css(styles.container, styles.fadeIn)} />;
   }
 }
 
 const styles = StyleSheet.create({
-  headerContainer: {
-    backgroundColor: '#333',
-    width: '100%',
+  container: {
     display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    padding: '10px 0'
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
 
-  headerLink: {
-    padding: '0 10px',
-    textDecoration: 'none'
-  },
-
-  logo: {
-    height: '45px',
-    width: '50px'
-  },
-
-  linkContainer: {
-    fontFamily: 'Raleway, sans-serif',
-    fontSize: '0.875em',
-    textTransform: 'uppercase',
-    padding: '0 10px'
-  },
-
-  link: {
-    color: '#FFF',
-    padding: '5px',
-    margin: '0 5px',
-    textDecoration: 'none'
+  header: {
+    color: '#333',
+    fontSize: '1.875em',
+    borderBottom: '3px solid #2980B9',
+    padding: '10px 20px',
+    textTransform: 'uppercase'
   },
 
   fadeIn: {
