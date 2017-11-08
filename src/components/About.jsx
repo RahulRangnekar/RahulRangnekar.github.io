@@ -93,7 +93,11 @@ const styles = StyleSheet.create({
     width: '400px',
     height: '400px',
     border: '3px solid #2980B9',
-    borderRadius: '50%'
+    borderRadius: '50%',
+    '@media(max-width:600px)': {
+      width: '300px',
+      height: '300px'
+    }
   },
 
   paragraph: {

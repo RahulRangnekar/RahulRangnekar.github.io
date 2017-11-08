@@ -4,32 +4,70 @@ import React from 'react';
 // NPM Modules
 import { Link } from 'react-router-dom';
 import { css, StyleSheet } from 'aphrodite';
-import { fadeIn } from 'react-animations';
+
+// Stylesheets
+import { generalStyles } from '../../stylesheets/general_stylesheet.js';
 
 export default class Projects extends React.Component {
   render() {
-    return <div className={css(styles.container, styles.fadeIn)} />;
+    return (
+      <div className={css(generalStyles.columnContainer, generalStyles.fadeIn)}>
+        <h2 className={css(generalStyles.header)}>My Work</h2>
+        <div
+          className={css(
+            generalStyles.columnContainer,
+            styles.projectsContainer
+          )}
+        >
+          {PROJECTS.map(proj => {
+            return (
+              <div>
+                <p>{proj.title}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
+const styles = StyleSheet.create({});
 
-  header: {
-    color: '#333',
-    fontSize: '1.875em',
-    borderBottom: '3px solid #2980B9',
-    padding: '10px 20px',
-    textTransform: 'uppercase'
+const PROJECTS = [
+  {
+    title: 'Annot8',
+    icon: '',
+    text: ''
   },
-
-  fadeIn: {
-    animationName: fadeIn,
-    animationDuration: '1s'
+  {
+    title: "Let's Talk Product",
+    icon: '',
+    text: ''
+  },
+  {
+    title: 'Spotify Top 10',
+    icon: '',
+    text: ''
+  },
+  {
+    title: 'Yelp Elite',
+    icon: '',
+    text: ''
+  },
+  {
+    title: 'The Yelp Elite Project',
+    icon: '',
+    text: ''
+  },
+  {
+    title: 'Berkeley Pi Sigma Epsilon',
+    icon: '',
+    text: ''
+  },
+  {
+    title: 'Writer',
+    icon: '',
+    text: ''
   }
-});
+];

@@ -18,7 +18,7 @@ export default class Footer extends React.Component {
             return (
               <Link
                 key={media.type}
-                className={css(styles.mediaLink, styles.link)}
+                className={css(styles.link, styles.mediaLink)}
                 to={media.link}
                 target="blank"
               >
@@ -49,17 +49,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: '0 15px',
-    textAlign: 'center'
+    textAlign: 'center',
+    '@media(max-width:600px)': {
+      flexDirection: 'column'
+    }
   },
 
   mediaLink: {
-    padding: '0 5px',
-    margin: '0 5px',
+    // padding: '0 5px',
+    margin: '0 7.5px',
     fontSize: '1.25em'
   },
 
   link: {
     color: '#FFF',
+    margin: '10px 0',
     textDecoration: 'none',
     ':hover': {
       color: '#2980B9'
