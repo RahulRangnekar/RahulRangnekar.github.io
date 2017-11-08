@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { css, StyleSheet } from 'aphrodite';
 import { fadeIn } from 'react-animations';
 
-export default class Project extends React.Component {
+export default class Projects extends React.Component {
   render() {
     return <div className={css(styles.container, styles.fadeIn)} />;
   }

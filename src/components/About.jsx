@@ -4,15 +4,18 @@ import React from 'react';
 // NPM Modules
 import { Link } from 'react-router-dom';
 import { css, StyleSheet } from 'aphrodite';
-import { fadeIn } from 'react-animations';
+
+import { generalStyles } from '../stylesheets/general_stylesheet.js';
 
 export default class About extends React.Component {
   render() {
     return (
-      <div className={css(styles.columnContainer, styles.fadeIn)}>
-        <h2 className={css(styles.header)}> About </h2>
+      <div className={css(generalStyles.columnContainer, generalStyles.fadeIn)}>
+        <h2 className={css(generalStyles.header)}> About </h2>
         <div className={css(styles.rowContainer)}>
-          <div className={css(styles.columnContainer, styles.leftContainer)}>
+          <div
+            className={css(generalStyles.columnContainer, styles.leftContainer)}
+          >
             <img
               src={'/images/rahul-1.jpg'}
               className={css(styles.image)}
@@ -64,13 +67,6 @@ export default class About extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  columnContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-
   header: {
     color: '#333',
     fontSize: '1.875em',
@@ -124,10 +120,5 @@ const styles = StyleSheet.create({
     color: '#2980B9',
     fontWeight: 'bold',
     letterSpacing: '0.035em'
-  },
-
-  fadeIn: {
-    animationName: fadeIn,
-    animationDuration: '1s'
   }
 });

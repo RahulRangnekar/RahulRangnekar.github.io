@@ -3,19 +3,23 @@ import React from 'react';
 
 // NPM Modules
 import { css, StyleSheet } from 'aphrodite';
-import { fadeIn } from 'react-animations';
 
+// Local Components
 import ProgressLine from './ProgressLine.jsx';
 import ProgressCircle from './ProgressCircle.jsx';
+
+import { generalStyles } from '../../stylesheets/general_stylesheet.js';
 
 export default class Skills extends React.Component {
   render() {
     return (
-      <div className={css(styles.skillsContainer, styles.fadeIn)}>
-        <h2 className={css(styles.header)}>My Strengths</h2>
+      <div className={css(styles.skillsContainer, generalStyles.fadeIn)}>
+        <h2 className={css(generalStyles.header, generalStyles.altHeader)}>
+          My Strengths
+        </h2>
 
         <div className={css(styles.bodyContainer)}>
-          <div className={css(styles.container)}>
+          <div className={css(generalStyles.columnContainer)}>
             <h3 className={css(styles.sectionHeader)}>Programming</h3>
             <div className={css(styles.pContainer)}>
               <div className={css(styles.pSubcontainer)}>
@@ -81,7 +85,7 @@ export default class Skills extends React.Component {
             </div>
           </div>
 
-          <div className={css(styles.container)}>
+          <div className={css(generalStyles.columnContainer)}>
             <h3 className={css(styles.sectionHeader)}>Product</h3>
             <div className={css(styles.prodContainer)}>
               <div className={css(styles.prodSubcontainer)}>
@@ -145,22 +149,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
 
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-
-  header: {
-    borderBottom: '3px solid #2980B9',
-    color: '#FFF',
-    fontSize: '1.875em',
-    letterSpacing: '0.025em',
-    padding: '5px 20px',
-    textTransform: 'uppercase'
-  },
-
   sectionHeader: {
     color: '#FFF',
     fontSize: '1.625em',
@@ -210,11 +198,6 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     margin: '5px 0',
     padding: 0
-  },
-
-  fadeIn: {
-    animationName: fadeIn,
-    animationDuration: '1s'
   }
 });
 
