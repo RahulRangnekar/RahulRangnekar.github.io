@@ -12,7 +12,7 @@ export default class Skills extends React.Component {
   render() {
     return (
       <div className={css(styles.skillsContainer, styles.fadeIn)}>
-        <h2 className={css(styles.header)}> What I'm Good At </h2>
+        <h2 className={css(styles.header)}>My Strengths</h2>
 
         <div className={css(styles.bodyContainer)}>
           <div className={css(styles.container)}>
@@ -128,6 +128,9 @@ export default class Skills extends React.Component {
 const styles = StyleSheet.create({
   skillsContainer: {
     background: 'url(images/beach.jpg)',
+    backgroundAttachment: 'fixed',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',

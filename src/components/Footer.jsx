@@ -32,7 +32,7 @@ export default class Footer extends React.Component {
           to={'https://github.com/rahrang/rahrang.github.io/'}
           target="blank"
         >
-          Source Code
+          GitHub
         </Link>
       </div>
     );
@@ -43,12 +43,13 @@ const styles = StyleSheet.create({
   footerContainer: {
     backgroundColor: '#333',
     color: '#FFF',
+    fontSize: '0.875em',
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: '0 15px',
-    fontSize: '0.875em'
+    textAlign: 'center'
   },
 
   mediaLink: {

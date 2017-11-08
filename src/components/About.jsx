@@ -42,7 +42,7 @@ export default class About extends React.Component {
               <span className={css(styles.highlighted)}>Whereabouts</span>
               <br />
               - Berkeley campus: searching for hidden areas and secrets <br />
-              - Sacks Coffee: filling up on my weekly caffeine and studying{' '}
+              - Sacks Coffee: filling up on my weekly caffeine and studying
               <br />
               - My Kitchen: prepping meals for the week or baking goodies <br />
               - Memorial Stadium Gym: getting swole every day before class
@@ -51,7 +51,7 @@ export default class About extends React.Component {
               <span className={css(styles.highlighted)}>Quirks</span>
               <br />
               - Strategizes how to climb every statue he sees <br />
-              - Takes pictures of food before eating - "it's for the Yelp"{' '}
+              - Takes pictures of food before eating - "it's for the Yelp"
               <br />
               - Considers Medium and Quora his favorite social media <br />
               - Feeds off the energy of ideas to make the world a better place
@@ -84,7 +84,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '15px'
+    padding: '15px',
+    '@media(max-width:900px)': {
+      flexDirection: 'column'
+    }
   },
 
   leftContainer: {
@@ -110,7 +113,11 @@ const styles = StyleSheet.create({
     fontSize: '1.25em',
     lineHeight: '1.375em',
     margin: 0,
-    padding: '10px 0'
+    padding: '10px 0',
+    '@media(max-width:600px)': {
+      fontSize: '1em',
+      padding: '10px'
+    }
   },
 
   highlighted: {
