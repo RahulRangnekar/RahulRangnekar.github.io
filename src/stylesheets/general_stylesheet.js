@@ -1,4 +1,4 @@
-import { StyleSheet, css } from 'aphrodite';
+import { StyleSheet } from 'aphrodite';
 import { fadeIn } from 'react-animations';
 
 export const generalStyles = StyleSheet.create({

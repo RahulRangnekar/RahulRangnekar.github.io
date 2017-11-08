@@ -7,18 +7,6 @@ import { css, StyleSheet } from 'aphrodite';
 
 export default class Navbar extends React.Component {
   render() {
-    const navLinks = navLinkInfo.map(item => {
-      return (
-        <NavLink
-          to={item.to}
-          className={css(styles.link)}
-          activeClassName={css(styles.activeLink)}
-        >
-          {item.text}
-        </NavLink>
-      );
-    });
-
     return (
       <div id="navbar-container">
         <div className={css(styles.headerContainer)}>
@@ -29,7 +17,20 @@ export default class Navbar extends React.Component {
               alt={'personal logo'}
             />
           </Link>
-          <div className={css(styles.linkContainer)}>{navLinks}</div>
+          <div className={css(styles.linkContainer)}>
+            {navLinkInfo.map(item => {
+              return (
+                <NavLink
+                  to={item.to}
+                  target={item.openBlank && 'blank'}
+                  className={css(styles.link)}
+                  activeClassName={css(styles.activeLink)}
+                >
+                  {item.text}
+                </NavLink>
+              );
+            })}
+          </div>
         </div>
       </div>
     );
@@ -67,7 +68,7 @@ const styles = StyleSheet.create({
   link: {
     color: '#FFF',
     padding: '5px',
-    margin: '0 5px',
+    margin: '0 10px',
     textDecoration: 'none',
     ':hover': {
       color: '#2980B9'
@@ -97,7 +98,8 @@ const navLinkInfo = [
     text: 'Projects'
   },
   {
-    to: '/contact',
-    text: 'Contact'
+    to: '/Rahul_Rangnekar_Resume.pdf',
+    text: 'Resume',
+    openBlank: true
   }
 ];

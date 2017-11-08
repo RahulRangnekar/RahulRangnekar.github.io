@@ -8,6 +8,7 @@ import { css, StyleSheet } from 'aphrodite';
 import ProgressLine from './ProgressLine.jsx';
 import ProgressCircle from './ProgressCircle.jsx';
 
+// Stylesheets
 import { generalStyles } from '../../stylesheets/general_stylesheet.js';
 
 export default class Skills extends React.Component {

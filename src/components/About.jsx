@@ -2,9 +2,9 @@
 import React from 'react';
 
 // NPM Modules
-import { Link } from 'react-router-dom';
 import { css, StyleSheet } from 'aphrodite';
 
+// Stylesheets
 import { generalStyles } from '../stylesheets/general_stylesheet.js';
 
 export default class About extends React.Component {
@@ -67,14 +67,6 @@ export default class About extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  header: {
-    color: '#333',
-    fontSize: '1.875em',
-    borderBottom: '3px solid #2980B9',
-    padding: '10px 20px',
-    textTransform: 'uppercase'
-  },
-
   rowContainer: {
     display: 'flex',
     flexDirection: 'row',

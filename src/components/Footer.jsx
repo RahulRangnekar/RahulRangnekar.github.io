@@ -4,28 +4,28 @@ import React from 'react';
 // NPM Modules
 import { Link } from 'react-router-dom';
 import { css, StyleSheet } from 'aphrodite';
-import { fadeIn } from 'react-animations';
+
+// Stylesheets
+import { generalStyles } from '../stylesheets/general_stylesheet.js';
 
 export default class Footer extends React.Component {
   render() {
-    const socialMediaLinks = FOOTER_INFO.map(media => {
-      return (
-        <Link
-          key={media.type}
-          className={css(styles.mediaLink, styles.link)}
-          to={media.link}
-          target="blank"
-        >
-          <i className={` fa fa-${media.icon}`} aria-hidden="true" />
-        </Link>
-      );
-    });
-
     return (
-      <div className={css(styles.footerContainer, styles.fadeIn)}>
+      <div className={css(styles.footerContainer, generalStyles.fadeIn)}>
         <p className={css(styles.text)}>Peace and Love</p>
         <div className={css(styles.socialMediaContainer)}>
-          {socialMediaLinks}
+          {FOOTER_INFO.map(media => {
+            return (
+              <Link
+                key={media.type}
+                className={css(styles.mediaLink, styles.link)}
+                to={media.link}
+                target="blank"
+              >
+                <i className={` fa fa-${media.icon}`} aria-hidden="true" />
+              </Link>
+            );
+          })}
         </div>
         <Link
           className={css(styles.link)}
@@ -64,11 +64,6 @@ const styles = StyleSheet.create({
     ':hover': {
       color: '#2980B9'
     }
-  },
-
-  fadeIn: {
-    animationName: fadeIn,
-    animationDuration: '1s'
   }
 });
 

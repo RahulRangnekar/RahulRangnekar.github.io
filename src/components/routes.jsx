@@ -14,7 +14,6 @@ import Skills from './Skills/Skills.jsx';
 import Passions from './Passions/Passions.jsx';
 import Projects from './Projects/Projects.jsx';
 import Proj from './Projects/Proj.jsx';
-import Contact from './Contact.jsx';
 import Footer from './Footer.jsx';
 
 export default class Routes extends React.Component {
@@ -30,7 +29,6 @@ export default class Routes extends React.Component {
             <Route exact path={'/passions'} component={Passions} />
             <Route exact path={'/projects'} component={Projects} />
             <Route path={`/projects/:project_title`} component={Proj} />
-            <Route path={`/contact`} component={Contact} />
           </Switch>
         </div>
         <Footer />
