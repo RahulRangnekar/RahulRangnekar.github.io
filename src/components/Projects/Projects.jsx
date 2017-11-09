@@ -5,6 +5,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { css, StyleSheet } from 'aphrodite';
 
+// Local Components
+import ProjectCard from './ProjectCard.jsx';
+
 // Stylesheets
 import { generalStyles } from '../../stylesheets/general_stylesheet.js';
 
@@ -21,9 +24,13 @@ export default class Projects extends React.Component {
         >
           {PROJECTS.map(proj => {
             return (
-              <div>
-                <p>{proj.title}</p>
-              </div>
+              <ProjectCard
+                title={proj.title}
+                link={proj.link}
+                image={proj.image}
+                text={proj.text}
+                hoverStyle={proj.hoverStyle}
+              />
             );
           })}
         </div>
@@ -32,42 +39,100 @@ export default class Projects extends React.Component {
   }
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  projectsContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexFlow: 'wrap',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
+});
+
+const hoverStyles = StyleSheet.create({
+  annot8Hover: {
+    ':hover': {
+      background: 'linear-gradient(#3F7BA9, #FFF)'
+    }
+  },
+  spotifyHover: {
+    ':hover': {
+      background: 'linear-gradient(#1ED760, #FFF)'
+    }
+  },
+  pseHover: {
+    ':hover': {
+      background: 'linear-gradient(#895FAD, #FFD700)'
+    }
+  },
+  yelpHover: {
+    ':hover': {
+      background: 'linear-gradient(#D32323, #FFF)'
+    }
+  },
+  productHover: {
+    ':hover': {
+      background: 'linear-gradient(#333, #FFF)'
+    }
+  },
+  writingHover: {
+    ':hover': {
+      background: 'linear-gradient(#FFF, #000)'
+    }
+  }
+});
 
 const PROJECTS = [
   {
     title: 'Annot8',
-    icon: '',
-    text: ''
-  },
-  {
-    title: "Let's Talk Product",
-    icon: '',
-    text: ''
+    link: 'projects/annot8',
+    image: 'images/projects/annot8.png',
+    text:
+      'A web application for students to ask questions on webcasted YouTube lecture videos.',
+    hoverStyle: hoverStyles.annot8Hover
   },
   {
     title: 'Spotify Top 10',
-    icon: '',
-    text: ''
+    link: 'projects/spotify',
+    image: 'images/projects/spotify.png',
+    text:
+      'A web application to track and visualize the top 10 songs worldwide.',
+    hoverStyle: hoverStyles.spotifyHover
   },
   {
-    title: 'Yelp Elite',
-    icon: '',
-    text: ''
+    title: 'Pi Sigma Epsilon',
+    link: 'projects/pse',
+    image: 'images/projects/pse.png',
+    text: 'A website for my business fraternity.',
+    hoverStyle: hoverStyles.pseHover
   },
   {
     title: 'The Yelp Elite Project',
-    icon: '',
-    text: ''
+    link: 'projects/yelp-dataset',
+    image: 'images/projects/yelp.png',
+    text:
+      "A website created from Yelp's publicly availably dataset to determine what makes a Yelp user Elite.",
+    hoverStyle: hoverStyles.yelpHover
   },
   {
-    title: 'Berkeley Pi Sigma Epsilon',
-    icon: '',
-    text: ''
+    title: "Let's Talk Product",
+    link: 'projects/product',
+    image: 'images/projects/lets-talk-product.png',
+    text: '',
+    hoverStyle: hoverStyles.productHover
   },
   {
-    title: 'Writer',
-    icon: '',
-    text: ''
+    title: 'Yelp Elite',
+    link: 'projects/yelp-elite',
+    image: 'images/projects/yelp.png',
+    text: 'images/projects/yelp.png',
+    hoverStyle: hoverStyles.yelpHover
+  },
+  {
+    title: 'Writing',
+    link: 'projects/writing',
+    image: 'images/projects/writing.png',
+    text: '',
+    hoverStyle: hoverStyles.writingHover
   }
 ];

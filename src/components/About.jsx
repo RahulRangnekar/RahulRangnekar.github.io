@@ -17,7 +17,7 @@ export default class About extends React.Component {
             className={css(generalStyles.columnContainer, styles.leftContainer)}
           >
             <img
-              src={'/images/rahul-1.jpg'}
+              src={'/images/self/rahul-1.jpg'}
               className={css(styles.image)}
               alt="Me"
             />

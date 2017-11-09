@@ -22,7 +22,7 @@ export default class Home extends React.Component {
 
 const styles = StyleSheet.create({
   homeContainer: {
-    background: 'url(images/cover-old.jpg)',
+    background: 'url(images/self/cover-old.jpg)',
     backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',

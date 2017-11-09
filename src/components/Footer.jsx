@@ -56,7 +56,6 @@ const styles = StyleSheet.create({
   },
 
   mediaLink: {
-    // padding: '0 5px',
     margin: '0 7.5px',
     fontSize: '1.25em'
   },

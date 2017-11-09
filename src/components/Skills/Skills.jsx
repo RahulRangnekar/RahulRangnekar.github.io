@@ -132,7 +132,7 @@ export default class Skills extends React.Component {
 
 const styles = StyleSheet.create({
   skillsContainer: {
-    background: 'url(images/beach.jpg)',
+    background: 'url(images/self/beach.jpg)',
     backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
