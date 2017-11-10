@@ -2,7 +2,6 @@
 import React from 'react';
 
 // NPM Modules
-import { Link } from 'react-router-dom';
 import { css, StyleSheet } from 'aphrodite';
 
 // Stylesheets
@@ -16,24 +15,24 @@ export default class Footer extends React.Component {
         <div className={css(styles.socialMediaContainer)}>
           {FOOTER_INFO.map(media => {
             return (
-              <Link
+              <a
                 key={media.type}
                 className={css(styles.link, styles.mediaLink)}
-                to={media.link}
-                target="blank"
+                href={media.link}
+                target="_blank"
               >
                 <i className={` fa fa-${media.icon}`} aria-hidden="true" />
-              </Link>
+              </a>
             );
           })}
         </div>
-        <Link
+        <a
           className={css(styles.link)}
-          to={'https://github.com/rahrang/rahrang.github.io/'}
-          target="blank"
+          href={'https://github.com/rahrang/rahrang.github.io/'}
+          target="_blank"
         >
           GitHub
-        </Link>
+        </a>
       </div>
     );
   }
@@ -62,6 +61,7 @@ const styles = StyleSheet.create({
 
   link: {
     color: '#FFF',
+    cursor: 'pointer',
     margin: '10px 0',
     textDecoration: 'none',
     ':hover': {

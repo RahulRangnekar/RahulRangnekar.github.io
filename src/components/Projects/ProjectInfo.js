@@ -63,7 +63,23 @@ const PROJECT_INFO = {
     body: [
       {
         type: 'paragraph',
-        text: 'This is the first paragraph'
+        text:
+          "Students face busy lives. We strive to keep up with our academics as we recruit for jobs and internships, maintain our mental and physical health, lead an active social life, participate in clubs and organizations, and work on personally-fulfilling side projects. It's tough to do it all, and so we often skip lectures for classes at inconvenient times to do tend to more pressing matters."
+      },
+      {
+        type: 'paragraph',
+        text:
+          "Luckily, a significant number of our classes have lectures that are recorded and uploaded to YouTube within the day, giving us the option to watch (or re-watch) lecture in our own time. Unfortunately, however, Berkeley disallows comments on its YouTube videos so that it doesn't have to filter comments for spam or harassment."
+      },
+      {
+        type: 'paragraph',
+        text:
+          "This puts students in a predicament if they have questions about something the professor said or confusing material covered in lecture. There is no convenient place to ask -- it's troublesome to link to a video at a timestamp using the otherwise-amazing platform Piazza. Office hours for the professor and TAs are too few and too packed to receive proper guidance. And if the material is necessary for an assignment, students have nowhere else to turn to get answers."
+      },
+      {
+        type: 'paragraph',
+        taglineStyle: true,
+        text: 'This is where Annot8 comes in.'
       },
       {
         type: 'image',
@@ -71,10 +87,6 @@ const PROJECT_INFO = {
         alt: 'Me at the beach',
         height: 200,
         width: 200
-      },
-      {
-        type: 'paragraph',
-        text: 'the second paragraph, after the image'
       }
     ]
   }
