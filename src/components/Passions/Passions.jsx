@@ -62,7 +62,7 @@ const passions = [
       'I find nothing more enjoyable than making myself a better person. I live to learn everything the world has to offer.'
   },
   {
-    icon: 'rocket',
+    icon: 'heartbeat',
     passion: 'exercise',
     text:
       "I love to challenge myself physically. I will do 50 consecutive pullups and run a half marathon by the year's end."
@@ -86,7 +86,7 @@ const passions = [
       'I journal to clear my head, relieve my stress, and track my self-growth. It is one of my most important habits.'
   },
   {
-    icon: 'heart-o',
+    icon: 'heart',
     passion: 'teach',
     text:
       "I've learned from others, and I strive to share my experiences. I plan to teach a design class in the fall semester."

@@ -21,6 +21,7 @@ export default class Navbar extends React.Component {
             {navLinkInfo.map(item => {
               return (
                 <NavLink
+                  key={item.text}
                   to={item.to}
                   target={item.openBlank && 'blank'}
                   className={css(styles.link)}

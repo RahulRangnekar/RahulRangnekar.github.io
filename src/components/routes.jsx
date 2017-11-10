@@ -13,7 +13,7 @@ import About from './About.jsx';
 import Skills from './Skills/Skills.jsx';
 import Passions from './Passions/Passions.jsx';
 import Projects from './Projects/Projects.jsx';
-import Proj from './Projects/Proj.jsx';
+import ProjectPage from './Projects/ProjectPage.jsx';
 import Footer from './Footer.jsx';
 
 export default class Routes extends React.Component {
@@ -28,7 +28,7 @@ export default class Routes extends React.Component {
             <Route exact path={'/skills'} component={Skills} />
             <Route exact path={'/passions'} component={Passions} />
             <Route exact path={'/projects'} component={Projects} />
-            <Route path={`/projects/:project_title`} component={Proj} />
+            <Route path={'/projects/:project_title'} component={ProjectPage} />
           </Switch>
         </div>
         <Footer />
