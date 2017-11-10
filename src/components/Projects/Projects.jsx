@@ -14,24 +14,22 @@ import { generalStyles } from '../../stylesheets/general_stylesheet.js';
 export default class Projects extends React.Component {
   render() {
     return (
-      <div className={css(generalStyles.columnContainer, generalStyles.fadeIn)}>
+      <div
+        className={css(
+          generalStyles.columnContainer,
+          generalStyles.fadeIn,
+          styles.projectContainer
+        )}
+      >
         <h2 className={css(generalStyles.header)}>My Work</h2>
         <div
           className={css(
             generalStyles.columnContainer,
-            styles.projectsContainer
+            styles.projectCardsContainer
           )}
         >
           {PROJECTS.map(proj => {
-            return (
-              <ProjectCard
-                title={proj.title}
-                link={proj.link}
-                image={proj.image}
-                text={proj.text}
-                hoverStyle={proj.hoverStyle}
-              />
-            );
+            return <ProjectCard project={proj} />;
           })}
         </div>
       </div>
@@ -40,7 +38,11 @@ export default class Projects extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  projectsContainer: {
+  projectContainer: {
+    padding: '0 0 20px'
+  },
+
+  projectCardsContainer: {
     display: 'flex',
     flexDirection: 'row',
     flexFlow: 'wrap',
@@ -49,90 +51,58 @@ const styles = StyleSheet.create({
   }
 });
 
-const hoverStyles = StyleSheet.create({
-  annot8Hover: {
-    ':hover': {
-      background: 'linear-gradient(#3F7BA9, #FFF)'
-    }
-  },
-  spotifyHover: {
-    ':hover': {
-      background: 'linear-gradient(#1ED760, #FFF)'
-    }
-  },
-  pseHover: {
-    ':hover': {
-      background: 'linear-gradient(#895FAD, #FFD700)'
-    }
-  },
-  yelpHover: {
-    ':hover': {
-      background: 'linear-gradient(#D32323, #FFF)'
-    }
-  },
-  productHover: {
-    ':hover': {
-      background: 'linear-gradient(#333, #FFF)'
-    }
-  },
-  writingHover: {
-    ':hover': {
-      background: 'linear-gradient(#FFF, #000)'
-    }
-  }
-});
-
 const PROJECTS = [
   {
     title: 'Annot8',
+    subtitle: 'a web application',
     link: 'projects/annot8',
     image: 'images/projects/annot8.png',
     text:
-      'A web application for students to ask questions on webcasted YouTube lecture videos.',
-    hoverStyle: hoverStyles.annot8Hover
+      'A platform for students to ask questions on webcasted YouTube lecture videos.'
   },
   {
-    title: 'Spotify Top 10',
+    title: 'Top 10',
+    subtitle: 'a web application',
     link: 'projects/spotify',
     image: 'images/projects/spotify.png',
     text:
-      'A web application to track and visualize the top 10 songs worldwide.',
-    hoverStyle: hoverStyles.spotifyHover
+      'A weekly-updated tracker and visualizer for the top 10 songs worldwide.'
   },
   {
     title: 'Pi Sigma Epsilon',
+    subtitle: 'a website',
     link: 'projects/pse',
     image: 'images/projects/pse.png',
-    text: 'A website for my business fraternity.',
-    hoverStyle: hoverStyles.pseHover
+    text: 'An 11-page website for my business fraternity.'
   },
   {
-    title: 'The Yelp Elite Project',
+    title: 'The Elite Project',
+    subtitle: 'a website',
     link: 'projects/yelp-dataset',
     image: 'images/projects/yelp.png',
     text:
-      "A website created from Yelp's publicly availably dataset to determine what makes a Yelp user Elite.",
-    hoverStyle: hoverStyles.yelpHover
+      "A website created from Yelp's public dataset to determine what makes a Yelp user Elite."
   },
   {
     title: "Let's Talk Product",
+    subtitle: 'a blog',
     link: 'projects/product',
     image: 'images/projects/lets-talk-product.png',
-    text: '',
-    hoverStyle: hoverStyles.productHover
+    text:
+      'A blog about new products and features -- how are they designed, developed, and marketed? What needs improvement?'
   },
   {
     title: 'Yelp Elite',
+    subtitle: 'a blog',
     link: 'projects/yelp-elite',
     image: 'images/projects/yelp.png',
-    text: 'images/projects/yelp.png',
-    hoverStyle: hoverStyles.yelpHover
+    text: 'Restaurant reviews in my personal quest to eat everywhere I can.'
   },
   {
     title: 'Writing',
+    subtitle: 'a lifelong journey',
     link: 'projects/writing',
     image: 'images/projects/writing.png',
-    text: '',
-    hoverStyle: hoverStyles.writingHover
+    text: 'A way to express myself and give back'
   }
 ];

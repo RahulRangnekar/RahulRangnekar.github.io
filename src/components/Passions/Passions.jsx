@@ -40,7 +40,6 @@ export default class Passions extends React.Component {
 
 const styles = StyleSheet.create({
   passionsContainer: {
-    backgroundColor: '#DDD',
     minHeight: 'calc(100vh - 108px)'
   },
 
