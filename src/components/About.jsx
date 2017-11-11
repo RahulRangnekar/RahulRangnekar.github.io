@@ -11,7 +11,7 @@ export default class About extends React.Component {
   render() {
     return (
       <div className={css(generalStyles.columnContainer, generalStyles.fadeIn)}>
-        <h2 className={css(generalStyles.header)}> About </h2>
+        <h2 className={css(generalStyles.header)}>Who I Am</h2>
         <div className={css(styles.rowContainer)}>
           <div
             className={css(generalStyles.columnContainer, styles.leftContainer)}

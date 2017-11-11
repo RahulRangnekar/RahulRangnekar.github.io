@@ -21,7 +21,7 @@ export default class Projects extends React.Component {
           styles.projectContainer
         )}
       >
-        <h2 className={css(generalStyles.header)}>My Work</h2>
+        <h2 className={css(generalStyles.header)}>What I Do</h2>
         <div
           className={css(
             generalStyles.columnContainer,

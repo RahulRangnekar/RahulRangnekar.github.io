@@ -16,7 +16,7 @@ export default class Skills extends React.Component {
     return (
       <div className={css(styles.skillsContainer, generalStyles.fadeIn)}>
         <h2 className={css(generalStyles.header, generalStyles.altHeader)}>
-          My Strengths
+          What I'm Good At
         </h2>
 
         <div className={css(styles.bodyContainer)}>

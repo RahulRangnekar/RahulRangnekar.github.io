@@ -53,6 +53,8 @@ const containers = StyleSheet.create({
     justifyContent: 'center',
     height: '325px',
     width: '325px',
+    margin: '2px 0',
+    // outline: '1px solid #AAA',
     textDecoration: 'none'
   },
 

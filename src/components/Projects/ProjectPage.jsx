@@ -20,22 +20,31 @@ export default class ProjectPage extends React.Component {
   };
 
   createImage = bodyItem => {
-    let { src, alt, height, width } = bodyItem;
+    let { src, alt, caption, height, width } = bodyItem;
     return (
-      <img
-        className={css(styles.image)}
-        src={src}
-        alt={alt}
-        height={height}
-        width={width}
-      />
+      <div
+        className={css(generalStyles.columnContainer, styles.imageContainer)}
+      >
+        <img
+          className={css(styles.image)}
+          src={src}
+          alt={alt}
+          height={height}
+          width={width}
+        />
+        <p className={css(styles.imageCaption)}>{caption}</p>
+      </div>
     );
   };
 
-  createProjectLink = link => {
+  createExternalLink = (link, text) => {
+    console.log(link);
+    if (_.isUndefined(link) || _.isEmpty(link)) {
+      return null;
+    }
     return (
       <a href={link} className={css(styles.link)} target="_blank">
-        Go To Project
+        {text}
       </a>
     );
   };
@@ -44,11 +53,18 @@ export default class ProjectPage extends React.Component {
     let project = this.props.match.params.project_title;
     let projectInfo = PROJECT_INFO[project];
 
-    if (_.isNull(project) || _.isEmpty(projectInfo)) {
+    if (_.isUndefined(project) || _.isUndefined(projectInfo)) {
       return null;
     }
 
-    let projectLink = this.createProjectLink(projectInfo.linkToProject);
+    let projectLink = this.createExternalLink(
+      projectInfo.linkToProject,
+      'Go To Project'
+    );
+    let repositoryLink = this.createExternalLink(
+      projectInfo.linkToRepository,
+      'GitHub Repository'
+    );
 
     let body = projectInfo.body.map(bodyItem => {
       switch (bodyItem.type) {
@@ -62,7 +78,13 @@ export default class ProjectPage extends React.Component {
     });
 
     return (
-      <div className={css(generalStyles.columnContainer, generalStyles.fadeIn)}>
+      <div
+        className={css(
+          generalStyles.columnContainer,
+          generalStyles.fadeIn,
+          styles.pageContainer
+        )}
+      >
         <h2 className={css(generalStyles.header)}>{projectInfo.title}</h2>
         {projectLink}
         <div
@@ -70,18 +92,25 @@ export default class ProjectPage extends React.Component {
         >
           {body}
         </div>
-        {projectLink}
+        <div id="link-container" className={css(generalStyles.rowContainer)}>
+          <div id="project-link-container">{projectLink}</div>
+          <div id="repository-link-container">{repositoryLink}</div>
+        </div>
       </div>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  pageContainer: {
+    padding: '0 0 40px'
+  },
+
   link: {
     color: '#333',
     border: '3px solid #333',
     borderRadius: '3px',
-    margin: '5px 0',
+    margin: '5px 10px',
     padding: '5px 10px',
     textDecoration: 'none',
     ':hover': {
@@ -100,12 +129,24 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
 
+  imageContainer: {
+    margin: '10px 0',
+    maxWidth: '100%'
+  },
+
   image: {
     border: '2px solid #2980B9'
   },
 
+  imageCaption: {
+    fontSize: '0.875em',
+    color: '#333',
+    margin: '2px 0'
+  },
+
   bodyContainer: {
     width: '70%',
+    padding: '0 0 20px',
     '@media(max-width: 600px)': {
       width: '95%'
     },
