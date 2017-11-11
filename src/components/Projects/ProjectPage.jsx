@@ -2,6 +2,7 @@
 import React from 'react';
 
 // NPM Modules
+import { Link } from 'react-router-dom';
 import { css, StyleSheet } from 'aphrodite';
 import * as _ from 'lodash';
 
@@ -49,6 +50,14 @@ export default class ProjectPage extends React.Component {
     );
   };
 
+  createInternalLink = (link, text) => {
+    return (
+      <Link to={link} className={css(styles.link)}>
+        {text}
+      </Link>
+    );
+  };
+
   render() {
     let project = this.props.match.params.project_title;
     let projectInfo = PROJECT_INFO[project];
@@ -65,6 +74,7 @@ export default class ProjectPage extends React.Component {
       projectInfo.linkToRepository,
       'GitHub Repository'
     );
+    let backLink = this.createInternalLink('/projects', 'Back to All');
 
     let body = projectInfo.body.map(bodyItem => {
       switch (bodyItem.type) {
@@ -93,6 +103,7 @@ export default class ProjectPage extends React.Component {
           {body}
         </div>
         <div id="link-container" className={css(generalStyles.rowContainer)}>
+          <div id="back-link-container">{backLink}</div>
           <div id="project-link-container">{projectLink}</div>
           <div id="repository-link-container">{repositoryLink}</div>
         </div>

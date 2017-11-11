@@ -12,7 +12,7 @@ export default class Navbar extends React.Component {
         <div className={css(styles.headerContainer)}>
           <Link to="/" className={css(styles.headerLink)}>
             <img
-              src="images/logo-white.png"
+              src="../images/logo-white.png"
               className={css(styles.logo)}
               alt={'personal logo'}
             />
