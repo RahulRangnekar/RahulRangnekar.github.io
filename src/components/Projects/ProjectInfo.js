@@ -142,7 +142,7 @@ const PROJECT_INFO = {
   // Spotify TOP 10
   spotify: {
     title: 'Top 10',
-    linkToProject: 'http://rahrang.xyz/SpotifyTop10',
+    linkToProject: 'https://rahrang.github.io/SpotifyTop10/',
     linkToRepository: 'https://github.com/rahrang/SpotifyTop10',
     body: [
       {
@@ -240,7 +240,7 @@ const PROJECT_INFO = {
   // The Elite Project
   'yelp-dataset': {
     title: 'The Elite Project',
-    linkToProject: 'http://rahrang.xyz/yelp-dataset-project',
+    linkToProject: 'https://rahrang.github.io/yelp-dataset-project',
     linkToRepository: 'https://github.com/rahrang/yelp-dataset-project',
     body: [
       {
