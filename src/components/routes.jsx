@@ -15,6 +15,7 @@ import Passions from './Passions/Passions.jsx';
 import Projects from './Projects/Projects.jsx';
 import ProjectPage from './Projects/ProjectPage.jsx';
 import Footer from './Footer.jsx';
+import Error404 from './Error404.jsx';
 
 export default class Routes extends React.Component {
   render() {
@@ -29,6 +30,7 @@ export default class Routes extends React.Component {
             <Route exact path={'/passions'} component={Passions} />
             <Route exact path={'/projects'} component={Projects} />
             <Route path={'/projects/:project_title'} component={ProjectPage} />
+            <Route component={Error404} />
           </Switch>
         </div>
         <Footer />

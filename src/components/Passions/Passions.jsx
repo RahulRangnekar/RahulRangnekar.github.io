@@ -22,7 +22,7 @@ export default class Passions extends React.Component {
       >
         <h2 className={css(generalStyles.header)}>What I Love To Do</h2>
         <div className={css(styles.passionCardContainer)}>
-          {passions.map(p => {
+          {PASSIONS.map(p => {
             return (
               <PassionCard
                 key={p.passion}
@@ -54,41 +54,41 @@ const styles = StyleSheet.create({
   }
 });
 
-const passions = [
+const PASSIONS = [
   {
     icon: 'graduation-cap',
     passion: 'learn',
     text:
-      'I find nothing more enjoyable than making myself a better person. I live to learn everything the world has to offer.'
+      'I find nothing more enjoyable than being a better person than I was the day before. I live to learn everything the world has to offer and from every person I meet.'
   },
   {
     icon: 'heartbeat',
     passion: 'exercise',
     text:
-      "I love to challenge myself physically. I will do 50 consecutive pullups and run a half marathon by the year's end."
+      'I love to start my days with a physical challenge. As I gravitate toward bodyweight exercises, I plan to achieve 30 consecutive pull-ups and a headstand by the end of the year.'
   },
   {
     icon: 'lightbulb-o',
     passion: 'strategize',
     text:
-      'I enjoy just sitting down, reading product strategy, and applying these lessons to improve products and companies.'
+      'I enjoy researching current tech events — new products, features, companies, technologies, etc. — and thinking about how best to improve their chances at success.'
   },
   {
     icon: 'code',
     passion: 'develop',
     text:
-      'Coding is one of my favorite pastimes. I love to learn new front-end languages to create websites and applications.'
+      'It thrills me to create robust and well-designed websites and applications that solve real-world needs. When I get started on a technical project, nothing can stop me from finishing.'
   },
   {
     icon: 'pencil',
     passion: 'write',
     text:
-      'I journal to clear my head, relieve my stress, and track my self-growth. It is one of my most important habits.'
+      'Writing helps me relieve my stress, process my thoughts, and track my self-growth. I write within a wide range — technology, my professional career, college, my personal life, and more.'
   },
   {
     icon: 'heart',
     passion: 'teach',
     text:
-      "I've learned from others, and I strive to share my experiences. I plan to teach a design class in the fall semester."
+      'In the end, we’re all human. I would love to see every one of us healthy, successful, and happy. The best way I can do that is by sharing my experiences so that other can be better people.'
   }
 ];

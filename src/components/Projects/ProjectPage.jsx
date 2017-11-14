@@ -13,6 +13,14 @@ import { PROJECT_INFO } from './ProjectInfo.js';
 import { generalStyles } from '../../stylesheets/general_stylesheet.js';
 
 export default class ProjectPage extends React.Component {
+  componentDidMount() {
+    let project = this.props.match.params.project_title;
+    let all_projects = Object.keys(PROJECT_INFO);
+    if (!_.includes(all_projects, project)) {
+      this.props.history.replace('/projects');
+    }
+  }
+
   createParagraph = bodyItem => {
     let { text, taglineStyle } = bodyItem;
     return (
@@ -39,7 +47,6 @@ export default class ProjectPage extends React.Component {
   };
 
   createExternalLink = (link, text) => {
-    console.log(link);
     if (_.isUndefined(link) || _.isEmpty(link)) {
       return null;
     }

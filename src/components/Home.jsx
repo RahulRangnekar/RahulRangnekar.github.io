@@ -3,12 +3,14 @@ import React from 'react';
 
 // NPM Modules
 import { css, StyleSheet } from 'aphrodite';
-import { fadeIn } from 'react-animations';
+
+// Stylesheets
+import { generalStyles } from '../stylesheets/general_stylesheet.js';
 
 export default class Home extends React.Component {
   render() {
     return (
-      <div className={css(styles.homeContainer, styles.fadeIn)}>
+      <div className={css(styles.homeContainer, generalStyles.fadeIn)}>
         <div className={css(styles.textContainer)}>
           <h1 className={css(styles.name)}>Rahul Rangnekar</h1>
           <h2 className={css(styles.roles)}>
@@ -60,10 +62,5 @@ const styles = StyleSheet.create({
     '@media(max-width:600px)': {
       fontSize: '1em'
     }
-  },
-
-  fadeIn: {
-    animationName: fadeIn,
-    animationDuration: '1s'
   }
 });
