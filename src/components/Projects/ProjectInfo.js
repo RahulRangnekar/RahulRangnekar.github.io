@@ -31,6 +31,14 @@ const PROJECTS = [
       "A website created from Yelp's public dataset to determine what makes a Yelp user Elite."
   },
   {
+    title: 'Social Media Bar',
+    subtitle: 'an open-source react component',
+    link: 'projects/social-media-bar',
+    image: 'images/projects/social-media-bar.png',
+    text:
+      'A React component creating external links to social media profiles using Font Awesome icons.'
+  },
+  {
     title: "Let's Talk Product",
     subtitle: 'a blog',
     link: 'projects/product',
@@ -303,6 +311,26 @@ const PROJECT_INFO = {
           'The breakdown for number of users inducted to Elite in a given year.',
         height: 'auto',
         width: '100%'
+      }
+    ]
+  },
+
+  // React Social Media Bar
+  'social-media-bar': {
+    title: 'Social Media Bar',
+    linkToProject: 'https://github.com/rahrang/react-social-media-bar',
+    body: [
+      {
+        type: 'paragraph',
+        text: 'UNDER CONSTRUCTION!'
+      },
+      {
+        type: 'paragraph',
+        text: 'PLEASE CHECK BACK LATER'
+      },
+      {
+        type: 'paragraph',
+        text: 'THANKS FOR VISITING!'
       }
     ]
   },
