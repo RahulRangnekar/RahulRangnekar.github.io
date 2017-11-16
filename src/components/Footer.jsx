@@ -3,6 +3,7 @@ import React from 'react';
 
 // NPM Modules
 import { css, StyleSheet } from 'aphrodite';
+import SocialMediaBar from 'react-social-media-bar';
 
 // Stylesheets
 import { generalStyles } from '../stylesheets/general_stylesheet.js';
@@ -12,20 +13,14 @@ export default class Footer extends React.Component {
     return (
       <div className={css(styles.footerContainer, generalStyles.fadeIn)}>
         <p className={css(styles.text)}>Peace and Love</p>
-        <div className={css(styles.socialMediaContainer)}>
-          {FOOTER_INFO.map(media => {
-            return (
-              <a
-                key={media.type}
-                className={css(styles.link, styles.mediaLink)}
-                href={media.link}
-                target="_blank"
-              >
-                <i className={` fa fa-${media.icon}`} aria-hidden="true" />
-              </a>
-            );
-          })}
-        </div>
+        <SocialMediaBar
+          icons={FOOTER_INFO}
+          iconColor={'#F5F5F5'}
+          iconSize={'1.25em'}
+          hoverColor={'#2980B9'}
+          hoverOpacity={0.9}
+          margin={{ top: '0px', right: '7.5px', bottom: '0px', left: '7.5px' }}
+        />
         <a
           className={css(styles.link)}
           href={'https://github.com/rahrang/rahrang.github.io/'}
@@ -54,11 +49,6 @@ const styles = StyleSheet.create({
     }
   },
 
-  mediaLink: {
-    margin: '0 7.5px',
-    fontSize: '1.25em'
-  },
-
   link: {
     color: '#FFF',
     cursor: 'pointer',
@@ -72,48 +62,39 @@ const styles = StyleSheet.create({
 
 const FOOTER_INFO = [
   {
-    type: 'email',
-    link: 'mailto:rr@berkeley.edu',
-    icon: 'envelope'
+    media: 'envelope',
+    link: 'mailto:rr@berkeley.edu'
   },
   {
-    type: 'github',
-    link: 'https://github.com/rahrang',
-    icon: 'github'
+    media: 'github',
+    link: 'https://github.com/rahrang'
   },
   {
-    type: 'medium',
-    link: 'https://medium.com/@rahrang',
-    icon: 'medium'
+    media: 'medium',
+    link: 'https://medium.com/@rahrang'
   },
   {
-    type: 'linkedin',
-    link: 'https://www.linkedin.com/in/rahrang',
-    icon: 'linkedin'
+    media: 'linkedin',
+    link: 'https://www.linkedin.com/in/rahrang'
   },
   {
-    type: 'yelp',
-    link: 'https://rahrang.yelp.com',
-    icon: 'yelp'
+    media: 'yelp',
+    link: 'https://rahrang.yelp.com'
   },
   {
-    type: 'quora',
-    link: 'https://www.quora.com/profile/Rahul-Rangnekar-6',
-    icon: 'quora'
+    media: 'quora',
+    link: 'https://www.quora.com/profile/Rahul-Rangnekar-6'
   },
   {
-    type: 'spotify',
-    link: 'https://open.spotify.com/user/rahrang',
-    icon: 'spotify'
+    media: 'spotify',
+    link: 'https://open.spotify.com/user/rahrang'
   },
   {
-    type: 'twitter',
-    link: 'https://twitter.com/rahrangnek',
-    icon: 'twitter'
+    media: 'twitter',
+    link: 'https://twitter.com/rahrangnek'
   },
   {
-    type: 'instagram',
-    link: 'https://www.instagram.com/rahrang/',
-    icon: 'instagram'
+    media: 'instagram',
+    link: 'https://www.instagram.com/rahrang/'
   }
 ];

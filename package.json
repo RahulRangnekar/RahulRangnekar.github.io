@@ -15,7 +15,8 @@
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.14"
+    "react-scripts": "1.0.14",
+    "react-social-media-bar": "0.0.2"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
