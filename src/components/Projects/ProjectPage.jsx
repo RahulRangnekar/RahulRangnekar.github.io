@@ -109,10 +109,10 @@ export default class ProjectPage extends React.Component {
         >
           {body}
         </div>
-        <div id="link-container" className={css(generalStyles.rowContainer)}>
-          <div id="back-link-container">{backLink}</div>
-          <div id="project-link-container">{projectLink}</div>
-          <div id="repository-link-container">{repositoryLink}</div>
+        <div className={css(generalStyles.rowContainer, styles.linkContainer)}>
+          {backLink}
+          {projectLink}
+          {repositoryLink}
         </div>
       </div>
     );
@@ -171,5 +171,9 @@ const styles = StyleSheet.create({
     '@media(max-width: 900px)': {
       width: '80%'
     }
+  },
+
+  linkContainer: {
+    flexWrap: 'wrap'
   }
 });
