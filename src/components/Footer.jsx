@@ -23,7 +23,7 @@ export default class Footer extends React.Component {
         />
         <a
           className={css(styles.link)}
-          href={'https://github.com/rahrang/rahrang.github.io/'}
+          href={'https://github.com/rahrang/rahrang'}
           target="_blank"
         >
           GitHub
