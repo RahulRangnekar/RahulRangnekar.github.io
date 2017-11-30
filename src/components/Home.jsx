@@ -7,20 +7,20 @@ import { css, StyleSheet } from 'aphrodite';
 // Stylesheets
 import { generalStyles } from '../stylesheets/general_stylesheet.js';
 
-export default class Home extends React.Component {
-  render() {
-    return (
-      <div className={css(styles.homeContainer, generalStyles.fadeIn)}>
-        <div className={css(styles.textContainer)}>
-          <h1 className={css(styles.name)}>Rahul Rangnekar</h1>
-          <h2 className={css(styles.roles)}>
-            Software Developer | Product Manager | Writer
-          </h2>
-        </div>
+const Home = props => {
+  return (
+    <div className={css(styles.homeContainer, generalStyles.fadeIn)}>
+      <div className={css(styles.textContainer)}>
+        <h1 className={css(styles.name)}>Rahul Rangnekar</h1>
+        <h2 className={css(styles.roles)}>
+          Software Developer | Product Manager | Writer
+        </h2>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
+export default Home;
 
 const styles = StyleSheet.create({
   homeContainer: {

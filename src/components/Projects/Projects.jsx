@@ -11,31 +11,31 @@ import { PROJECTS } from './ProjectInfo.js';
 // Stylesheets
 import { generalStyles } from '../../stylesheets/general_stylesheet.js';
 
-export default class Projects extends React.Component {
-  render() {
-    return (
+const Projects = props => {
+  return (
+    <div
+      className={css(
+        generalStyles.columnContainer,
+        generalStyles.fadeIn,
+        styles.projectContainer
+      )}
+    >
+      <h2 className={css(generalStyles.header)}>What I Do</h2>
       <div
         className={css(
           generalStyles.columnContainer,
-          generalStyles.fadeIn,
-          styles.projectContainer
+          styles.projectCardsContainer
         )}
       >
-        <h2 className={css(generalStyles.header)}>What I Do</h2>
-        <div
-          className={css(
-            generalStyles.columnContainer,
-            styles.projectCardsContainer
-          )}
-        >
-          {PROJECTS.map(proj => {
-            return <ProjectCard project={proj} />;
-          })}
-        </div>
+        {PROJECTS.map(proj => {
+          return <ProjectCard project={proj} />;
+        })}
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
+export default Projects;
 
 const styles = StyleSheet.create({
   projectContainer: {

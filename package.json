@@ -2,6 +2,10 @@
   "name": "rahrang",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "8.4.0",
+    "npm": "5.5.1"
+  },
   "dependencies": {
     "aphrodite": "^1.2.5",
     "eslint": "^4.11.0",

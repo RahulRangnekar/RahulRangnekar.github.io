@@ -8,30 +8,30 @@ import SocialMediaBar from 'react-social-media-bar';
 // Stylesheets
 import { generalStyles } from '../stylesheets/general_stylesheet.js';
 
-export default class Footer extends React.Component {
-  render() {
-    return (
-      <div className={css(styles.footerContainer, generalStyles.fadeIn)}>
-        <p className={css(styles.text)}>Peace and Love</p>
-        <SocialMediaBar
-          icons={FOOTER_INFO}
-          iconColor={'#F5F5F5'}
-          iconSize={'1.25em'}
-          hoverColor={'#2980B9'}
-          hoverOpacity={0.9}
-          margin={{ top: '0px', right: '7.5px', bottom: '0px', left: '7.5px' }}
-        />
-        <a
-          className={css(styles.link)}
-          href={'https://github.com/rahrang/rahrang'}
-          target="_blank"
-        >
-          GitHub
-        </a>
-      </div>
-    );
-  }
-}
+const Footer = props => {
+  return (
+    <div className={css(styles.footerContainer, generalStyles.fadeIn)}>
+      <p className={css(styles.text)}>Peace and Love</p>
+      <SocialMediaBar
+        icons={FOOTER_INFO}
+        iconColor={'#F5F5F5'}
+        iconSize={'1.25em'}
+        hoverColor={'#2980B9'}
+        hoverOpacity={0.9}
+        margin={{ top: '0px', right: '7.5px', bottom: '0px', left: '7.5px' }}
+      />
+      <a
+        className={css(styles.link)}
+        href={'https://github.com/rahrang/rahrang'}
+        target="_blank"
+      >
+        GitHub
+      </a>
+    </div>
+  );
+};
+
+export default Footer;
 
 const styles = StyleSheet.create({
   footerContainer: {

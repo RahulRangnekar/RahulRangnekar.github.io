@@ -10,33 +10,33 @@ import PassionCard from './PassionCard.jsx';
 // Stylesheets
 import { generalStyles } from '../../stylesheets/general_stylesheet.js';
 
-export default class Passions extends React.Component {
-  render() {
-    return (
-      <div
-        className={css(
-          styles.passionsContainer,
-          generalStyles.columnContainer,
-          generalStyles.fadeIn
-        )}
-      >
-        <h2 className={css(generalStyles.header)}>What I Love To Do</h2>
-        <div className={css(styles.passionCardContainer)}>
-          {PASSIONS.map(p => {
-            return (
-              <PassionCard
-                key={p.passion}
-                icon={p.icon}
-                passion={p.passion}
-                text={p.text}
-              />
-            );
-          })}
-        </div>
+const Passions = props => {
+  return (
+    <div
+      className={css(
+        styles.passionsContainer,
+        generalStyles.columnContainer,
+        generalStyles.fadeIn
+      )}
+    >
+      <h2 className={css(generalStyles.header)}>What I Love To Do</h2>
+      <div className={css(styles.passionCardContainer)}>
+        {PASSIONS.map(p => {
+          return (
+            <PassionCard
+              key={p.passion}
+              icon={p.icon}
+              passion={p.passion}
+              text={p.text}
+            />
+          );
+        })}
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
+export default Passions;
 
 const styles = StyleSheet.create({
   passionsContainer: {

@@ -11,124 +11,124 @@ import ProgressCircle from './ProgressCircle.jsx';
 // Stylesheets
 import { generalStyles } from '../../stylesheets/general_stylesheet.js';
 
-export default class Skills extends React.Component {
-  render() {
-    return (
-      <div className={css(styles.skillsContainer, generalStyles.fadeIn)}>
-        <h2 className={css(generalStyles.header, generalStyles.altHeader)}>
-          What I'm Good At
-        </h2>
+const Skills = props => {
+  return (
+    <div className={css(styles.skillsContainer, generalStyles.fadeIn)}>
+      <h2 className={css(generalStyles.header, generalStyles.altHeader)}>
+        What I'm Good At
+      </h2>
 
-        <div className={css(styles.bodyContainer)}>
-          <div className={css(generalStyles.columnContainer)}>
-            <h3 className={css(styles.sectionHeader)}>Programming</h3>
-            <div className={css(styles.pContainer)}>
-              <div className={css(styles.pSubcontainer)}>
-                <div className={css(styles.subsectionContainer)}>
-                  <h4 className={css(styles.subsectionHeader)}>Languages</h4>
-                  <div className={css(styles.progressBars)}>
-                    {progressBars.slice(0, 3).map(bar => {
-                      return (
-                        <ProgressLine
-                          key={bar.text}
-                          progressText={bar.text}
-                          percent={bar.percent}
-                        />
-                      );
-                    })}
-                  </div>
-                </div>
-                <div className={css(styles.subsectionContainer)}>
-                  <h4 className={css(styles.subsectionHeader)}>Libraries</h4>
-                  <div className={css(styles.progressBars)}>
-                    {progressBars.slice(3, 4).map(bar => {
-                      return (
-                        <ProgressLine
-                          key={bar.text}
-                          progressText={bar.text}
-                          percent={bar.percent}
-                        />
-                      );
-                    })}
-                  </div>
+      <div className={css(styles.bodyContainer)}>
+        <div className={css(generalStyles.columnContainer)}>
+          <h3 className={css(styles.sectionHeader)}>Programming</h3>
+          <div className={css(styles.pContainer)}>
+            <div className={css(styles.pSubcontainer)}>
+              <div className={css(styles.subsectionContainer)}>
+                <h4 className={css(styles.subsectionHeader)}>Languages</h4>
+                <div className={css(styles.progressBars)}>
+                  {progressBars.slice(0, 3).map(bar => {
+                    return (
+                      <ProgressLine
+                        key={bar.text}
+                        progressText={bar.text}
+                        percent={bar.percent}
+                      />
+                    );
+                  })}
                 </div>
               </div>
-              <div className={css(styles.pSubcontainer)}>
-                <div className={css(styles.subsectionContainer)}>
-                  <h4 className={css(styles.subsectionHeader)}>Frameworks</h4>
-                  <div className={css(styles.progressBars)}>
-                    {progressBars.slice(4, 7).map(bar => {
-                      return (
-                        <ProgressLine
-                          key={bar.text}
-                          progressText={bar.text}
-                          percent={bar.percent}
-                        />
-                      );
-                    })}
-                  </div>
-                </div>
-                <div className={css(styles.subsectionContainer)}>
-                  <h4 className={css(styles.subsectionHeader)}>Databases</h4>
-                  <div className={css(styles.progressBars)}>
-                    {progressBars.slice(7, 8).map(bar => {
-                      return (
-                        <ProgressLine
-                          key={bar.text}
-                          progressText={bar.text}
-                          percent={bar.percent}
-                        />
-                      );
-                    })}
-                  </div>
+              <div className={css(styles.subsectionContainer)}>
+                <h4 className={css(styles.subsectionHeader)}>Libraries</h4>
+                <div className={css(styles.progressBars)}>
+                  {progressBars.slice(3, 4).map(bar => {
+                    return (
+                      <ProgressLine
+                        key={bar.text}
+                        progressText={bar.text}
+                        percent={bar.percent}
+                      />
+                    );
+                  })}
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className={css(generalStyles.columnContainer)}>
-            <h3 className={css(styles.sectionHeader)}>Product</h3>
-            <div className={css(styles.prodContainer)}>
-              <div className={css(styles.prodSubcontainer)}>
-                {progressPies.slice(0, 3).map(pie => {
-                  return (
-                    <ProgressCircle
-                      key={pie.text}
-                      progressText={pie.text}
-                      percent={pie.percent}
-                    />
-                  );
-                })}
+            <div className={css(styles.pSubcontainer)}>
+              <div className={css(styles.subsectionContainer)}>
+                <h4 className={css(styles.subsectionHeader)}>Frameworks</h4>
+                <div className={css(styles.progressBars)}>
+                  {progressBars.slice(4, 7).map(bar => {
+                    return (
+                      <ProgressLine
+                        key={bar.text}
+                        progressText={bar.text}
+                        percent={bar.percent}
+                      />
+                    );
+                  })}
+                </div>
               </div>
-              <div className={css(styles.prodSubcontainer)}>
-                {progressPies.slice(3, 6).map(pie => {
-                  return (
-                    <ProgressCircle
-                      key={pie.text}
-                      progressText={pie.text}
-                      percent={pie.percent}
-                    />
-                  );
-                })}
-              </div>
-              <div className={css(styles.prodSubcontainer)}>
-                {progressPies.slice(6, 7).map(pie => {
-                  return (
-                    <ProgressCircle
-                      key={pie.text}
-                      progressText={pie.text}
-                      percent={pie.percent}
-                    />
-                  );
-                })}
+              <div className={css(styles.subsectionContainer)}>
+                <h4 className={css(styles.subsectionHeader)}>Databases</h4>
+                <div className={css(styles.progressBars)}>
+                  {progressBars.slice(7, 8).map(bar => {
+                    return (
+                      <ProgressLine
+                        key={bar.text}
+                        progressText={bar.text}
+                        percent={bar.percent}
+                      />
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        <div className={css(generalStyles.columnContainer)}>
+          <h3 className={css(styles.sectionHeader)}>Product</h3>
+          <div className={css(styles.prodContainer)}>
+            <div className={css(styles.prodSubcontainer)}>
+              {progressPies.slice(0, 3).map(pie => {
+                return (
+                  <ProgressCircle
+                    key={pie.text}
+                    progressText={pie.text}
+                    percent={pie.percent}
+                  />
+                );
+              })}
+            </div>
+            <div className={css(styles.prodSubcontainer)}>
+              {progressPies.slice(3, 6).map(pie => {
+                return (
+                  <ProgressCircle
+                    key={pie.text}
+                    progressText={pie.text}
+                    percent={pie.percent}
+                  />
+                );
+              })}
+            </div>
+            <div className={css(styles.prodSubcontainer)}>
+              {progressPies.slice(6, 7).map(pie => {
+                return (
+                  <ProgressCircle
+                    key={pie.text}
+                    progressText={pie.text}
+                    percent={pie.percent}
+                  />
+                );
+              })}
+            </div>
+          </div>
+        </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
+export default Skills;
 
 const styles = StyleSheet.create({
   skillsContainer: {

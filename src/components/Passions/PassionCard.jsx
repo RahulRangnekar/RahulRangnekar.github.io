@@ -7,29 +7,26 @@ import { css, StyleSheet } from 'aphrodite';
 // Stylesheets
 import { generalStyles } from '../../stylesheets/general_stylesheet.js';
 
-export default class PassionCard extends React.Component {
-  render() {
-    let { icon, passion, text } = this.props;
-    let iconToRender = (
+const PassionCard = props => {
+  let { icon, passion, text } = props;
+  return (
+    <div
+      className={css(
+        generalStyles.rowContainer,
+        generalStyles.fadeIn,
+        styles.container
+      )}
+    >
       <i className={css(styles.icon) + ` fa fa-${icon}`} aria-hidden="true" />
-    );
-    return (
-      <div
-        className={css(
-          generalStyles.rowContainer,
-          generalStyles.fadeIn,
-          styles.container
-        )}
-      >
-        {iconToRender}
-        <div className={css(styles.textContainer)}>
-          <p className={css(styles.passion)}>{passion}</p>
-          <p className={css(styles.text)}>{text}</p>
-        </div>
+      <div className={css(styles.textContainer)}>
+        <p className={css(styles.passion)}>{passion}</p>
+        <p className={css(styles.text)}>{text}</p>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
+export default PassionCard;
 
 const styles = StyleSheet.create({
   container: {

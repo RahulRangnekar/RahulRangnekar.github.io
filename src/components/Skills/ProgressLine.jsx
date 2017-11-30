@@ -5,26 +5,25 @@ import React from 'react';
 import { css, StyleSheet } from 'aphrodite';
 import { Line } from 'rc-progress';
 
-export default class ProgressLine extends React.Component {
-  render() {
-    let { progressText, percent } = this.props;
+const ProgressLine = props => {
+  let { progressText, percent } = props;
+  return (
+    <div className={css(styles.progressContainer)}>
+      <p className={css(styles.progressText)}>{progressText}</p>
+      <Line
+        percent={percent}
+        strokeWidth={'5'}
+        strokeColor={'#2980B9'}
+        trailWidth={'5'}
+        trailColor={'#F5F5F5'}
+        strokeLinecap={'square'}
+        className={css(styles.progress)}
+      />
+    </div>
+  );
+};
 
-    return (
-      <div className={css(styles.progressContainer)}>
-        <p className={css(styles.progressText)}>{progressText}</p>
-        <Line
-          percent={percent}
-          strokeWidth={'5'}
-          strokeColor={'#2980B9'}
-          trailWidth={'5'}
-          trailColor={'#F5F5F5'}
-          strokeLinecap={'square'}
-          className={css(styles.progress)}
-        />
-      </div>
-    );
-  }
-}
+export default ProgressLine;
 
 const styles = StyleSheet.create({
   progress: {

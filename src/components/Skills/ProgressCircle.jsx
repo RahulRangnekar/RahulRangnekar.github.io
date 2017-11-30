@@ -5,29 +5,28 @@ import React from 'react';
 import { css, StyleSheet } from 'aphrodite';
 import { Circle } from 'rc-progress';
 
-export default class ProgressCircle extends React.Component {
-  render() {
-    let { progressText, percent } = this.props;
-
-    return (
-      <div className={css(styles.progressContainer)}>
-        <p className={css(styles.progressText)}>{progressText}</p>
-        <div className={css(styles.circleContainer)}>
-          <span className={css(styles.percent)}>{percent}%</span>
-          <Circle
-            percent={percent}
-            strokeWidth={'13'}
-            strokeColor={'#2980B9'}
-            trailWidth={'12'}
-            trailColor={'#F5F5F5'}
-            strokeLinecap={'square'}
-            className={css(styles.progress)}
-          />
-        </div>
+const ProgressCircle = props => {
+  let { progressText, percent } = props;
+  return (
+    <div className={css(styles.progressContainer)}>
+      <p className={css(styles.progressText)}>{progressText}</p>
+      <div className={css(styles.circleContainer)}>
+        <span className={css(styles.percent)}>{percent}%</span>
+        <Circle
+          percent={percent}
+          strokeWidth={'13'}
+          strokeColor={'#2980B9'}
+          trailWidth={'12'}
+          trailColor={'#F5F5F5'}
+          strokeLinecap={'square'}
+          className={css(styles.progress)}
+        />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
+export default ProgressCircle;
 
 const styles = StyleSheet.create({
   progress: {
