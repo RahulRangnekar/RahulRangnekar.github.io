@@ -1,11 +1,15 @@
 import axios from 'axios';
 import React from 'react';
 
+const projects = ['annot8', 'spotify', 'pse', 'yelp-dataset', 'social-media-bar', 'product', 'yelp-elite', 'writing'];
+
 export default {
   getSiteProps: () => ({
     title: 'Rahul Rangnekar',
   }),
   getRoutes: async () => {
+    // const { data: projects } = projects;
+    console.log(projects);
     return [
       {
         path: '/',
@@ -26,6 +30,16 @@ export default {
       {
         path: '/projects',
         component: 'src/containers/Projects/Projects',
+        getProps: () => ({
+          projects,
+        }),
+        children: projects.map(proj => ({
+          path: `/projects/${proj}`,
+          component: 'src/containers/Projects/ProjectPage',
+          getProps: () => ({
+            proj,
+          })
+        }))
       },
       // {
       //   path: '/blog',

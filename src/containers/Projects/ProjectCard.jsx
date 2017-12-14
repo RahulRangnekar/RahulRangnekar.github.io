@@ -2,7 +2,7 @@
 import React from 'react';
 
 // NPM Modules
-import { Link } from 'react-router-dom';
+import { Link } from 'react-static';
 import { css, StyleSheet } from 'aphrodite';
 
 // Stylesheets
@@ -16,13 +16,13 @@ export default class ProjectCard extends React.Component {
     };
   }
   render() {
-    let { title, subtitle, link, image, text } = this.props.project;
+    let { title, subtitle, id, image, text } = this.props.project;
     let { hovered } = this.state;
     return (
       <Link
         onMouseEnter={() => this.setState({ hovered: true })}
         onMouseLeave={() => this.setState({ hovered: false })}
-        to={link}
+        to={`/projects/${id}`}
         className={css(containers.card, generalStyles.fadeIn)}
       >
         {!hovered ? (

@@ -15,7 +15,7 @@ const About = props => {
           className={css(generalStyles.columnContainer, styles.leftContainer)}
         >
           <img
-            src={'/images/self/rahul-1.jpg'}
+            src={'images/self/rahul-1.jpg'}
             className={css(styles.image)}
             alt="Me"
           />
