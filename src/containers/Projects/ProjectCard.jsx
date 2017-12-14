@@ -2,7 +2,7 @@
 import React from 'react';
 
 // NPM Modules
-import { Link } from 'react-static';
+import { Link } from 'react-router-dom';
 import { css, StyleSheet } from 'aphrodite';
 
 // Stylesheets

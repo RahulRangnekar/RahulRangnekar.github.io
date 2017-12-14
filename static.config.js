@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 
-const projects = ['annot8', 'spotify', 'pse', 'yelp-dataset', 'social-media-bar', 'product', 'yelp-elite', 'writing'];
+// const projects = ['annot8', 'spotify', 'pse', 'yelp-dataset', 'social-media-bar', 'product', 'yelp-elite', 'writing'];
 
 export default {
   getSiteProps: () => ({
@@ -9,7 +9,7 @@ export default {
   }),
   getRoutes: async () => {
     // const { data: projects } = projects;
-    console.log(projects);
+    // console.log(projects);
     return [
       {
         path: '/',
@@ -28,33 +28,13 @@ export default {
         component: 'src/containers/Passions/Passions'
       },
       {
+        path: '/projects/:project_id',
+        component: 'src/containers/Projects/ProjectPage',
+      },
+      {
         path: '/projects',
         component: 'src/containers/Projects/Projects',
-        getProps: () => ({
-          projects,
-        }),
-        children: projects.map(proj => ({
-          path: `/projects/${proj}`,
-          component: 'src/containers/Projects/ProjectPage',
-          getProps: () => ({
-            proj,
-          })
-        }))
       },
-      // {
-      //   path: '/blog',
-      //   component: 'src/containers/Blog',
-      //   getProps: () => ({
-      //     posts,
-      //   }),
-      //   children: posts.map(post => ({
-      //     path: `/post/${post.id}`,
-      //     component: 'src/containers/Post',
-      //     getProps: () => ({
-      //       post,
-      //     }),
-      //   })),
-      // },
       {
         is404: true,
         component: 'src/containers/Error404',
