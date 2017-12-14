@@ -1,16 +1,20 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import React from 'react'
+import { Router, Link } from 'react-static'
+//
+import Routes from 'react-static-routes';
+import Navbar from './containers/Navbar';
+import Footer from './containers/Footer';
 
-import Routes from './components/routes.jsx';
+import './app.css'
 
-class App extends Component {
-  render() {
-    return (
-      <Router>
-        <Route component={Routes} />
-      </Router>
-    );
-  }
-}
-
-export default App;
+export default () => (
+  <Router>
+    <div>
+      <Navbar />
+      <div className="content">
+        <Routes />
+      </div>
+      <Footer />
+    </div>
+  </Router>
+)

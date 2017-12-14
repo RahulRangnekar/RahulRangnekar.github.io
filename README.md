@@ -1,3 +1,10 @@
-My personal website: http://rahrang.xyz
+# React-Static - Basic Example
 
-built with React
+This example is the most basic version of react-static available. It includes:
+- Babel
+- CSS imports
+- Image imports
+- File imports
+- Automatic Routing
+
+To get started, run `react-static create` and use the `basic` template.
