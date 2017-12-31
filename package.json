@@ -26,14 +26,15 @@
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
       "prettier --single-quote --write",
+      "prettier --print-width 80 --write",
+      "prettier --use-tabs --write",
+      "prettier --tab-width 2 --write",
       "git add"
     ]
   },
   "scripts": {
     "precommit": "lint-staged",
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
 }
