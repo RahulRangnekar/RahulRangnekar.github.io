@@ -1,46 +1,43 @@
-import React from 'react';
+// React
+import React from "react";
 
-// React Router
-import { Switch, Route } from 'react-router-dom';
+// node modules
+import { Switch, Route } from "react-router-dom";
+import styled from "styled-components";
 
-// NPM Modules
-import { StyleSheet, css } from 'aphrodite';
-
-// Containers
-import Navbar from './Navbar.jsx';
-import Home from './Home.jsx';
-import About from './About.jsx';
-import Skills from './Skills/Skills.jsx';
-import Passions from './Passions/Passions.jsx';
-import Projects from './Projects/Projects.jsx';
-import ProjectPage from './Projects/ProjectPage.jsx';
-import Footer from './Footer.jsx';
-import Error404 from './Error404.jsx';
+// containers
+import Navbar from "./Navbar/Navbar";
+import Home from "./Home";
+import About from "./About";
+import Skills from "./Skills/Skills";
+import Passions from "./Passions/Passions";
+import Projects from "./Projects/Projects";
+import ProjectPage from "./Projects/ProjectPage";
+import Footer from "./Footer";
+import Error404 from "./Error404";
 
 export default class Routes extends React.Component {
   render() {
     return (
-      <div className={css(styles.routerContainer)}>
+      <div id="router-container">
         <Navbar />
-        <div className={css(styles.mainContainer)}>
+        <MainContainer>
           <Switch>
-            <Route exact path={'/'} component={Home} />
-            <Route exact path={'/about'} component={About} />
-            <Route exact path={'/skills'} component={Skills} />
-            <Route exact path={'/passions'} component={Passions} />
-            <Route exact path={'/projects'} component={Projects} />
-            <Route path={'/projects/:project_title'} component={ProjectPage} />
+            <Route exact path={"/"} component={Home} />
+            <Route exact path={"/about"} component={About} />
+            <Route exact path={"/skills"} component={Skills} />
+            <Route exact path={"/passions"} component={Passions} />
+            <Route exact path={"/projects"} component={Projects} />
+            <Route path={"/projects/:project_title"} component={ProjectPage} />
             <Route component={Error404} />
           </Switch>
-        </div>
+        </MainContainer>
         <Footer />
       </div>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  mainContainer: {
-    minHeight: 'calc(100vh - 108px)'
-  }
-});
+const MainContainer = styled.div`
+  min-height: calc(100vh - 108px);
+`;
