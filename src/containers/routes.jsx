@@ -13,7 +13,7 @@ import Skills from "./Skills/Skills";
 import Passions from "./Passions/Passions";
 import Projects from "./Projects/Projects";
 import ProjectPage from "./Projects/ProjectPage";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import Error404 from "./Error404";
 
 export default class Routes extends React.Component {
