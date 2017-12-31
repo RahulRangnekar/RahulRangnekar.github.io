@@ -1,52 +1,27 @@
 // React
-import React from 'react';
+import React from "react";
 
-// NPM Modules
-import { css, StyleSheet } from 'aphrodite';
-
-// Local Components
-import ProjectCard from './ProjectCard.jsx';
-import { PROJECTS } from './ProjectInfo.js';
-
-// Stylesheets
-import { generalStyles } from '../../stylesheets/general_stylesheet.js';
+// components
+import { RowContainer, ColumnContainer } from "../components/Containers";
+import { PageHeader } from "../components/Headers";
+import ProjectCard from "./ProjectCard.jsx";
+import { PROJECTS } from "./ProjectInfo.js";
 
 const Projects = props => {
   return (
-    <div
-      className={css(
-        generalStyles.columnContainer,
-        generalStyles.fadeIn,
-        styles.projectContainer
-      )}
-    >
-      <h2 className={css(generalStyles.header)}>What I Do</h2>
-      <div
-        className={css(
-          generalStyles.columnContainer,
-          styles.projectCardsContainer
-        )}
-      >
+    <ProjectContainer>
+      <PageHeader>What I Do</PageHeader>
+      <RowContainer>
         {PROJECTS.map(proj => {
           return <ProjectCard project={proj} />;
         })}
-      </div>
-    </div>
+      </RowContainer>
+    </ProjectContainer>
   );
 };
 
 export default Projects;
 
-const styles = StyleSheet.create({
-  projectContainer: {
-    padding: '0 0 20px'
-  },
-
-  projectCardsContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    flexFlow: 'wrap',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-});
+const ProjectContainer = ColumnContainer.extend`
+  padding: 0 0 1.25rem;
+`;

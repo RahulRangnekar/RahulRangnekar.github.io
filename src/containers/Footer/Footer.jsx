@@ -2,7 +2,6 @@
 import React from "react";
 
 // node modules
-import styled from "styled-components";
 import SocialMediaBar from "react-social-media-bar";
 
 // components
@@ -20,7 +19,7 @@ const Footer = props => {
         iconSize={"1rem"}
         hoverColor={"#2980B9"}
         hoverOpacity={0.9}
-        margin={{ top: "0px", right: "7.5px", bottom: "0px", left: "7.5px" }}
+        margin={{ top: "0px", right: "7.5px", bottom: "8px", left: "7.5px" }}
       />
       <SourceLink href={"https://github.com/rahrang/rahrang"} target="_blank">
         Source

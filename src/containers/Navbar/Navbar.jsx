@@ -7,7 +7,7 @@ import styled from "styled-components";
 import { slide as Menu } from "react-burger-menu";
 
 // components
-import { RowContainer, ColumnContainer } from "../components/Containers";
+import { RowContainer } from "../components/Containers";
 import { Image } from "../components/Images";
 import NAV_INFO from "./NavInfo";
 
@@ -96,14 +96,14 @@ const NLink = styled(NavLink).attrs({
     color: #2980b9;
   }
   &.${activeClassName} {
-    border-bottom: 3px solid #2980b9;
+    border-bottom: 2px solid #2980b9;
   }
 `;
 
 const LinkContainer = styled.div`
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-weight: bold;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.025rem;
   text-transform: uppercase;
   padding: 0 0.625rem;
 `;
