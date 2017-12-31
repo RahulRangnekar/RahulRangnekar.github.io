@@ -9,4 +9,20 @@ const PageHeader = styled.h2`
   text-transform: uppercase;
 `;
 
-export { PageHeader };
+const SectionHeader = styled.h3`
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0.375px 0;
+  padding: 0;
+`;
+
+const SubSectionHeader = styled.h4`
+  color: #fff;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  margin: 0.375rem 0;
+  padding: 0;
+`;
+
+export { PageHeader, SectionHeader, SubSectionHeader };

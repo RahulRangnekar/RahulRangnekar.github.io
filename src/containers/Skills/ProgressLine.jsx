@@ -2,43 +2,40 @@
 import React from 'react';
 
 // NPM Modules
-import { css, StyleSheet } from 'aphrodite';
+import styled from 'styled-components';
 import { Line } from 'rc-progress';
 
 const ProgressLine = props => {
   let { progressText, percent } = props;
   return (
-    <div className={css(styles.progressContainer)}>
-      <p className={css(styles.progressText)}>{progressText}</p>
-      <Line
+    <ProgressContainer>
+      <ProgressText>{progressText}</ProgressText>
+      <ProgLine
         percent={percent}
         strokeWidth={'5'}
         strokeColor={'#2980B9'}
         trailWidth={'5'}
         trailColor={'#F5F5F5'}
         strokeLinecap={'square'}
-        className={css(styles.progress)}
       />
-    </div>
+    </ProgressContainer>
   );
 };
 
 export default ProgressLine;
 
-const styles = StyleSheet.create({
-  progress: {
-    width: '300px'
-  },
+const ProgressContainer = styled.div`
+  color: #fff;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.25rem 0;
+`;
 
-  progressContainer: {
-    color: '#FFF',
-    fontSize: '0.875em',
-    letterSpacing: '0.025em',
-    padding: '3px 0'
-  },
+const ProgressText = styled.p`
+  margin: 0;
+  padding: 0.25rem 0;
+`;
 
-  progressText: {
-    padding: '3px 0',
-    margin: '0'
-  }
-});
+const ProgLine = styled(Line)`
+  width: 300px;
+`;
