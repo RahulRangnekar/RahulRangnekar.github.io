@@ -5,14 +5,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 // components
-import ParallaxContainer from './components/ParallaxContainer';
+import { ParallaxContainer } from './components/Containers';
 
 const Home = props => {
   return (
     <ParallaxContainer srcURL="images/self/cover.jpg">
       <TextContainer>
         <SiteTitle>Rahul Rangnekar</SiteTitle>
-        <Roles>Software Developer | Writer</Roles>
+        <Roles>Software Developer & Writer</Roles>
       </TextContainer>
     </ParallaxContainer>
   );
