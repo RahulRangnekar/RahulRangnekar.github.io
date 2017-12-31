@@ -1,27 +1,27 @@
 // React
-import React from 'react';
+import React from "react";
 
 // node modules
-import styled from 'styled-components';
+import styled from "styled-components";
 
 // components
 import {
   ParallaxContainer,
   ColumnContainer,
   RowContainer
-} from '../components/Containers';
+} from "../components/Containers";
 import {
   PageHeader,
   SectionHeader,
   SubSectionHeader
-} from '../components/Headers';
+} from "../components/Headers";
 
-import ProgressLine from './ProgressLine';
-import ProgressCircle from './ProgressCircle';
-import { PROGRESS_BARS, PROGRESS_PIES } from './ProgressInfo';
+import ProgressLine from "./ProgressLine";
+import ProgressCircle from "./ProgressCircle";
+import { PROGRESS_BARS, PROGRESS_PIES } from "./ProgressInfo";
 
 // Stylesheets
-import { generalStyles } from '../../stylesheets/general_stylesheet.js';
+import { generalStyles } from "../../stylesheets/general_stylesheet.js";
 
 const Skills = props => {
   return (
@@ -35,7 +35,7 @@ const Skills = props => {
               <SubSectionContainer>
                 <SubSectionHeader>Languages</SubSectionHeader>
                 {PROGRESS_BARS.filter(bar => {
-                  return bar.type === 'language';
+                  return bar.type === "language";
                 }).map(bar => {
                   return (
                     <ProgressLine
@@ -49,7 +49,7 @@ const Skills = props => {
               <SubSectionContainer>
                 <SubSectionHeader>Libraries</SubSectionHeader>
                 {PROGRESS_BARS.filter(bar => {
-                  return bar.type === 'library';
+                  return bar.type === "library";
                 }).map(bar => {
                   return (
                     <ProgressLine
@@ -65,7 +65,7 @@ const Skills = props => {
               <SubSectionContainer>
                 <SubSectionHeader>Frameworks</SubSectionHeader>
                 {PROGRESS_BARS.filter(bar => {
-                  return bar.type === 'framework';
+                  return bar.type === "framework";
                 }).map(bar => {
                   return (
                     <ProgressLine
@@ -79,7 +79,7 @@ const Skills = props => {
               <SubSectionContainer>
                 <SubSectionHeader>Databases</SubSectionHeader>
                 {PROGRESS_BARS.filter(bar => {
-                  return bar.type === 'database';
+                  return bar.type === "database";
                 }).map(bar => {
                   return (
                     <ProgressLine
@@ -161,5 +161,5 @@ const SubSectionContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin: 0.675rem 0;
+  margin: 0.625rem 0;
 `;

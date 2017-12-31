@@ -1,9 +1,9 @@
 // React
-import React from 'react';
+import React from "react";
 
 // NPM Modules
-import styled from 'styled-components';
-import { Circle } from 'rc-progress';
+import styled from "styled-components";
+import { Circle } from "rc-progress";
 
 const ProgressCircle = props => {
   let { progressText, percent } = props;
@@ -14,11 +14,11 @@ const ProgressCircle = props => {
         <span>{percent}%</span>
         <ProgCircle
           percent={percent}
-          strokeWidth={'13'}
-          strokeColor={'#2980B9'}
-          trailWidth={'12'}
-          trailColor={'#F5F5F5'}
-          strokeLinecap={'square'}
+          strokeWidth={"13"}
+          strokeColor={"#2980B9"}
+          trailWidth={"12"}
+          trailColor={"#F5F5F5"}
+          strokeLinecap={"square"}
         />
       </CircleContainer>
     </ProgressContainer>
@@ -31,7 +31,7 @@ const ProgressContainer = styled.div`
   color: #fff;
   font-size: 0.9rem;
   letter-spacing: 0.05rem;
-  margin: 0 0.675rem;
+  margin: 0 0.625rem;
   padding: 0.25rem 0;
   text-align: center;
   width: 165px;
