@@ -1,75 +1,59 @@
 // React
 import React from 'react';
 
-// NPM Modules
-import { Link } from 'react-router-dom';
-import { css, StyleSheet } from 'aphrodite';
-import * as _ from 'lodash';
+// node modules
+import { isUndefined, isEmpty, includes } from 'lodash';
 
-// Local Components
+// components
 import { PROJECT_INFO } from './ProjectInfo.js';
-
-// Stylesheets
-import { generalStyles } from '../../stylesheets/general_stylesheet.js';
+import { ColumnContainer, RowContainer } from '../components/Containers';
+import { PageHeader } from '../components/Headers';
+import { Paragraph, TaglineParagraph } from '../components/Texts';
+import { IntButtonLink, ExtButtonLink } from '../components/Links';
+import ImageWithCaption from '../components/ImageWithCaption';
 
 export default class ProjectPage extends React.Component {
   componentDidMount() {
     let project = this.props.match.params.project_title;
     let all_projects = Object.keys(PROJECT_INFO);
-    if (!_.includes(all_projects, project)) {
+    if (!includes(all_projects, project)) {
       this.props.history.replace('/projects');
     }
   }
 
   createParagraph = bodyItem => {
     let { text, taglineStyle } = bodyItem;
-    return (
-      <p className={css(styles.text, taglineStyle && styles.tagline)}>{text}</p>
+    return taglineStyle ? (
+      <TaglineParagraph>{text}</TaglineParagraph>
+    ) : (
+      <Paragraph>{text}</Paragraph>
     );
   };
 
   createImage = bodyItem => {
-    let { src, alt, caption, height, width } = bodyItem;
-    return (
-      <div
-        className={css(generalStyles.columnContainer, styles.imageContainer)}
-      >
-        <img
-          className={css(styles.image)}
-          src={src}
-          alt={alt}
-          height={height}
-          width={width}
-        />
-        <p className={css(styles.imageCaption)}>{caption}</p>
-      </div>
-    );
+    return <ImageWithCaption {...bodyItem} />;
   };
 
   createExternalLink = (link, text) => {
-    if (_.isUndefined(link) || _.isEmpty(link)) {
+    if (isUndefined(link) || isEmpty(link)) {
       return null;
     }
     return (
-      <a href={link} className={css(styles.link)} target="_blank">
+      <ExtButtonLink fontSize={'1rem'} href={link} target="_blank">
         {text}
-      </a>
+      </ExtButtonLink>
     );
   };
 
   createInternalLink = (link, text) => {
-    return (
-      <Link to={link} className={css(styles.link)}>
-        {text}
-      </Link>
-    );
+    return <IntButtonLink to={link}>{text}</IntButtonLink>;
   };
 
   render() {
     let project = this.props.match.params.project_title;
     let projectInfo = PROJECT_INFO[project];
 
-    if (_.isUndefined(project) || _.isUndefined(projectInfo)) {
+    if (isUndefined(project) || isUndefined(projectInfo)) {
       return null;
     }
 
@@ -95,85 +79,31 @@ export default class ProjectPage extends React.Component {
     });
 
     return (
-      <div
-        className={css(
-          generalStyles.columnContainer,
-          generalStyles.fadeIn,
-          styles.pageContainer
-        )}
-      >
-        <h2 className={css(generalStyles.header)}>{projectInfo.title}</h2>
+      <PageContainer>
+        <PageHeader>{projectInfo.title}</PageHeader>
         {projectLink}
-        <div
-          className={css(generalStyles.columnContainer, styles.bodyContainer)}
-        >
-          {body}
-        </div>
-        <div className={css(generalStyles.rowContainer, styles.linkContainer)}>
+        <BodyContainer>{body}</BodyContainer>
+        <RowContainer>
           {backLink}
           {projectLink}
           {repositoryLink}
-        </div>
-      </div>
+        </RowContainer>
+      </PageContainer>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  pageContainer: {
-    padding: '0 0 40px'
-  },
+const PageContainer = ColumnContainer.extend`
+  padding: 0 0 2.5rem;
+`;
 
-  link: {
-    color: '#333',
-    border: '3px solid #333',
-    borderRadius: '3px',
-    margin: '5px 10px',
-    padding: '5px 10px',
-    textDecoration: 'none',
-    ':hover': {
-      backgroundColor: '#333',
-      color: '#FFF'
-    }
-  },
-
-  text: {
-    color: '#333',
-    fontSize: '1.125em',
-    lineHeight: '1.25em'
-  },
-
-  tagline: {
-    fontWeight: 'bold'
-  },
-
-  imageContainer: {
-    margin: '10px 0',
-    maxWidth: '100%'
-  },
-
-  image: {
-    border: '2px solid #2980B9'
-  },
-
-  imageCaption: {
-    fontSize: '0.875em',
-    color: '#333',
-    margin: '2px 0'
-  },
-
-  bodyContainer: {
-    width: '70%',
-    padding: '0 0 20px',
-    '@media(max-width: 600px)': {
-      width: '95%'
-    },
-    '@media(max-width: 900px)': {
-      width: '80%'
-    }
-  },
-
-  linkContainer: {
-    flexWrap: 'wrap'
+const BodyContainer = ColumnContainer.extend`
+  width: 70%;
+  padding: 0 0 1.25rem;
+  @media (max-width: 900px) {
+    width: 80%;
   }
-});
+  @media (max-width: 600px) {
+    width: 95%;
+  }
+`;
