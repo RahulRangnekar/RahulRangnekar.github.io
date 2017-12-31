@@ -1,24 +1,26 @@
 // React
-import React from 'react';
+import React from "react";
 
-// NPM Modules
-import { css, StyleSheet } from 'aphrodite';
+// node modules
 
-// Stylesheets
-import { generalStyles } from '../stylesheets/general_stylesheet.js';
+// components
+import { ColumnContainer } from "./components/Containers";
+import { PageHeader } from "./components/Headers";
+import { Paragraph } from "./components/Texts";
+import { Image } from "./components/Images";
 
 export default class Error404 extends React.Component {
   componentDidMount() {
     let pathname = this.props.location.pathname;
     switch (pathname) {
-      case '/spotify-top-10':
-        return this.props.history.push('/projects/spotify');
-      case '/yelp-dataset-project':
-        return this.props.history.push('/projects/yelp-dataset');
+      case "/spotify-top-10":
+        return this.props.history.replace("/projects/spotify");
+      case "/yelp-dataset-project":
+        return this.props.history.replace("/projects/yelp-dataset");
       default:
         return setTimeout(
           function() {
-            this.props.history.push('/');
+            this.props.history.replace("/");
           }.bind(this),
           3000
         );
@@ -27,33 +29,17 @@ export default class Error404 extends React.Component {
 
   render() {
     return (
-      <div className={css(generalStyles.columnContainer, generalStyles.fadeIn)}>
-        <h1 className={css(styles.h1)}>Sorry, this page does not exist.</h1>
-        <img
-          className={css(styles.image)}
+      <ColumnContainer>
+        <PageHeader>Error 404 :(</PageHeader>
+        <Paragraph>Sorry, this page does not exist.</Paragraph>
+        <Image
           src="images/error404.jpg"
           alt="error -- this page does not exist"
+          height="691px"
+          width="389px"
         />
-        <h2 className={css(styles.h2)}>You will be redirected home.</h2>
-      </div>
+        <Paragraph>You will be redirected home.</Paragraph>
+      </ColumnContainer>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  h1: {
-    color: '#333',
-    fontSize: '2em'
-  },
-
-  image: {
-    border: '3px solid #2980B9',
-    height: '691px',
-    width: '389px'
-  },
-
-  h2: {
-    color: '#333',
-    fontSize: '1.5em'
-  }
-});

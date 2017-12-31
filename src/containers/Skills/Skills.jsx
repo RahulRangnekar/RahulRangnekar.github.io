@@ -20,9 +20,6 @@ import ProgressLine from "./ProgressLine";
 import ProgressCircle from "./ProgressCircle";
 import { PROGRESS_BARS, PROGRESS_PIES } from "./ProgressInfo";
 
-// Stylesheets
-import { generalStyles } from "../../stylesheets/general_stylesheet.js";
-
 const Skills = props => {
   return (
     <SkillsContainer srcURL="images/self/beach.jpg">

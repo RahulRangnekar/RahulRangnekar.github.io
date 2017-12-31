@@ -1,9 +1,6 @@
 // React
 import React from "react";
 
-// node modules
-import styled from "styled-components";
-
 // components
 import { ColumnContainer, RowContainer } from "../components/Containers";
 import { PageHeader } from "../components/Headers";

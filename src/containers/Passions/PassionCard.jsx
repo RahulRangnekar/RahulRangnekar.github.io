@@ -2,7 +2,6 @@
 import React from "react";
 
 // NPM Modules
-import { css, StyleSheet } from "aphrodite";
 import styled from "styled-components";
 
 // components
