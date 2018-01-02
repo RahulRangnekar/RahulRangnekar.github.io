@@ -1,14 +1,14 @@
 // React
-import React from 'react';
+import React from "react";
 
 // node modules
-import styled from 'styled-components';
+import styled from "styled-components";
 
 // components
-import { ColumnContainer, RowContainer } from './components/Containers';
-import { PageHeader } from './components/Headers';
-import { Paragraph } from './components/Texts';
-import { Image } from './components/Images';
+import { ColumnContainer, RowContainer } from "./components/Containers";
+import { PageHeader } from "./components/Headers";
+import { Paragraph } from "./components/Texts";
+import { Image } from "./components/Images";
 
 const About = props => {
   return (
@@ -16,7 +16,13 @@ const About = props => {
       <PageHeader>Who I Am</PageHeader>
       <RowContainerP>
         <ColumnContainerF>
-          <AboutImage src={'/images/self/rahul-1.jpg'} alt="Me" round />
+          <AboutImage
+            src={"/images/self/rahul-1.jpg"}
+            alt="Me"
+            round
+            height="400px"
+            width="400px"
+          />
         </ColumnContainerF>
         <RightContainer>
           <ParaSpan>

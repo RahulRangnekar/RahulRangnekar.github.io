@@ -29,4 +29,15 @@ const ProjectPageHeader = PageHeader.extend`
   padding: 0.25rem 0;
 `;
 
-export { PageHeader, SectionHeader, SubSectionHeader, ProjectPageHeader };
+const ProjectSectionHeader = SectionHeader.extend`
+  color: #333;
+  font-size: 1.4rem;
+`;
+
+export {
+  PageHeader,
+  SectionHeader,
+  SubSectionHeader,
+  ProjectPageHeader,
+  ProjectSectionHeader
+};

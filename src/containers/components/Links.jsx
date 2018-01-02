@@ -17,6 +17,7 @@ const IntButtonLink = IntLink.extend`
   font-size: ${props => props.fontSize || "1rem"};
   margin: 0.25rem 0.5rem;
   padding: 0.25rem 0.5rem;
+  text-transform: uppercase;
   &:hover {
     background-color: #2980b9;
     color: #fff;
@@ -42,6 +43,7 @@ const ExtButtonLink = ExtLink.extend`
   font-size: ${props => props.fontSize || "1rem"};
   margin: 0.25rem 0.5rem;
   padding: 0.25rem 0.5rem;
+  text-transform: uppercase;
   &:hover {
     background-color: #333;
     color: #fff;

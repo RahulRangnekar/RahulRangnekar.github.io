@@ -12,7 +12,7 @@ import {
   RowContainer,
   Container
 } from "../components/Containers";
-import { ProjectPageHeader } from "../components/Headers";
+import { ProjectPageHeader, ProjectSectionHeader } from "../components/Headers";
 import { Paragraph, ParagraphItem } from "../components/Texts";
 import { IntButtonLink, ExtButtonLink, ProjLink } from "../components/Links";
 import { Image } from "../components/Images";
@@ -44,14 +44,16 @@ export default class ProjectPage extends React.Component {
     }
 
     let backLink = (
-      <IntButtonLink to={"/projects"}>{"Back to All"}</IntButtonLink>
+      <IntButtonLink to={"/projects"} fontSize="0.875rem">
+        {"Back to All"}
+      </IntButtonLink>
     );
 
     let externalLinks = Object.entries(projectInfo.links).map(extLink => {
       return (
         <ExtButtonLink
           key={extLink[0]}
-          fontSize={"1rem"}
+          fontSize={"0.875rem"}
           href={extLink[1]}
           target="_blank"
         >
@@ -94,6 +96,9 @@ const options = {
     h1: {
       component: ProjectPageHeader
     },
+    h2: {
+      component: ProjectSectionHeader
+    },
     img: {
       component: Image
     },
@@ -101,7 +106,10 @@ const options = {
       component: ParagraphItem
     },
     a: {
-      component: ProjLink
+      component: ProjLink,
+      props: {
+        fontSize: "0.875rem"
+      }
     }
   }
 };
