@@ -17,13 +17,13 @@ export default class ProjectCard extends React.Component {
     };
   }
   render() {
-    let { title, subtitle, link, image, text } = this.props.project;
+    let { title, subtitle, internal_link, image, text } = this.props;
     let { hovered } = this.state;
     return (
       <CardContainer
         onMouseEnter={() => this.setState({ hovered: true })}
         onMouseLeave={() => this.setState({ hovered: false })}
-        to={link}
+        to={internal_link}
       >
         {!hovered ? (
           <FrontSide>

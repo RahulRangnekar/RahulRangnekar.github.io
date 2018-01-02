@@ -6,6 +6,7 @@ const Paragraph = styled.p`
   line-height: 1.5rem;
   margin: 0;
   padding: 0.675rem 0;
+  max-width: 100%;
   @media (max-width: 600px) {
     font-size: 1rem;
     padding: 1rem;
@@ -16,4 +17,10 @@ const TaglineParagraph = Paragraph.extend`
   font-weight: bold;
 `;
 
-export { Paragraph, TaglineParagraph };
+const ParagraphItem = Paragraph.withComponent("li").extend`
+  font-size: 1rem;
+  line-height: 1.125rem;
+  padding: 0.125rem 0;
+`;
+
+export { Paragraph, TaglineParagraph, ParagraphItem };

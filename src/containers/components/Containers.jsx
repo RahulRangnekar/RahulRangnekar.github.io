@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const ColumnContainer = styled.div`
   display: flex;
@@ -27,4 +27,8 @@ const ParallaxContainer = styled.div`
   min-height: calc(100vh - 108px);
 `;
 
-export { ColumnContainer, RowContainer, ParallaxContainer };
+const Container = styled.div`
+  padding: 0 0 2.5rem;
+`;
+
+export { ColumnContainer, RowContainer, ParallaxContainer, Container };

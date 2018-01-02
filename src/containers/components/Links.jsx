@@ -23,7 +23,10 @@ const IntButtonLink = IntLink.extend`
   }
 `;
 
-const ExtLink = styled.a`
+const ExtLink = styled.a.attrs({
+  target: "_blank",
+  rel: "noopener noreferrer"
+})`
   color: #333;
   font-size: inherit;
   text-decoration: none;
@@ -45,4 +48,8 @@ const ExtButtonLink = ExtLink.extend`
   }
 `;
 
-export { IntLink, IntButtonLink, ExtLink, ExtButtonLink };
+const ProjLink = ExtButtonLink.extend`
+  margin: 0.25rem 0;
+`;
+
+export { IntLink, IntButtonLink, ExtLink, ExtButtonLink, ProjLink };
