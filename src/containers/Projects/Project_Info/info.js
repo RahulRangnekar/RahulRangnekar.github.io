@@ -56,7 +56,8 @@ const PROJECTS = {
     subtitle: "an open-source react component",
     internal_link: "projects/social-media-bar",
     links: {
-      project: "https://github.com/rahrang/react-social-media-bar"
+      project: "https://github.com/rahrang/react-social-media-bar",
+      npm: "https://www.npmjs.com/package/react-social-media-bar"
     },
     image: "images/projects/social-media-bar.png",
     text:

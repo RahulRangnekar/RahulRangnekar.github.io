@@ -63,7 +63,8 @@
       "prettier --use-tabs --write",
       "prettier --tab-width 2 --write",
       "git add"
-    ]
+    ],
+    "**/*.md": ["prettier --parser markdown", "git add"]
   },
   "scripts": {
     "precommit": "lint-staged",

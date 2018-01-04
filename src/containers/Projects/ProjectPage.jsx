@@ -4,6 +4,7 @@ import React from "react";
 // node modules
 import { isUndefined, includes } from "lodash";
 import Markdown from "markdown-to-jsx";
+import styled from "styled-components";
 
 // components
 import PROJECTS from "./Project_Info/info.js";
@@ -88,6 +89,11 @@ const BodyContainer = ColumnContainer.extend`
   }
 `;
 
+const paddedHR = styled.hr`
+  margin: 1rem 0;
+  border: 1px solid #2980b9;
+`;
+
 const options = {
   overrides: {
     p: {
@@ -110,6 +116,9 @@ const options = {
       props: {
         fontSize: "0.875rem"
       }
+    },
+    hr: {
+      component: paddedHR
     }
   }
 };
