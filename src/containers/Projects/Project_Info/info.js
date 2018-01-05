@@ -80,7 +80,7 @@ const PROJECTS = {
     subtitle: "a food blog",
     internal_link: "projects/yelp-elite",
     links: {
-      project: "https://rahrang.yelp.com"
+      profile: "https://rahrang.yelp.com"
     },
     image: "images/projects/yelp.png",
     text: "Restaurant reviews in my personal quest to eat everywhere I can."
