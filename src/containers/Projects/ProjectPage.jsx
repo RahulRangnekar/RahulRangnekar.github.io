@@ -94,6 +94,11 @@ const paddedHR = styled.hr`
   border: 1px solid #2980b9;
 `;
 
+const codeBlock = styled.code`
+  color: #2980b9;
+  font-size: 1.25rem;
+`;
+
 const options = {
   overrides: {
     p: {
@@ -116,6 +121,9 @@ const options = {
       props: {
         fontSize: "0.875rem"
       }
+    },
+    code: {
+      component: codeBlock
     },
     hr: {
       component: paddedHR

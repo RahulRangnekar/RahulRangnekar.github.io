@@ -18,7 +18,7 @@ const TaglineParagraph = Paragraph.extend`
 `;
 
 const ParagraphItem = Paragraph.withComponent("li").extend`
-  font-size: 1rem;
+  font-size: 1.05rem;
   line-height: 1.125rem;
   padding: 0.125rem 0;
 `;
