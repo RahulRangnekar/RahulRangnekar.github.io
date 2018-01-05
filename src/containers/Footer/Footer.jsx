@@ -19,7 +19,7 @@ const Footer = props => {
         iconSize={"1rem"}
         hoverColor={"#2980B9"}
         hoverOpacity={0.9}
-        margin={{ top: "0px", right: "7.5px", bottom: "8px", left: "7.5px" }}
+        margin={{ top: "4px", right: "7.5px", bottom: "4px", left: "7.5px" }}
       />
       <SourceLink href={"https://github.com/rahrang/rahrang"} target="_blank">
         Source

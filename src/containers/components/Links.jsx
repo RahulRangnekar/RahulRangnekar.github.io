@@ -17,13 +17,17 @@ const IntButtonLink = IntLink.extend`
   font-size: ${props => props.fontSize || "1rem"};
   margin: 0.25rem 0.5rem;
   padding: 0.25rem 0.5rem;
+  text-transform: uppercase;
   &:hover {
     background-color: #2980b9;
     color: #fff;
   }
 `;
 
-const ExtLink = styled.a`
+const ExtLink = styled.a.attrs({
+  target: "_blank",
+  rel: "noopener noreferrer"
+})`
   color: #333;
   font-size: inherit;
   text-decoration: none;
@@ -39,10 +43,15 @@ const ExtButtonLink = ExtLink.extend`
   font-size: ${props => props.fontSize || "1rem"};
   margin: 0.25rem 0.5rem;
   padding: 0.25rem 0.5rem;
+  text-transform: uppercase;
   &:hover {
     background-color: #333;
     color: #fff;
   }
 `;
 
-export { IntLink, IntButtonLink, ExtLink, ExtButtonLink };
+const ProjLink = ExtButtonLink.extend`
+  margin: 0.25rem 0;
+`;
+
+export { IntLink, IntButtonLink, ExtLink, ExtButtonLink, ProjLink };

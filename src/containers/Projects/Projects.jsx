@@ -5,15 +5,15 @@ import React from "react";
 import { RowContainer, ColumnContainer } from "../components/Containers";
 import { PageHeader } from "../components/Headers";
 import ProjectCard from "./ProjectCard.jsx";
-import { PROJECTS } from "./ProjectInfo.js";
+import PROJECTS from "./Project_Info/info.js";
 
 const Projects = props => {
   return (
     <ProjectContainer>
       <PageHeader>What I Do</PageHeader>
       <RowContainer>
-        {PROJECTS.map(proj => {
-          return <ProjectCard project={proj} />;
+        {Object.values(PROJECTS).map(project => {
+          return <ProjectCard {...project} />;
         })}
       </RowContainer>
     </ProjectContainer>

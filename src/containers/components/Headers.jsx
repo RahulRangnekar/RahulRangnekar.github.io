@@ -25,4 +25,19 @@ const SubSectionHeader = styled.h4`
   padding: 0;
 `;
 
-export { PageHeader, SectionHeader, SubSectionHeader };
+const ProjectPageHeader = PageHeader.extend`
+  padding: 0.25rem 0;
+`;
+
+const ProjectSectionHeader = SectionHeader.extend`
+  color: #333;
+  font-size: 1.4rem;
+`;
+
+export {
+  PageHeader,
+  SectionHeader,
+  SubSectionHeader,
+  ProjectPageHeader,
+  ProjectSectionHeader
+};
