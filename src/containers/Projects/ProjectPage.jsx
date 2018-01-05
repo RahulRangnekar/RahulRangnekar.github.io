@@ -2,7 +2,9 @@
 import React from "react";
 
 // node modules
-import { isUndefined, includes } from "lodash";
+// import { isUndefined, includes } from "lodash";
+import isUndefined from "lodash/isUndefined";
+import includes from "lodash/includes";
 import Markdown from "markdown-to-jsx";
 import styled from "styled-components";
 
@@ -38,11 +40,12 @@ export default class ProjectPage extends React.Component {
   render() {
     let project = this.props.match.params.project_title;
     let projectInfo = PROJECTS[project];
-    let mdFile = require(`./Project_Info/${projectInfo.key}.md`);
 
     if (isUndefined(project) || isUndefined(projectInfo)) {
       return null;
     }
+
+    let mdFile = require(`./Project_Info/${projectInfo.key}.md`);
 
     let backLink = (
       <IntButtonLink to={"/projects"} fontSize="0.875rem">
