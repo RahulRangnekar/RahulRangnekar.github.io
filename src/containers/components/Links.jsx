@@ -5,6 +5,8 @@ const IntLink = styled(Link)`
   color: #2980b9;
   font-size: inherit;
   text-decoration: none;
+  transition: all 0.25s;
+
   &:hover {
     color: #333;
   }
@@ -18,6 +20,7 @@ const IntButtonLink = IntLink.extend`
   margin: 0.25rem 0.5rem;
   padding: 0.25rem 0.5rem;
   text-transform: uppercase;
+
   &:hover {
     background-color: #2980b9;
     color: #fff;
@@ -31,6 +34,8 @@ const ExtLink = styled.a.attrs({
   color: #333;
   font-size: inherit;
   text-decoration: none;
+  transition: all 0.25s;
+
   &:hover {
     color: #2980b9;
   }

@@ -97,6 +97,17 @@ const PROJECTS = {
     },
     image: "images/projects/writing.png",
     text: "A way to express myself."
+  },
+  "365_lessons": {
+    key: "365_lessons",
+    title: "365 Lessons in 2018",
+    subtitle: "A Medium Series",
+    internal_link: "projects/365_lessons",
+    links: {
+      medium: "https://medium.com/series/365-life-lessons-in-2018-5c86116f7929"
+    },
+    image: "images/projects/365_lessons.png",
+    text: "A lesson a day"
   }
 };
 
