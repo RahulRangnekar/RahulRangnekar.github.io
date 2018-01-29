@@ -71,7 +71,7 @@ export default About;
 
 const RowContainerP = RowContainer.extend`
   padding: 1rem;
-  @media (max-width: 900px) : {
+  @media (max-width: 900px) {
     flex-direction: column;
   }
 `;

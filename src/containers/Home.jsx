@@ -1,11 +1,11 @@
 // React
-import React from 'react';
+import React from "react";
 
 // node modules
-import styled from 'styled-components';
+import styled from "styled-components";
 
 // components
-import { ParallaxContainer } from './components/Containers';
+import { ParallaxContainer } from "./components/Containers";
 
 const Home = props => {
   return (
@@ -32,8 +32,8 @@ const SiteTitle = styled.h1`
   text-transform: uppercase;
   margin: 0;
   padding: 0.5rem 0;
-  @media (max-width: 600px) : {
-    fontsize: '3em';
+  @media (max-width: 600px) {
+    font-size: 2.5rem;
   }
 `;
 
@@ -42,8 +42,8 @@ const Roles = styled.h2`
   font-weight: 200;
   margin: 0;
   padding: 0.5rem;
-  @media (max-width: 600px) : {
-    font-size: '1em';
+  @media (max-width: 600px) {
+    font-size: 1rem;
   }
 `;
 
