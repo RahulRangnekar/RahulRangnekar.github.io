@@ -10,6 +10,7 @@ import Navbar from "./Navbar/Navbar";
 import Home from "./Home";
 import About from "./About";
 import Skills from "./Skills/Skills";
+import SkillPage from "./Skills/SkillPage";
 import Passions from "./Passions/Passions";
 import Projects from "./Projects/Projects";
 import ProjectPage from "./Projects/ProjectPage";
@@ -19,25 +20,26 @@ import Error404 from "./Error404";
 export default class Routes extends React.Component {
   render() {
     return (
-      <div id="router-container">
+      <MainContainer>
         <Navbar />
-        <MainContainer>
-          <Switch>
-            <Route exact path={"/"} component={Home} />
-            <Route exact path={"/about"} component={About} />
-            <Route exact path={"/skills"} component={Skills} />
-            <Route exact path={"/passions"} component={Passions} />
-            <Route exact path={"/projects"} component={Projects} />
-            <Route path={"/projects/:project_title"} component={ProjectPage} />
-            <Route component={Error404} />
-          </Switch>
-        </MainContainer>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/skills" component={Skills} />
+          <Route exact path="/skills/:skill" component={SkillPage} />
+          <Route exact path="/passions" component={Passions} />
+          <Route exact path="/projects" component={Projects} />
+          <Route path="/projects/:project_title" component={ProjectPage} />
+          <Route component={Error404} />
+        </Switch>
         <Footer />
-      </div>
+      </MainContainer>
     );
   }
 }
 
 const MainContainer = styled.div`
-  min-height: calc(100vh - 108px);
+  border-top: 5px solid var(--blue);
+  display: grid;
+  grid-template-rows: 60px 1fr 50px;
 `;
