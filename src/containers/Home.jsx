@@ -1,29 +1,50 @@
 // React
-import React from 'react';
+import React from "react";
 
 // node modules
-import styled from 'styled-components';
+import styled from "styled-components";
 
 // components
-import { ParallaxContainer } from './components/Containers';
+import { ParallaxContainer } from "./components/Containers";
 
 const Home = props => {
   return (
-    <ParallaxContainer srcURL="images/self/cover.jpg">
-      <TextContainer>
-        <SiteTitle>Rahul Rangnekar</SiteTitle>
-        <Roles>Software Developer & Writer</Roles>
-      </TextContainer>
-    </ParallaxContainer>
+    <GridContainer>
+      <TopContainer srcURL="images/self/cover.jpg">
+        <TextContainer>
+          <SiteTitle>Rahul Rangnekar</SiteTitle>
+          <Roles>Software Developer && Writer</Roles>
+        </TextContainer>
+      </TopContainer>
+    </GridContainer>
   );
 };
 
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+`;
+
+const TopContainer = ParallaxContainer.extend`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1 / -1;
+  align-content: center;
+`;
+
 const TextContainer = styled.div`
   color: #fff;
-  position: absolute;
-  left: 2rem;
-  top: 15rem;
   text-align: center;
+  grid-column: 1;
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 3rem;
+      padding: 0 1rem;
+    }
+  }
 `;
 
 const SiteTitle = styled.h1`
@@ -32,9 +53,6 @@ const SiteTitle = styled.h1`
   text-transform: uppercase;
   margin: 0;
   padding: 0.5rem 0;
-  @media (max-width: 600px) : {
-    fontsize: '3em';
-  }
 `;
 
 const Roles = styled.h2`
@@ -42,9 +60,6 @@ const Roles = styled.h2`
   font-weight: 200;
   margin: 0;
   padding: 0.5rem;
-  @media (max-width: 600px) : {
-    font-size: '1em';
-  }
 `;
 
 export default Home;

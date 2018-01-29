@@ -21,6 +21,7 @@ const ParallaxContainer = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #333;
+  background-position: center;
   padding: 0;
   margin: 0;
   position: relative;
