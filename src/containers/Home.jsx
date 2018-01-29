@@ -12,7 +12,7 @@ const Home = props => {
     <ParallaxContainer srcURL="images/self/cover.jpg">
       <TextContainer>
         <SiteTitle>Rahul Rangnekar</SiteTitle>
-        <Roles>Software Developer & Writer</Roles>
+        <Roles>Software Developer && Writer</Roles>
       </TextContainer>
     </ParallaxContainer>
   );

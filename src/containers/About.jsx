@@ -95,7 +95,7 @@ const ParaSpan = Paragraph.extend`
 `;
 
 const AboutImage = Image.extend`
-  @media (max-width: 600px) : {
+  @media (max-width: 600px) {
     width: 300px;
     height: 300px;
   }
